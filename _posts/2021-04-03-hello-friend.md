@@ -11,7 +11,7 @@ print("Hello friend")
 
 > 折腾了好多次才发现直接 clone [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 真的很方便...
 
-## 目的
+## 为什么要写博客
 
 * 平时学习工作中多亏了大佬写的高质量文章，让我可以把研究文档的时间用来摸鱼（不是），所以感觉自己也有义务把 ~~经验~~ **踩过的坑**分享给大家。
 
