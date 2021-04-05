@@ -1,12 +1,12 @@
 ---
 title: John The Ripper
-description: 
+description: John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.
 categories:
- - hacking
  - cheatsheet
+ - tools
 tags:
  - password
- - tool
+ - brute force
 ---
 
 # 转换为 john 可识别的 hash
@@ -16,7 +16,6 @@ tags:
 john --format=nt --wordlist=[wordlist] [file]
 ```
 ## /etc/shadow
-### unshadow
 
 ```
 unshadow [passwd] [shadow]
@@ -57,7 +56,7 @@ ssh2john [id_rsa] > [output file]
 Example Usage:
 ssh2john id_rsa > hash.txt
 ```
-# 暴力破解
+# 配合字典暴力破解
 
 解压 rockyou 字典
 
@@ -90,7 +89,9 @@ john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ## Single 模式
 
 把相关信息放在 hash 前面
-mike:xxxxxx
+
+如：mike:xxxxxx
+
 john 可以根据提供的信息自己生成字典用来破解
 
 ```
@@ -99,3 +100,8 @@ john --single --format=[format] [file]
 Example Usage:
 john --single --format=raw-sha256 hash.txt
 ```
+
+---
+
+ref:
+[TryHackMe - John The Ripper](https://tryhackme.com/room/johntheripper0)
