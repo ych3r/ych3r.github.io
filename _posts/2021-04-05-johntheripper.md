@@ -10,11 +10,7 @@ tags:
 ---
 
 # 转换为 john 可识别的 hash
-## Windows
 
-```
-john --format=nt --wordlist=[wordlist] [file]
-```
 ## /etc/shadow
 
 ```
