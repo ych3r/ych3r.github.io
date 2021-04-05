@@ -26,3 +26,5 @@ print("Hello friend")
 * [whale3070的博客](https://whale3070.github.io/)
 
 * [统计文章阅读量](https://bjtu-hxs.github.io/2018/06/12/leancloud-config/)
+
+* [主题深度优化](https://www.laugh12321.cn/2018/12/24/update_next_for_jekyll/)
