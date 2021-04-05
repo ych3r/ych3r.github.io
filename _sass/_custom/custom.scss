@@ -1,14 +1,8 @@
 // Custom styles.
-<<<<<<< HEAD
 
 //文章内容背景改成了半透明
 .content-wrap {
     background: rgba(255, 255, 255, 0.9);
-=======
-//文章内容背景改成了半透明
-.content-wrap {
-    background: rgba(255, 255, 255, 0.8);
->>>>>>> e4e7e156af394ccb2fd2984fb55b38e600948222
 }
 .sidebar {
     background: rgba(255, 255, 255, 0.1);
@@ -18,11 +12,11 @@
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.8);
 }
 .sidebar-inner {
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0 2px 6px #dbdbdb;
 }
 .header-inner {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 6px #dbdbdb;
 }
 .footer {
