@@ -7,6 +7,7 @@ categories:
 tags:
  - password
  - brute force
+ - hash
 ---
 
 # 转换为 john 可识别的 hash
