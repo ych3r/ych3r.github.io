@@ -2,7 +2,6 @@
 title: John The Ripper
 description: John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems.
 categories:
- - cheatsheet
  - tools
 tags:
  - password
