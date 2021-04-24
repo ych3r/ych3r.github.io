@@ -1,13 +1,12 @@
 ---
 title: 端口 & 服务
+description: 收集了常见端口和服务。
 categories:
  - methodology
 tags:
  - info gathering
  - cheatsheet
 ---
-
-> 收集了常见端口和服务。
 
 # 文件共享服务端口
 
