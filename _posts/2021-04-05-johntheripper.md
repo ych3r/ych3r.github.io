@@ -7,6 +7,7 @@ tags:
  - password
  - brute force
  - hash
+ - cheatsheet
 ---
 
 # 转换为 john 可识别的 hash
