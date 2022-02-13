@@ -16,9 +16,8 @@
 			<guid>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</guid>
 			<description>
 			 This tutorial is for mac users.
- STEP 0 - Installation You’re gonna need:
- hugo git  Install Hugo Type this in your terminal.
-brew install …
+ Here we have three easy steps: Install it, Build locally, and Put it on Github.
+STEP 0 - Installation …
 			</description>
 		</item>
 		<item>
