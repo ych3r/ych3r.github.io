@@ -6,6 +6,7 @@
 		<description>Recent content in Categories on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
 		<atom:link href="https://ych3r.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>
