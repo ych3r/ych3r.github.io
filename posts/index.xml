@@ -21,15 +21,5 @@
 brew install …
 			</description>
 		</item>
-		<item>
-			<title>My First Post</title>
-			<link>https://ych3r.github.io/posts/my-first-post/</link>
-			<pubDate>Sat, 12 Feb 2022 21:10:35 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/my-first-post/</guid>
-			<description>
-			Hello friend.
-
-			</description>
-		</item>
 	</channel>
 </rss>
