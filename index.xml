@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Yuchen blog</title>
+		<link>https://ych3r.github.io/</link>
+		<description>Recent content on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Sat, 12 Feb 2022 21:10:35 -0500</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>My First Post</title>
+			<link>https://ych3r.github.io/posts/my-first-post/</link>
+			<pubDate>Sat, 12 Feb 2022 21:10:35 -0500</pubDate>
+			<guid>https://ych3r.github.io/posts/my-first-post/</guid>
+			<description>
+			Hello friend.
+
+			</description>
+		</item>
+		<item>
+			<title>About</title>
+			<link>https://ych3r.github.io/about/</link>
+			<pubDate>Sat, 12 Feb 2022 21:01:22 -0500</pubDate>
+			<guid>https://ych3r.github.io/about/</guid>
+			<description>
+			
+			</description>
+		</item>
+	</channel>
+</rss>
