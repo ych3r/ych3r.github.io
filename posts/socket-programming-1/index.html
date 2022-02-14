@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Socket Programming - Simple Client &amp; Server | Yuchen blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.2" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sockets and the socket API are used to send messages across a network.
+Three main parts:
+ create a simple socket server and client handle multiple …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Socket Programming - Simple Client &amp; Server" />
+<meta property="og:description" content="Sockets and the socket API are used to send messages across a network.
+Three main parts:
+ create a simple socket server and client handle multiple connections simultaneously build a full-fledged socket application  By the end, hope you’ll understand how to use socket to write your own client-server applications.
+But now, let&rsquo;s focus on building simple echo client and server using TCP socket.
+What are TCP Sockets? TCP(Transmission Control Protocol) is reliable and has in-order data delivery." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/posts/socket-programming-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-13T10:45:21-05:00" />
+<meta property="article:modified_time" content="2022-02-13T10:45:21-05:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Socket Programming - Simple Client &amp; Server"/>
+<meta name="twitter:description" content="Sockets and the socket API are used to send messages across a network.
+Three main parts:
+ create a simple socket server and client handle multiple connections simultaneously build a full-fledged socket application  By the end, hope you’ll understand how to use socket to write your own client-server applications.
+But now, let&rsquo;s focus on building simple echo client and server using TCP socket.
+What are TCP Sockets? TCP(Transmission Control Protocol) is reliable and has in-order data delivery."/>
+
+<meta itemprop="name" content="Socket Programming - Simple Client &amp; Server">
+<meta itemprop="description" content="Sockets and the socket API are used to send messages across a network.
+Three main parts:
+ create a simple socket server and client handle multiple connections simultaneously build a full-fledged socket application  By the end, hope you’ll understand how to use socket to write your own client-server applications.
+But now, let&rsquo;s focus on building simple echo client and server using TCP socket.
+What are TCP Sockets? TCP(Transmission Control Protocol) is reliable and has in-order data delivery."><meta itemprop="datePublished" content="2022-02-13T10:45:21-05:00" />
+<meta itemprop="dateModified" content="2022-02-13T10:45:21-05:00" />
+<meta itemprop="wordCount" content="468">
+<meta itemprop="keywords" content="" />
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="titleonly"><a href="https://ych3r.github.io/">Yuchen blog</a></h2>
+</div>
+<div id="title-social">
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">13</span>
+<span class="rest">Feb 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Socket Programming - Simple Client &amp; Server</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;468&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>Sockets and the socket API are used to send messages across a network.</p>
+<p>Three main parts:</p>
+<ul>
+<li>create a simple socket server and client</li>
+<li>handle multiple connections simultaneously</li>
+<li>build a full-fledged socket application</li>
+</ul>
+<p>By the end, hope you’ll understand how to use socket to write your own client-server applications.</p>
+<p>But now, let&rsquo;s focus on building simple echo client and server using TCP socket.</p>
+<h1 id="what-are-tcp-sockets">What are TCP Sockets?</h1>
+<p>TCP(Transmission Control Protocol) is reliable and has in-order data delivery. Here we’re going to create a socket object using <strong>socket.socket()</strong> and specify the socket type as <strong>socket.SOCK_STREAM</strong>.</p>
+<blockquote>
+<p>btw, UDP(User Datagram Protocol) sockets created with <strong>socket.SOCK_DGRAM</strong> aren’t reliable, and data read by the receiver can be out-of-order.</p>
+</blockquote>
+<p>The sequence of socket API calls and data flow for TCP:</p>
+<p><figure>
+  <img src="/img/socket1/data_flow.png" alt="tcp data flow"  />
+</figure></p>
+<p>The Server:</p>
+<ul>
+<li>socket()</li>
+<li>bind()</li>
+<li>listen()</li>
+<li>accept()</li>
+</ul>
+<p>server start listening&hellip;</p>
+<p>The Client:</p>
+<ul>
+<li>socket()</li>
+<li>connect()</li>
+</ul>
+<p>establish a connection to the server and initiate the three-way handshake.</p>
+<h1 id="create-echo-client--server">Create Echo Client &amp; Server</h1>
+<h2 id="server">Server</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">#!/usr/bin/env python3
+
+import socket
+
+HOST = &#34;127.0.0.1&#34;
+PORT = 4444 # whatever you want(&gt;1023)
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen()
+    conn, addr = s.accept()
+    with conn:
+        print(&#34;Connected by&#34;, addr)
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
+            conn.sendall(data)
+</code></pre></div><p>explanation:</p>
+<ul>
+<li>with statement helps you close() automatically.</li>
+<li>AF_INET is the Internet address family for IPv4.</li>
+<li>SOCK_STREAM is the socket type for TCP.</li>
+<li>bind() is used to associate the socket with a specific network interface and port number. It expects a 2-tuple like (host, port).</li>
+<li>listen() enables a server to accept() connections.</li>
+<li>accept() blocks and waits for an incoming connection. When a client connects, it returns a new socket object.</li>
+<li>An infinite while loop is used to loop over blocking calls to conn.recv(). And then echoes back using conn.sendall().</li>
+</ul>
+<h2 id="client">Client</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">#!/usr/bin/env python3
+
+import socket
+
+HOST = &#34;127.0.0.1&#34;
+PORT = 4444
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((HOST, PORT))
+    s.sendall(b&#34;Hello friend&#34;)
+    data = s.recv(1024)
+
+print(&#34;Received&#34;, repr(data))
+</code></pre></div><h2 id="run-the-server-and-client">run the server and client</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./echo-server.py
+Connected by (&#39;127.0.0.1&#39;, 47060)
+-------------------------------------------
+it will appear to hang because of accept()
+open another terminal
+-------------------------------------------
+$ ./echo-client.py
+Received b&#39;Hello friend&#39;
+</code></pre></div><p>When server is running&hellip;</p>
+<p>Use netstat to view socket state:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ netstat -an | grep 4444
+tcp        0      0 127.0.0.1:4444          0.0.0.0:*               LISTEN
+</code></pre></div><p>Use lsof(list open files) to view state:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ lsof -i -n
+COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+python3 12332 shylock    3u  IPv4 375130      0t0  TCP 127.0.0.1:4444 (LISTEN)
+</code></pre></div><p>When there’s no listening socket&hellip;</p>
+<ul>
+<li>maybe port number is wrong</li>
+<li>maybe server isn’t running</li>
+<li>maybe there’s a firewall</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./echo-client.py
+Traceback (most recent call last):
+  File &#34;./echo-client.py&#34;, line 9, in &lt;module&gt;
+    s.connect((HOST, PORT))
+ConnectionRefusedError: [Errno 111] Connection refused
+</code></pre></div><blockquote>
+<p>Why 127.0.0.1? What’s the loopback interface?</p>
+<blockquote>
+<p>The loopback interface is contained inside the host. When you’re using it, data never leaves the host. The loopback interface and IP address 127.0.0.1 or ::1 referred to as “localhost”.</p>
+</blockquote>
+</blockquote>
+<p>ref:</p>
+<ul>
+<li><a href="realpython.com/python-sockets">Socket Programming in Python (Guide)</a></li>
+</ul>
+
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>
