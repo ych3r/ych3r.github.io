@@ -11,13 +11,12 @@
 		<atom:link href="https://ych3r.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Socket Programming - Simple Client &amp; Server</title>
-			<link>https://ych3r.github.io/posts/socket-programming-1/</link>
+			<link>https://ych3r.github.io/posts/socket-programming/</link>
 			<pubDate>Sun, 13 Feb 2022 10:45:21 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/socket-programming-1/</guid>
+			<guid>https://ych3r.github.io/posts/socket-programming/</guid>
 			<description>
 			Sockets and the socket API are used to send messages across a network.
-Three main parts:
- create a simple socket server and client handle …
+Let’s focus on building simple echo client and server using TCP …
 			</description>
 		</item>
 		<item>
