@@ -7,8 +7,19 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Thu, 17 Feb 2022 16:07:19 -0500</lastBuildDate>
+		<lastBuildDate>Fri, 18 Feb 2022 21:45:20 -0500</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Wireshark 101</title>
+			<link>https://ych3r.github.io/posts/wireshark-101/</link>
+			<pubDate>Fri, 18 Feb 2022 21:45:20 -0500</pubDate>
+			<guid>https://ych3r.github.io/posts/wireshark-101/</guid>
+			<description>
+			Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
+Wireshark uses OSI layers to break down packets.
+7 …
+			</description>
+		</item>
 		<item>
 			<title>How to Use Struct</title>
 			<link>https://ych3r.github.io/posts/how-to-use-struct/</link>
