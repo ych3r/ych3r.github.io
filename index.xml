@@ -28,7 +28,7 @@ App Layer: SMB …
 			<description>
 			This box is about “FTP”.
 FTP is a file transfer service.
-### Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Starting Nmap …
+Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Starting Nmap 7.92 …
 			</description>
 		</item>
 		<item>
@@ -39,7 +39,7 @@ FTP is a file transfer service.
 			<description>
 			This box is about “configuration mistakes”.
 When there’s a login box, try:
- admin administrator root  ### Scan ┌──(kali㉿kali)-[~/htb/meow] …
+ admin administrator root  Scan ┌──(kali㉿kali)-[~/htb/meow] └─$ …
 			</description>
 		</item>
 		<item>
