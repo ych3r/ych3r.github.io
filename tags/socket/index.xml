@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>socket on Yuchen blog</title>
+		<link>https://ych3r.github.io/tags/socket/</link>
+		<description>Recent content in socket on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Sun, 13 Feb 2022 10:45:21 -0500</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Socket Programming - Simple Client &amp; Server</title>
+			<link>https://ych3r.github.io/posts/socket-programming/</link>
+			<pubDate>Sun, 13 Feb 2022 10:45:21 -0500</pubDate>
+			<guid>https://ych3r.github.io/posts/socket-programming/</guid>
+			<description>
+			Sockets and the socket API are used to send messages across a network.
+Let’s focus on building simple echo client and server using TCP …
+			</description>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>FTP on Yuchen blog</title>
+		<link>https://ych3r.github.io/tags/ftp/</link>
+		<description>Recent content in FTP on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Sat, 12 Mar 2022 21:14:36 -0500</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Fawn</title>
+			<link>https://ych3r.github.io/posts/htb-fawn/</link>
+			<pubDate>Sat, 12 Mar 2022 21:14:36 -0500</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-fawn/</guid>
+			<description>
+			This box is about “FTP”.
+FTP is a file transfer service.
+Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Starting Nmap 7.92 …
+			</description>
+		</item>
+	</channel>
+</rss>

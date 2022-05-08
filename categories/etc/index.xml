@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>etc on Yuchen blog</title>
+		<link>https://ych3r.github.io/categories/etc/</link>
+		<description>Recent content in etc on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Sat, 12 Feb 2022 21:51:31 -0500</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/categories/etc/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>How to Build a Hugo Blog</title>
+			<link>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</link>
+			<pubDate>Sat, 12 Feb 2022 21:51:31 -0500</pubDate>
+			<guid>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</guid>
+			<description>
+			 This tutorial is for mac users.
+ Here we have three easy steps: Install it, Build locally, and Put it on Github.
+STEP 0 - Installation …
+			</description>
+		</item>
+	</channel>
+</rss>

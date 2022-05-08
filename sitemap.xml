@@ -2,20 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ych3r.github.io/categories/</loc>
+    <lastmod>2022-03-12T21:15:07-05:00</lastmod>
+  </url><url>
     <loc>https://ych3r.github.io/posts/htb-dancing/</loc>
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/posts/</loc>
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
   </url><url>
+    <loc>https://ych3r.github.io/tags/smb/</loc>
+    <lastmod>2022-03-12T21:15:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/</loc>
+    <lastmod>2022-03-12T21:15:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/categories/writeups/</loc>
+    <lastmod>2022-03-12T21:15:07-05:00</lastmod>
+  </url><url>
     <loc>https://ych3r.github.io/</loc>
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/ftp/</loc>
+    <lastmod>2022-03-12T21:14:36-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/posts/htb-fawn/</loc>
     <lastmod>2022-03-12T21:14:36-05:00</lastmod>
   </url><url>
+    <loc>https://ych3r.github.io/tags/config-mistakes/</loc>
+    <lastmod>2022-03-12T21:12:42-05:00</lastmod>
+  </url><url>
     <loc>https://ych3r.github.io/posts/htb-meow/</loc>
     <lastmod>2022-03-12T21:12:42-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/categories/netsec/</loc>
+    <lastmod>2022-02-18T21:45:20-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/wireshark/</loc>
+    <lastmod>2022-02-18T21:45:20-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/posts/wireshark-101/</loc>
     <lastmod>2022-02-18T21:45:20-05:00</lastmod>
@@ -23,8 +47,20 @@
     <loc>https://ych3r.github.io/posts/how-to-use-struct/</loc>
     <lastmod>2022-02-17T16:07:19-05:00</lastmod>
   </url><url>
+    <loc>https://ych3r.github.io/tags/struct/</loc>
+    <lastmod>2022-02-17T16:07:19-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/socket/</loc>
+    <lastmod>2022-02-13T10:45:21-05:00</lastmod>
+  </url><url>
     <loc>https://ych3r.github.io/posts/socket-programming/</loc>
     <lastmod>2022-02-13T10:45:21-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/etc/</loc>
+    <lastmod>2022-02-12T21:51:31-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/categories/etc/</loc>
+    <lastmod>2022-02-12T21:51:31-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</loc>
     <lastmod>2022-02-12T21:51:31-05:00</lastmod>
@@ -32,10 +68,6 @@
     <loc>https://ych3r.github.io/about/</loc>
     <lastmod>2022-02-12T21:01:22-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/categories/</loc>
-  </url><url>
     <loc>https://ych3r.github.io/series/</loc>
-  </url><url>
-    <loc>https://ych3r.github.io/tags/</loc>
   </url>
 </urlset>

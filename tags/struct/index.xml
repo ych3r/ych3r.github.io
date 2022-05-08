@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>struct on Yuchen blog</title>
+		<link>https://ych3r.github.io/tags/struct/</link>
+		<description>Recent content in struct on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Thu, 17 Feb 2022 16:07:19 -0500</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/tags/struct/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>How to Use Struct</title>
+			<link>https://ych3r.github.io/posts/how-to-use-struct/</link>
+			<pubDate>Thu, 17 Feb 2022 16:07:19 -0500</pubDate>
+			<guid>https://ych3r.github.io/posts/how-to-use-struct/</guid>
+			<description>
+			The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is …
+			</description>
+		</item>
+	</channel>
+</rss>
