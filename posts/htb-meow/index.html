@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>HTB-Meow | Yuchen blog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.98.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="This box is about “configuration mistakes”.
 When there’s a login box, try:
@@ -63,6 +63,8 @@ When there&rsquo;s a login box, try:
 <li><a href="/">Home</a></li>
 <li><a href="/posts">All Posts</a></li>
 <li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
 </ul>
 </nav>
 </div>
@@ -107,62 +109,62 @@ When there&rsquo;s a login box, try:
 <li>root</li>
 </ul>
 <h3 id="scan">Scan</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">┌──(kali㉿kali)-[~/htb/meow]
-└─$ nmap 10.129.188.75    
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:06 EST
-Nmap scan report for 10.129.188.75
-Host is up (0.018s latency).
-Not shown: 999 closed tcp ports (conn-refused)
-PORT   STATE SERVICE
-23/tcp open  telnet
-</code></pre></div><h3 id="try-username-root">Try username: root</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">┌──(kali㉿kali)-[~/htb/meow]
-└─$ telnet 10.129.188.75        
-Trying 10.129.188.75...
-Connected to 10.129.188.75.
-Escape character is &#39;^]&#39;.
-
-  █  █         ▐▌     ▄█▄ █          ▄▄▄▄
-  █▄▄█ ▀▀█ █▀▀ ▐▌▄▀    █  █▀█ █▀█    █▌▄█ ▄▀▀▄ ▀▄▀
-  █  █ █▄█ █▄▄ ▐█▀▄    █  █ █ █▄▄    █▌▄█ ▀▄▄▀ █▀█
-
-
-Meow login: root
-Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-77-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Sun 13 Mar 2022 01:06:55 AM UTC
-
-  System load:           0.0
-  Usage of /:            41.7% of 7.75GB
-  Memory usage:          4%
-  Swap usage:            0%
-  Processes:             136
-  Users logged in:       0
-  IPv4 address for eth0: 10.129.188.75
-  IPv6 address for eth0: dead:beef::250:56ff:feb9:335b
-
- * Super-optimized for small spaces - read how we shrank the memory
-   footprint of MicroK8s to make it the smallest full K8s around.
-
-   https://ubuntu.com/blog/microk8s-memory-optimisation
-
-75 updates can be applied immediately.
-31 of these updates are standard security updates.
-To see these additional updates run: apt list --upgradable
-
-
-The list of available updates is more than a week old.
-To check for new updates run: sudo apt update
-
-Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
-root@Meow:~#
-root@Meow:~# cat flag.txt 
-b40abdfe23665f766f9c61ecba8a4c19
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb/meow]
+</span></span><span style="display:flex;"><span>└─$ nmap 10.129.188.75    
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:06 EST
+</span></span><span style="display:flex;"><span>Nmap scan report for 10.129.188.75
+</span></span><span style="display:flex;"><span>Host is up (0.018s latency).
+</span></span><span style="display:flex;"><span>Not shown: 999 closed tcp ports (conn-refused)
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE
+</span></span><span style="display:flex;"><span>23/tcp open  telnet
+</span></span></code></pre></div><h3 id="try-username-root">Try username: root</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb/meow]
+</span></span><span style="display:flex;"><span>└─$ telnet 10.129.188.75        
+</span></span><span style="display:flex;"><span>Trying 10.129.188.75...
+</span></span><span style="display:flex;"><span>Connected to 10.129.188.75.
+</span></span><span style="display:flex;"><span>Escape character is &#39;^]&#39;.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  █  █         ▐▌     ▄█▄ █          ▄▄▄▄
+</span></span><span style="display:flex;"><span>  █▄▄█ ▀▀█ █▀▀ ▐▌▄▀    █  █▀█ █▀█    █▌▄█ ▄▀▀▄ ▀▄▀
+</span></span><span style="display:flex;"><span>  █  █ █▄█ █▄▄ ▐█▀▄    █  █ █ █▄▄    █▌▄█ ▀▄▄▀ █▀█
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Meow login: root
+</span></span><span style="display:flex;"><span>Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-77-generic x86_64)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> * Documentation:  https://help.ubuntu.com
+</span></span><span style="display:flex;"><span> * Management:     https://landscape.canonical.com
+</span></span><span style="display:flex;"><span> * Support:        https://ubuntu.com/advantage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  System information as of Sun 13 Mar 2022 01:06:55 AM UTC
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  System load:           0.0
+</span></span><span style="display:flex;"><span>  Usage of /:            41.7% of 7.75GB
+</span></span><span style="display:flex;"><span>  Memory usage:          4%
+</span></span><span style="display:flex;"><span>  Swap usage:            0%
+</span></span><span style="display:flex;"><span>  Processes:             136
+</span></span><span style="display:flex;"><span>  Users logged in:       0
+</span></span><span style="display:flex;"><span>  IPv4 address for eth0: 10.129.188.75
+</span></span><span style="display:flex;"><span>  IPv6 address for eth0: dead:beef::250:56ff:feb9:335b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> * Super-optimized for small spaces - read how we shrank the memory
+</span></span><span style="display:flex;"><span>   footprint of MicroK8s to make it the smallest full K8s around.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   https://ubuntu.com/blog/microk8s-memory-optimisation
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>75 updates can be applied immediately.
+</span></span><span style="display:flex;"><span>31 of these updates are standard security updates.
+</span></span><span style="display:flex;"><span>To see these additional updates run: apt list --upgradable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The list of available updates is more than a week old.
+</span></span><span style="display:flex;"><span>To check for new updates run: sudo apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Last login: Mon Sep  6 15:15:23 UTC 2021 from 10.10.14.18 on pts/0
+</span></span><span style="display:flex;"><span>root@Meow:~#
+</span></span><span style="display:flex;"><span>root@Meow:~# cat flag.txt 
+</span></span><span style="display:flex;"><span>b40abdfe23665f766f9c61ecba8a4c19
+</span></span></code></pre></div>
 </div>
 </div>
 </article>

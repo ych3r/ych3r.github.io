@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>HTB-Fawn | Yuchen blog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.98.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="This box is about “FTP”.
 FTP is a file transfer service.
@@ -63,6 +63,8 @@ Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Sta
 <li><a href="/">Home</a></li>
 <li><a href="/posts">All Posts</a></li>
 <li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
 </ul>
 </nav>
 </div>
@@ -102,60 +104,60 @@ Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Sta
 <p>This box is about &ldquo;FTP&rdquo;.</p>
 <p>FTP is a file transfer service.</p>
 <h3 id="scan">Scan</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">┌──(kali㉿kali)-[~/htb/fawn]
-└─$ nmap -sC -sV 10.129.234.156
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:12 EST
-Nmap scan report for 10.129.234.156
-Host is up (0.018s latency).
-Not shown: 999 closed tcp ports (conn-refused)
-PORT   STATE SERVICE VERSION
-21/tcp open  ftp     vsftpd 3.0.3
-| ftp-syst: 
-|   STAT: 
-| FTP server status:
-|      Connected to ::ffff:10.10.14.24
-|      Logged in as ftp
-|      TYPE: ASCII
-|      No session bandwidth limit
-|      Session timeout in seconds is 300
-|      Control connection is plain text
-|      Data connections will be plain text
-|      At session startup, client count was 2
-|      vsFTPd 3.0.3 - secure, fast, stable
-|_End of status
-| ftp-anon: Anonymous FTP login allowed (FTP code 230)
-|_-rw-r--r--    1 0        0              32 Jun 04  2021 flag.txt
-Service Info: OS: Unix
-</code></pre></div><h3 id="use-anonymous-account-type-in-whatever-password">Use anonymous account, type in whatever password</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">┌──(kali㉿kali)-[~/htb/fawn]
-└─$ ftp 10.129.234.156
-Connected to 10.129.234.156.
-220 (vsFTPd 3.0.3)
-Name (10.129.234.156:kali): anonymous
-331 Please specify the password.
-Password: 
-230 Login successful.
-Remote system type is UNIX.
-Using binary mode to transfer files.
-ftp&gt; ls
-229 Entering Extended Passive Mode (|||21923|)
-150 Here comes the directory listing.
--rw-r--r--    1 0        0              32 Jun 04  2021 flag.txt
-226 Directory send OK.
-ftp&gt; get flag.txt
-local: flag.txt remote: flag.txt
-229 Entering Extended Passive Mode (|||15050|)
-150 Opening BINARY mode data connection for flag.txt (32 bytes).
-100% |*********************************************************************|    32      459.55 KiB/s    00:00 ETA
-226 Transfer complete.
-32 bytes received in 00:00 (1.84 KiB/s)
-ftp&gt; ^D
-221 Goodbye.
-                                                                                                                  
-┌──(kali㉿kali)-[~/htb/fawn]
-└─$ cat flag.txt 
-035db21c881520061c53e0536e44f815
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb/fawn]
+</span></span><span style="display:flex;"><span>└─$ nmap -sC -sV 10.129.234.156
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:12 EST
+</span></span><span style="display:flex;"><span>Nmap scan report for 10.129.234.156
+</span></span><span style="display:flex;"><span>Host is up (0.018s latency).
+</span></span><span style="display:flex;"><span>Not shown: 999 closed tcp ports (conn-refused)
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>21/tcp open  ftp     vsftpd 3.0.3
+</span></span><span style="display:flex;"><span>| ftp-syst: 
+</span></span><span style="display:flex;"><span>|   STAT: 
+</span></span><span style="display:flex;"><span>| FTP server status:
+</span></span><span style="display:flex;"><span>|      Connected to ::ffff:10.10.14.24
+</span></span><span style="display:flex;"><span>|      Logged in as ftp
+</span></span><span style="display:flex;"><span>|      TYPE: ASCII
+</span></span><span style="display:flex;"><span>|      No session bandwidth limit
+</span></span><span style="display:flex;"><span>|      Session timeout in seconds is 300
+</span></span><span style="display:flex;"><span>|      Control connection is plain text
+</span></span><span style="display:flex;"><span>|      Data connections will be plain text
+</span></span><span style="display:flex;"><span>|      At session startup, client count was 2
+</span></span><span style="display:flex;"><span>|      vsFTPd 3.0.3 - secure, fast, stable
+</span></span><span style="display:flex;"><span>|_End of status
+</span></span><span style="display:flex;"><span>| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+</span></span><span style="display:flex;"><span>|_-rw-r--r--    1 0        0              32 Jun 04  2021 flag.txt
+</span></span><span style="display:flex;"><span>Service Info: OS: Unix
+</span></span></code></pre></div><h3 id="use-anonymous-account-type-in-whatever-password">Use anonymous account, type in whatever password</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb/fawn]
+</span></span><span style="display:flex;"><span>└─$ ftp 10.129.234.156
+</span></span><span style="display:flex;"><span>Connected to 10.129.234.156.
+</span></span><span style="display:flex;"><span>220 (vsFTPd 3.0.3)
+</span></span><span style="display:flex;"><span>Name (10.129.234.156:kali): anonymous
+</span></span><span style="display:flex;"><span>331 Please specify the password.
+</span></span><span style="display:flex;"><span>Password: 
+</span></span><span style="display:flex;"><span>230 Login successful.
+</span></span><span style="display:flex;"><span>Remote system type is UNIX.
+</span></span><span style="display:flex;"><span>Using binary mode to transfer files.
+</span></span><span style="display:flex;"><span>ftp&gt; ls
+</span></span><span style="display:flex;"><span>229 Entering Extended Passive Mode (|||21923|)
+</span></span><span style="display:flex;"><span>150 Here comes the directory listing.
+</span></span><span style="display:flex;"><span>-rw-r--r--    1 0        0              32 Jun 04  2021 flag.txt
+</span></span><span style="display:flex;"><span>226 Directory send OK.
+</span></span><span style="display:flex;"><span>ftp&gt; get flag.txt
+</span></span><span style="display:flex;"><span>local: flag.txt remote: flag.txt
+</span></span><span style="display:flex;"><span>229 Entering Extended Passive Mode (|||15050|)
+</span></span><span style="display:flex;"><span>150 Opening BINARY mode data connection for flag.txt (32 bytes).
+</span></span><span style="display:flex;"><span>100% |*********************************************************************|    32      459.55 KiB/s    00:00 ETA
+</span></span><span style="display:flex;"><span>226 Transfer complete.
+</span></span><span style="display:flex;"><span>32 bytes received in 00:00 (1.84 KiB/s)
+</span></span><span style="display:flex;"><span>ftp&gt; ^D
+</span></span><span style="display:flex;"><span>221 Goodbye.
+</span></span><span style="display:flex;"><span>                                                                                                                  
+</span></span><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb/fawn]
+</span></span><span style="display:flex;"><span>└─$ cat flag.txt 
+</span></span><span style="display:flex;"><span>035db21c881520061c53e0536e44f815
+</span></span></code></pre></div>
 </div>
 </div>
 </article>

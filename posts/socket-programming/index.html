@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Socket Programming - Simple Client &amp; Server | Yuchen blog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.98.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Sockets and the socket API are used to send messages across a network.
 Let’s focus on building simple echo client and server using TCP socket.
@@ -66,6 +66,8 @@ What are TCP Sockets? TCP(Transmission Control Protocol) is reliable and has in-
 <li><a href="/">Home</a></li>
 <li><a href="/posts">All Posts</a></li>
 <li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
 </ul>
 </nav>
 </div>
@@ -129,25 +131,25 @@ What are TCP Sockets? TCP(Transmission Control Protocol) is reliable and has in-
 <p>establish a connection to the server and initiate the three-way handshake.</p>
 <h1 id="create-echo-client--server">Create Echo Client &amp; Server</h1>
 <h2 id="server">Server</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
-
-<span style="color:#f92672">import</span> socket
-
-HOST <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>
-PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">4444</span> <span style="color:#75715e"># whatever you want(&gt;1023)</span>
-
-<span style="color:#66d9ef">with</span> socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET, socket<span style="color:#f92672">.</span>SOCK_STREAM) <span style="color:#66d9ef">as</span> s:
-    s<span style="color:#f92672">.</span>bind((HOST, PORT))
-    s<span style="color:#f92672">.</span>listen()
-    conn, addr <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>accept()
-    <span style="color:#66d9ef">with</span> conn:
-        print(<span style="color:#e6db74">&#34;Connected by&#34;</span>, addr)
-        <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
-            data <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1024</span>)
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> data:
-                <span style="color:#66d9ef">break</span>
-            conn<span style="color:#f92672">.</span>sendall(data)
-</code></pre></div><p>explanation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> socket
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HOST <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>
+</span></span><span style="display:flex;"><span>PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">4444</span> <span style="color:#75715e"># whatever you want(&gt;1023)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET, socket<span style="color:#f92672">.</span>SOCK_STREAM) <span style="color:#66d9ef">as</span> s:
+</span></span><span style="display:flex;"><span>    s<span style="color:#f92672">.</span>bind((HOST, PORT))
+</span></span><span style="display:flex;"><span>    s<span style="color:#f92672">.</span>listen()
+</span></span><span style="display:flex;"><span>    conn, addr <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>accept()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> conn:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Connected by&#34;</span>, addr)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>            data <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1024</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> data:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            conn<span style="color:#f92672">.</span>sendall(data)
+</span></span></code></pre></div><p>explanation:</p>
 <ul>
 <li>with statement helps you close() automatically.</li>
 <li>AF_INET is the Internet address family for IPv4.</li>
@@ -158,48 +160,48 @@ PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">4444</span
 <li>An infinite while loop is used to loop over blocking calls to conn.recv(). And then echoes back using conn.sendall().</li>
 </ul>
 <h2 id="client">Client</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
-
-<span style="color:#f92672">import</span> socket
-
-HOST <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>
-PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">4444</span>
-
-<span style="color:#66d9ef">with</span> socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET, socket<span style="color:#f92672">.</span>SOCK_STREAM) <span style="color:#66d9ef">as</span> s:
-    s<span style="color:#f92672">.</span>connect((HOST, PORT))
-    s<span style="color:#f92672">.</span>sendall(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Hello friend&#34;</span>)
-    data <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1024</span>)
-
-print(<span style="color:#e6db74">&#34;Received&#34;</span>, repr(data))
-</code></pre></div><h2 id="run-the-server-and-client">run the server and client</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./echo-server.py
-Connected by (&#39;127.0.0.1&#39;, 47060)
--------------------------------------------
-it will appear to hang because of accept()
-open another terminal
--------------------------------------------
-$ ./echo-client.py
-Received b&#39;Hello friend&#39;
-</code></pre></div><p>When server is running&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> socket
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>HOST <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>
+</span></span><span style="display:flex;"><span>PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">4444</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET, socket<span style="color:#f92672">.</span>SOCK_STREAM) <span style="color:#66d9ef">as</span> s:
+</span></span><span style="display:flex;"><span>    s<span style="color:#f92672">.</span>connect((HOST, PORT))
+</span></span><span style="display:flex;"><span>    s<span style="color:#f92672">.</span>sendall(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Hello friend&#34;</span>)
+</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">1024</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Received&#34;</span>, repr(data))
+</span></span></code></pre></div><h2 id="run-the-server-and-client">run the server and client</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ ./echo-server.py
+</span></span><span style="display:flex;"><span>Connected by (&#39;127.0.0.1&#39;, 47060)
+</span></span><span style="display:flex;"><span>-------------------------------------------
+</span></span><span style="display:flex;"><span>it will appear to hang because of accept()
+</span></span><span style="display:flex;"><span>open another terminal
+</span></span><span style="display:flex;"><span>-------------------------------------------
+</span></span><span style="display:flex;"><span>$ ./echo-client.py
+</span></span><span style="display:flex;"><span>Received b&#39;Hello friend&#39;
+</span></span></code></pre></div><p>When server is running&hellip;</p>
 <p>Use netstat to view socket state:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ netstat -an | grep 4444
-tcp        0      0 127.0.0.1:4444          0.0.0.0:*               LISTEN
-</code></pre></div><p>Use lsof(list open files) to view state:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ lsof -i -n
-COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-python3 12332 shylock    3u  IPv4 375130      0t0  TCP 127.0.0.1:4444 (LISTEN)
-</code></pre></div><p>When there’s no listening socket&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ netstat -an | grep 4444
+</span></span><span style="display:flex;"><span>tcp        0      0 127.0.0.1:4444          0.0.0.0:*               LISTEN
+</span></span></code></pre></div><p>Use lsof(list open files) to view state:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ lsof -i -n
+</span></span><span style="display:flex;"><span>COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+</span></span><span style="display:flex;"><span>python3 12332 shylock    3u  IPv4 375130      0t0  TCP 127.0.0.1:4444 (LISTEN)
+</span></span></code></pre></div><p>When there’s no listening socket&hellip;</p>
 <ul>
 <li>maybe port number is wrong</li>
 <li>maybe server isn’t running</li>
 <li>maybe there’s a firewall</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./echo-client.py
-Traceback (most recent call last):
-  File &#34;./echo-client.py&#34;, line 9, in &lt;module&gt;
-    s.connect((HOST, PORT))
-ConnectionRefusedError: [Errno 111] Connection refused
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ ./echo-client.py
+</span></span><span style="display:flex;"><span>Traceback (most recent call last):
+</span></span><span style="display:flex;"><span>  File &#34;./echo-client.py&#34;, line 9, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    s.connect((HOST, PORT))
+</span></span><span style="display:flex;"><span>ConnectionRefusedError: [Errno 111] Connection refused
+</span></span></code></pre></div><blockquote>
 <p>Why 127.0.0.1? What’s the loopback interface?</p>
 <blockquote>
 <p>The loopback interface is contained inside the host. When you’re using it, data never leaves the host. The loopback interface and IP address 127.0.0.1 or ::1 referred to as “localhost”.</p>

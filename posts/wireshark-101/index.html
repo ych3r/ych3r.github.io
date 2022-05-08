@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Wireshark 101 | Yuchen blog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.98.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
 Wireshark uses OSI layers to break down packets.
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 <meta property="og:title" content="Wireshark 101" />
 <meta property="og:description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
 Wireshark uses OSI layers to break down packets.
-7 Layers of the OSI Model Application - End User layer - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port - API&#39;s, Sockets, WinSock Transport - End-to-end connections - TCP, UDP Network - Packets - IP, ICMP, IPSec, IGMP Data Link - Frames - Ethernet, PPP, Switch, Bridge Physical - Physical structure - Coax, Fiber, Wireless, Hubs, Repeaters" />
+7 Layers of the OSI Model  Application - End User layer  - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer  - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port  - API&#39;s, Sockets, WinSock Transport - End-to-end connections  - TCP, UDP Network - Packets  - IP, ICMP, IPSec, IGMP Data Link - Frames  - Ethernet, PPP, Switch, Bridge Physical - Physical structure  - Coax, Fiber, Wireless, Hubs, Repeaters" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ych3r.github.io/posts/wireshark-101/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-18T21:45:20-05:00" />
@@ -34,12 +34,12 @@ Wireshark uses OSI layers to break down packets.
 <meta name="twitter:title" content="Wireshark 101"/>
 <meta name="twitter:description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
 Wireshark uses OSI layers to break down packets.
-7 Layers of the OSI Model Application - End User layer - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port - API&#39;s, Sockets, WinSock Transport - End-to-end connections - TCP, UDP Network - Packets - IP, ICMP, IPSec, IGMP Data Link - Frames - Ethernet, PPP, Switch, Bridge Physical - Physical structure - Coax, Fiber, Wireless, Hubs, Repeaters"/>
+7 Layers of the OSI Model  Application - End User layer  - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer  - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port  - API&#39;s, Sockets, WinSock Transport - End-to-end connections  - TCP, UDP Network - Packets  - IP, ICMP, IPSec, IGMP Data Link - Frames  - Ethernet, PPP, Switch, Bridge Physical - Physical structure  - Coax, Fiber, Wireless, Hubs, Repeaters"/>
 
 <meta itemprop="name" content="Wireshark 101">
 <meta itemprop="description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
 Wireshark uses OSI layers to break down packets.
-7 Layers of the OSI Model Application - End User layer - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port - API&#39;s, Sockets, WinSock Transport - End-to-end connections - TCP, UDP Network - Packets - IP, ICMP, IPSec, IGMP Data Link - Frames - Ethernet, PPP, Switch, Bridge Physical - Physical structure - Coax, Fiber, Wireless, Hubs, Repeaters"><meta itemprop="datePublished" content="2022-02-18T21:45:20-05:00" />
+7 Layers of the OSI Model  Application - End User layer  - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer  - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port  - API&#39;s, Sockets, WinSock Transport - End-to-end connections  - TCP, UDP Network - Packets  - IP, ICMP, IPSec, IGMP Data Link - Frames  - Ethernet, PPP, Switch, Bridge Physical - Physical structure  - Coax, Fiber, Wireless, Hubs, Repeaters"><meta itemprop="datePublished" content="2022-02-18T21:45:20-05:00" />
 <meta itemprop="dateModified" content="2022-02-18T21:45:20-05:00" />
 <meta itemprop="wordCount" content="590">
 <meta itemprop="keywords" content="" />
@@ -63,6 +63,8 @@ Wireshark uses OSI layers to break down packets.
 <li><a href="/">Home</a></li>
 <li><a href="/posts">All Posts</a></li>
 <li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
 </ul>
 </nav>
 </div>
@@ -101,23 +103,23 @@ Wireshark uses OSI layers to break down packets.
 <div class="markdown">
 <p><a href="https://www.wireshark.org/docs/" target="_blank">Wireshark</a> is tool used for creating and analyzing PCAPs(network packet capture files).</p>
 <p>Wireshark uses OSI layers to break down packets.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">7 Layers of the OSI Model
-
-Application  - End User layer
-             - HTTP, FTP, IRC, SSH, DNS
-Presentation - Syntax layer
-             - SSL, SSH, IMAP, FTP, MPEG, JPEG
-Session      - Synch &amp; send to port
-             - API&#39;s, Sockets, WinSock
-Transport    - End-to-end connections
-             - TCP, UDP
-Network      - Packets
-             - IP, ICMP, IPSec, IGMP
-Data Link    - Frames
-             - Ethernet, PPP, Switch, Bridge
-Physical     - Physical structure
-             - Coax, Fiber, Wireless, Hubs, Repeaters
-</code></pre></div><p><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>7 Layers of the OSI Model
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Application  - End User layer
+</span></span><span style="display:flex;"><span>             - HTTP, FTP, IRC, SSH, DNS
+</span></span><span style="display:flex;"><span>Presentation - Syntax layer
+</span></span><span style="display:flex;"><span>             - SSL, SSH, IMAP, FTP, MPEG, JPEG
+</span></span><span style="display:flex;"><span>Session      - Synch &amp; send to port
+</span></span><span style="display:flex;"><span>             - API&#39;s, Sockets, WinSock
+</span></span><span style="display:flex;"><span>Transport    - End-to-end connections
+</span></span><span style="display:flex;"><span>             - TCP, UDP
+</span></span><span style="display:flex;"><span>Network      - Packets
+</span></span><span style="display:flex;"><span>             - IP, ICMP, IPSec, IGMP
+</span></span><span style="display:flex;"><span>Data Link    - Frames
+</span></span><span style="display:flex;"><span>             - Ethernet, PPP, Switch, Bridge
+</span></span><span style="display:flex;"><span>Physical     - Physical structure
+</span></span><span style="display:flex;"><span>             - Coax, Fiber, Wireless, Hubs, Repeaters
+</span></span></code></pre></div><p><figure>
   <img src="/img/wireshark/packet_details.png" alt="packet details"  />
 </figure></p>
 <p>Packet Details (e.g. HTTP)</p>
@@ -149,8 +151,8 @@ Physical     - Physical structure
 </figure></p>
 <p>ps:
 filter by mac address</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">eth.src == [mac address]
-</code></pre></div><h1 id="icmp">ICMP</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>eth.src == [mac address]
+</span></span></code></pre></div><h1 id="icmp">ICMP</h1>
 <p>ICMP(Internet Control Message Protocol) is used analyze various nodes on a network. A ping would have a request and a reply.</p>
 <p>Packet details:</p>
 <ul>

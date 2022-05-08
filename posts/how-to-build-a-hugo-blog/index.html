@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>How to Build a Hugo Blog | Yuchen blog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.98.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content=" This tutorial is for mac users.
  Here we have three easy steps: Install it, Build locally, and Put it on Github.
@@ -75,6 +75,8 @@ git --version STEP 1 - Build the blog locally Before make it public, we need to 
 <li><a href="/">Home</a></li>
 <li><a href="/posts">All Posts</a></li>
 <li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
 </ul>
 </nav>
 </div>
@@ -123,19 +125,19 @@ git --version STEP 1 - Build the blog locally Before make it public, we need to 
 </ul>
 <h2 id="install-hugo">Install Hugo</h2>
 <p>Type this in your terminal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">brew install hugo
-</code></pre></div><p>Check if it&rsquo;s installed successfully.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo version
-</code></pre></div><h2 id="install-git">Install Git</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p>Check if it&rsquo;s installed successfully.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h2 id="install-git">Install Git</h2>
 <p>If you&rsquo;ve installed it, it&rsquo;ll show your version. Otherwise, it&rsquo;ll install it for you ;)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git --version
-</code></pre></div><h1 id="step-1---build-the-blog-locally">STEP 1 - Build the blog locally</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><h1 id="step-1---build-the-blog-locally">STEP 1 - Build the blog locally</h1>
 <p>Before make it public, we need to modify it.</p>
 <h2 id="create-our-blog">Create our blog</h2>
 <p>Go to the directory where you wanna store your website. I stored it on the home directory.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd ~
-hugo new site [what-ever-you-want]
-</code></pre></div><p>And a folder will appear.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd ~
+</span></span><span style="display:flex;"><span>hugo new site [what-ever-you-want]
+</span></span></code></pre></div><p>And a folder will appear.</p>
 <h3 id="so-what-are-those-files-for">So, what are those files for?</h3>
 <ul>
 <li>config.toml: we modify this configuration file to make our website fancy.</li>
@@ -148,47 +150,47 @@ hugo new site [what-ever-you-want]
 <h2 id="choose-a-theme">Choose a theme</h2>
 <p>Go to the official website <a href="https://themes.gohugo.io/" target="_blank">Hugo themes</a> and pick one.</p>
 <p>Then go back to your blog directory and clone your theme in to the themes folder.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd Blog
-cd themes
-git clone https://github.com/dataCobra/hugo-vitae.git
-</code></pre></div><h2 id="use-your-theme">Use your theme</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd Blog
+</span></span><span style="display:flex;"><span>cd themes
+</span></span><span style="display:flex;"><span>git clone https://github.com/dataCobra/hugo-vitae.git
+</span></span></code></pre></div><h2 id="use-your-theme">Use your theme</h2>
 <p>Go to your blog directory and modify <strong>config.toml</strong>.
 Check this <a href="https://github.com/dataCobra/hugo-vitae/blob/main/examples/config.toml" target="_blank">example config</a>.
 You probably need some time to make your own copy of it.</p>
 <h2 id="create-a-blog">Create a blog</h2>
 <p>Let&rsquo;s create a about page.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd Blog
-hugo new about.md
-</code></pre></div><p>Then, a new file created in the content folder.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd Blog
+</span></span><span style="display:flex;"><span>hugo new about.md
+</span></span></code></pre></div><p>Then, a new file created in the content folder.
 Edit the file, delete the line &ldquo;draft=true&rdquo; and add some content to it.
 It&rsquo;ll appear on the <code>http://localhost:1313/about</code>.</p>
 <p>Let&rsquo;s create a blog post.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd Blog
-hugo new posts/first-blog.md
-</code></pre></div><p>According to the config.toml, files in <strong>posts</strong> folder will appear on home page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd Blog
+</span></span><span style="display:flex;"><span>hugo new posts/first-blog.md
+</span></span></code></pre></div><p>According to the config.toml, files in <strong>posts</strong> folder will appear on home page.</p>
 <h2 id="make-it-work">Make it work</h2>
 <p>In terminal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd Blog
-hugo server
-</code></pre></div><p>Go to <a href="http://localhost:1313/" target="_blank">http://localhost:1313/</a> in your web browser.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd Blog
+</span></span><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>Go to <a href="http://localhost:1313/" target="_blank">http://localhost:1313/</a> in your web browser.
 You&rsquo;ll see the page.</p>
 <h1 id="step-2---put-it-on-github">STEP 2 - Put it on Github</h1>
 <p>Github provides free personal page which is awesome.
 Go to the <strong>public</strong> folder.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd Blog
-hugo
-cd public
-</code></pre></div><h2 id="create-a-github-repository">Create a Github Repository</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd Blog
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>cd public
+</span></span></code></pre></div><h2 id="create-a-github-repository">Create a Github Repository</h2>
 <p>Create a new repository and name it <code>[your-username].github.io</code>. After pushing your stuff on it, it&rsquo;ll automatically become a public website, trust me;)</p>
 <h2 id="commit">Commit</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd Blog
-cd public
-git init
-git add .
-git remote add origin https://github.com/[username]/[username].gitbhub.io.git
-git commit -m &#34;first commit&#34;
-git push origin main
-</code></pre></div><p>After a while, your brand new blog will be online! That&rsquo;ll be on <code>https://[username].github.io/</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd Blog
+</span></span><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/[username]/[username].gitbhub.io.git
+</span></span><span style="display:flex;"><span>git commit -m &#34;first commit&#34;
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>After a while, your brand new blog will be online! That&rsquo;ll be on <code>https://[username].github.io/</code></p>
 <p>Congrats!</p>
 <p>ref:</p>
 <ul>
