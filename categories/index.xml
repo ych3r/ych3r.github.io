@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Categories on Yuchen blog</title>
+		<title>Categories on Yuchen Blog</title>
 		<link>https://ych3r.github.io/categories/</link>
 		<description>Recent content in Categories on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sat, 21 May 2022 13:02:40 -0400</lastBuildDate>
+		<lastBuildDate>Sun, 22 May 2022 17:37:30 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>etc</title>
+			<link>https://ych3r.github.io/categories/etc/</link>
+			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
+			<guid>https://ych3r.github.io/categories/etc/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>projects</title>
 			<link>https://ych3r.github.io/categories/projects/</link>
@@ -32,15 +41,6 @@
 			<link>https://ych3r.github.io/categories/netsec/</link>
 			<pubDate>Fri, 18 Feb 2022 21:45:20 -0500</pubDate>
 			<guid>https://ych3r.github.io/categories/netsec/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>etc</title>
-			<link>https://ych3r.github.io/categories/etc/</link>
-			<pubDate>Sat, 12 Feb 2022 21:51:31 -0500</pubDate>
-			<guid>https://ych3r.github.io/categories/etc/</guid>
 			<description>
 			
 			</description>

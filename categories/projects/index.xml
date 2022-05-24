@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>projects on Yuchen blog</title>
+		<title>projects on Yuchen Blog</title>
 		<link>https://ych3r.github.io/categories/projects/</link>
 		<description>Recent content in projects on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -16,9 +16,9 @@
 			<guid>https://ych3r.github.io/posts/auto-birthday-wisher/</guid>
 			<description>
 			Objectives: Send email using python code.
-Libraries: smtplib, datetime
+Libraries: smtplib, datetime, pandas
 Code: Automated Birthday Wisher
- How email works? For example, we …
+ How email works? For …
 			</description>
 		</item>
 	</channel>

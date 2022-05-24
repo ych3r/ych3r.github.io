@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Tags on Yuchen blog</title>
+		<title>Tags on Yuchen Blog</title>
 		<link>https://ych3r.github.io/tags/</link>
 		<description>Recent content in Tags on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sat, 21 May 2022 13:02:40 -0400</lastBuildDate>
+		<lastBuildDate>Sun, 22 May 2022 17:37:30 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
 		<item>
-			<title>auto</title>
-			<link>https://ych3r.github.io/tags/auto/</link>
-			<pubDate>Sat, 21 May 2022 13:02:40 -0400</pubDate>
-			<guid>https://ych3r.github.io/tags/auto/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>birthday</title>
-			<link>https://ych3r.github.io/tags/birthday/</link>
-			<pubDate>Sat, 21 May 2022 13:02:40 -0400</pubDate>
-			<guid>https://ych3r.github.io/tags/birthday/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>email</title>
-			<link>https://ych3r.github.io/tags/email/</link>
-			<pubDate>Sat, 21 May 2022 13:02:40 -0400</pubDate>
-			<guid>https://ych3r.github.io/tags/email/</guid>
+			<title>being lazy</title>
+			<link>https://ych3r.github.io/tags/being-lazy/</link>
+			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/being-lazy/</guid>
 			<description>
 			
 			</description>
