@@ -2,25 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ych3r.github.io/tags/being-lazy/</loc>
-    <lastmod>2022-05-22T17:37:30-04:00</lastmod>
-  </url><url>
     <loc>https://ych3r.github.io/categories/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/posts/htb-redeemer/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/posts/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/redis/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/categories/writeups/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/</loc>
+    <lastmod>2022-05-29T11:39:54-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/being-lazy/</loc>
     <lastmod>2022-05-22T17:37:30-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/categories/etc/</loc>
     <lastmod>2022-05-22T17:37:30-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/</loc>
-    <lastmod>2022-05-22T17:37:30-04:00</lastmod>
-  </url><url>
     <loc>https://ych3r.github.io/posts/ssh-login-without-password/</loc>
-    <lastmod>2022-05-22T17:37:30-04:00</lastmod>
-  </url><url>
-    <loc>https://ych3r.github.io/tags/</loc>
-    <lastmod>2022-05-22T17:37:30-04:00</lastmod>
-  </url><url>
-    <loc>https://ych3r.github.io/</loc>
     <lastmod>2022-05-22T17:37:30-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/being-bored/</loc>
@@ -39,9 +48,6 @@
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/smb/</loc>
-    <lastmod>2022-03-12T21:15:07-05:00</lastmod>
-  </url><url>
-    <loc>https://ych3r.github.io/categories/writeups/</loc>
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/ftp/</loc>

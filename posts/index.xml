@@ -7,8 +7,19 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sun, 22 May 2022 17:37:30 -0400</lastBuildDate>
+		<lastBuildDate>Sun, 29 May 2022 11:39:54 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Redeemer</title>
+			<link>https://ych3r.github.io/posts/htb-redeemer/</link>
+			<pubDate>Sun, 29 May 2022 11:39:54 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-redeemer/</guid>
+			<description>
+			This box is about redis.
+Redis is an open source, in-memory data structure store, used as a database, cache, and message broker.
+In-memory …
+			</description>
+		</item>
 		<item>
 			<title>SSH Login Without Password</title>
 			<link>https://ych3r.github.io/posts/ssh-login-without-password/</link>

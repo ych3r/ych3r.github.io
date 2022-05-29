@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sun, 22 May 2022 17:37:30 -0400</lastBuildDate>
+		<lastBuildDate>Sun, 29 May 2022 11:39:54 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>writeups</title>
+			<link>https://ych3r.github.io/categories/writeups/</link>
+			<pubDate>Sun, 29 May 2022 11:39:54 -0400</pubDate>
+			<guid>https://ych3r.github.io/categories/writeups/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>etc</title>
 			<link>https://ych3r.github.io/categories/etc/</link>
@@ -23,15 +32,6 @@
 			<link>https://ych3r.github.io/categories/projects/</link>
 			<pubDate>Sun, 22 May 2022 17:06:21 -0400</pubDate>
 			<guid>https://ych3r.github.io/categories/projects/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>writeups</title>
-			<link>https://ych3r.github.io/categories/writeups/</link>
-			<pubDate>Sat, 12 Mar 2022 21:15:07 -0500</pubDate>
-			<guid>https://ych3r.github.io/categories/writeups/</guid>
 			<description>
 			
 			</description>
