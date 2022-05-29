@@ -7,8 +7,18 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sun, 29 May 2022 11:39:54 -0400</lastBuildDate>
+		<lastBuildDate>Sun, 29 May 2022 19:00:51 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Appointment</title>
+			<link>https://ych3r.github.io/posts/htb-appointment/</link>
+			<pubDate>Sun, 29 May 2022 19:00:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-appointment/</guid>
+			<description>
+			This box is about sql injection.
+┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 …
+			</description>
+		</item>
 		<item>
 			<title>HTB-Redeemer</title>
 			<link>https://ych3r.github.io/posts/htb-redeemer/</link>
