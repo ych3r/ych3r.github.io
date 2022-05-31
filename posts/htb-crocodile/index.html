@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTB-Crocodile | Yuchen Blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.99.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="FTP">
+<meta name="description" content="This box is about “FTP”.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:15 EDT Nmap …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="HTB-Crocodile" />
+<meta property="og:description" content="This box is about &ldquo;FTP&rdquo;.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:15 EDT Nmap scan report for 10.129.89.19 Host is up (0.017s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 | ftp-anon: Anonymous FTP login allowed (FTP code 230) | -rw-r--r-- 1 ftp ftp 33 Jun 08 2021 allowed.userlist |_-rw-r--r-- 1 ftp ftp 62 Apr 20 2021 allowed." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/posts/htb-crocodile/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-31T16:43:38-04:00" />
+<meta property="article:modified_time" content="2022-05-31T16:43:38-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTB-Crocodile"/>
+<meta name="twitter:description" content="This box is about &ldquo;FTP&rdquo;.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:15 EDT Nmap scan report for 10.129.89.19 Host is up (0.017s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 | ftp-anon: Anonymous FTP login allowed (FTP code 230) | -rw-r--r-- 1 ftp ftp 33 Jun 08 2021 allowed.userlist |_-rw-r--r-- 1 ftp ftp 62 Apr 20 2021 allowed."/>
+
+<meta itemprop="name" content="HTB-Crocodile">
+<meta itemprop="description" content="This box is about &ldquo;FTP&rdquo;.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:15 EDT Nmap scan report for 10.129.89.19 Host is up (0.017s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 | ftp-anon: Anonymous FTP login allowed (FTP code 230) | -rw-r--r-- 1 ftp ftp 33 Jun 08 2021 allowed.userlist |_-rw-r--r-- 1 ftp ftp 62 Apr 20 2021 allowed."><meta itemprop="datePublished" content="2022-05-31T16:43:38-04:00" />
+<meta itemprop="dateModified" content="2022-05-31T16:43:38-04:00" />
+<meta itemprop="wordCount" content="536">
+<meta itemprop="keywords" content="FTP," />
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="titleonly"><a href="https://ych3r.github.io/">Yuchen Blog</a></h2>
+</div>
+<div id="title-social">
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">31</span>
+<span class="rest">May 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">HTB-Crocodile</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;536&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This box is about &ldquo;FTP&rdquo;.</p>
+<h3 id="scan">Scan</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -sC -sV 10.129.89.19  
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2022-05-31 16:15 EDT
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.129.89.19
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.017s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">998</span> closed tcp ports <span style="color:#f92672">(</span>conn-refused<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>21/tcp open  ftp     vsftpd 3.0.3
+</span></span><span style="display:flex;"><span>| ftp-anon: Anonymous FTP login allowed <span style="color:#f92672">(</span>FTP code 230<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| -rw-r--r--    <span style="color:#ae81ff">1</span> ftp      ftp            <span style="color:#ae81ff">33</span> Jun <span style="color:#ae81ff">08</span>  <span style="color:#ae81ff">2021</span> allowed.userlist
+</span></span><span style="display:flex;"><span>|_-rw-r--r--    <span style="color:#ae81ff">1</span> ftp      ftp            <span style="color:#ae81ff">62</span> Apr <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2021</span> 
+</span></span><span style="display:flex;"><span>allowed.userlist.passwd
+</span></span><span style="display:flex;"><span>| ftp-syst: 
+</span></span><span style="display:flex;"><span>|   STAT: 
+</span></span><span style="display:flex;"><span>| FTP server status:
+</span></span><span style="display:flex;"><span>|      Connected to ::ffff:10.10.15.233
+</span></span><span style="display:flex;"><span>|      Logged in as ftp
+</span></span><span style="display:flex;"><span>|      TYPE: ASCII
+</span></span><span style="display:flex;"><span>|      No session bandwidth limit
+</span></span><span style="display:flex;"><span>|      Session timeout in seconds is <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>|      Control connection is plain text
+</span></span><span style="display:flex;"><span>|      Data connections will be plain text
+</span></span><span style="display:flex;"><span>|      At session startup, client count was <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>|      vsFTPd 3.0.3 - secure, fast, stable
+</span></span><span style="display:flex;"><span>|_End of status
+</span></span><span style="display:flex;"><span>80/tcp open  http    Apache httpd 2.4.41 <span style="color:#f92672">((</span>Ubuntu<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>|_http-title: Smash - Bootstrap Business Template
+</span></span><span style="display:flex;"><span>|_http-server-header: Apache/2.4.41 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Service Info: OS: Unix
+</span></span></code></pre></div><h3 id="enumerate-ftp">Enumerate FTP</h3>
+<blockquote>
+<p>The File Transfer Protocol (FTP) is a standard communication protocol
+used to transfer
+computer files from a server to a client on a computer network. FTP users
+may
+authenticate themselves with a clear-text sign-in protocol, generally
+using a username
+and password. However, they can connect anonymously if the server is
+configured to
+allow it.</p>
+</blockquote>
+<p>Users can connect to the FTP server using &ldquo;anonymous&rdquo; account without
+password. Notice <code>ftp-anon: Anonymous FTP login allowed (FTP code  230)</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ ftp 10.129.89.19
+</span></span><span style="display:flex;"><span>Connected to 10.129.89.19.
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">220</span> <span style="color:#f92672">(</span>vsFTPd 3.0.3<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Name <span style="color:#f92672">(</span>10.129.89.19:kali<span style="color:#f92672">)</span>: anonymous
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">230</span> Login successful.
+</span></span><span style="display:flex;"><span>Remote system type is UNIX.
+</span></span><span style="display:flex;"><span>Using binary mode to transfer files.
+</span></span><span style="display:flex;"><span>ftp&gt; ls
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">229</span> Entering Extended Passive Mode <span style="color:#f92672">(||</span>|40679|<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">150</span> Here comes the directory listing.
+</span></span><span style="display:flex;"><span>-rw-r--r--    <span style="color:#ae81ff">1</span> ftp      ftp            <span style="color:#ae81ff">33</span> Jun <span style="color:#ae81ff">08</span>  <span style="color:#ae81ff">2021</span> allowed.userlist
+</span></span><span style="display:flex;"><span>-rw-r--r--    <span style="color:#ae81ff">1</span> ftp      ftp            <span style="color:#ae81ff">62</span> Apr <span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">2021</span> 
+</span></span><span style="display:flex;"><span>allowed.userlist.passwd
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">226</span> Directory send OK.
+</span></span><span style="display:flex;"><span>ftp&gt; get allowed.userlist
+</span></span><span style="display:flex;"><span>local: allowed.userlist remote: allowed.userlist
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">229</span> Entering Extended Passive Mode <span style="color:#f92672">(||</span>|48500|<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">150</span> Opening BINARY mode data connection <span style="color:#66d9ef">for</span> allowed.userlist <span style="color:#f92672">(</span><span style="color:#ae81ff">33</span> bytes<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>100% 
+</span></span><span style="display:flex;"><span>|***********************************************************************|    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">33</span>       36.12 KiB/s    00:00 ETA
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">226</span> Transfer complete.
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">33</span> bytes received in 00:00 <span style="color:#f92672">(</span>1.78 KiB/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>ftp&gt; get a
+</span></span><span style="display:flex;"><span>allowed.userlist        allowed.userlist.passwd
+</span></span><span style="display:flex;"><span>ftp&gt; get allowed.userlist.passwd
+</span></span><span style="display:flex;"><span>local: allowed.userlist.passwd remote: allowed.userlist.passwd
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">229</span> Entering Extended Passive Mode <span style="color:#f92672">(||</span>|46198|<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">150</span> Opening BINARY mode data connection <span style="color:#66d9ef">for</span> allowed.userlist.passwd <span style="color:#f92672">(</span><span style="color:#ae81ff">62</span> 
+</span></span><span style="display:flex;"><span>bytes<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>100% 
+</span></span><span style="display:flex;"><span>|***********************************************************************|    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">62</span>      992.57 KiB/s    00:00 ETA
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">226</span> Transfer complete.
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">62</span> bytes received in 00:00 <span style="color:#f92672">(</span>3.46 KiB/s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ cat allowed.userlist
+</span></span><span style="display:flex;"><span>aron
+</span></span><span style="display:flex;"><span>pwnmeow
+</span></span><span style="display:flex;"><span>egotisticalsw
+</span></span><span style="display:flex;"><span>admin
+</span></span><span style="display:flex;"><span>                                                                                                                    
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ cat allowed.userlist.passwd   
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>Supersecretpassword1
+</span></span><span style="display:flex;"><span>@BaASD&amp;9032123sADS
+</span></span><span style="display:flex;"><span>rKXM59ESxesUFHAd
+</span></span></code></pre></div><h3 id="enumerate-web-app">Enumerate Web App</h3>
+<p>Btw, <strong>Wappalyzer</strong> is a really good plug-in for browser. We can learn
+about the tech used on that website.</p>
+<p>Base on that, we could even update our command below with <code>-x php,  html</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ gobuster dir -w 
+</span></span><span style="display:flex;"><span>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 
+</span></span><span style="display:flex;"><span>10.129.89.19
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>Gobuster v3.1.0
+</span></span><span style="display:flex;"><span>by OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span> &amp; Christian Mehlmauer <span style="color:#f92672">(</span>@firefart<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Url:                     http://10.129.89.19
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Method:                  GET
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Threads:                 <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Wordlist:                
+</span></span><span style="display:flex;"><span>/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Negative Status codes:   <span style="color:#ae81ff">404</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> User Agent:              gobuster/3.1.0
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Timeout:                 10s
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>2022/05/31 16:26:19 Starting gobuster in directory enumeration mode
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============================================================</span>
+</span></span><span style="display:flex;"><span>/assets               <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 313<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; 
+</span></span><span style="display:flex;"><span>http://10.129.89.19/assets/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/css                  <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 310<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; 
+</span></span><span style="display:flex;"><span>http://10.129.89.19/css/<span style="color:#f92672">]</span>   
+</span></span><span style="display:flex;"><span>/js                   <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 309<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; 
+</span></span><span style="display:flex;"><span>http://10.129.89.19/js/<span style="color:#f92672">]</span>    
+</span></span><span style="display:flex;"><span>/fonts                <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 312<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; 
+</span></span><span style="display:flex;"><span>http://10.129.89.19/fonts/<span style="color:#f92672">]</span> 
+</span></span><span style="display:flex;"><span>/dashboard            <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 316<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; 
+</span></span><span style="display:flex;"><span>http://10.129.89.19/dashboard/<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Go to /dashboard, it redirects to login page.</p>
+<p><figure>
+  <img src="/img/htb/crocodile/login.png" alt="login page"  />
+</figure></p>
+<p>login with <code>admin:rKXM59ESxesUFHAd</code></p>
+<p><figure>
+  <img src="/img/htb/crocodile/flag.png" alt="flag page"  />
+</figure></p>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/writeups/">writeups</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/ftp/">ftp</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>
