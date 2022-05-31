@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sun, 29 May 2022 19:00:51 -0400</lastBuildDate>
+		<lastBuildDate>Tue, 31 May 2022 15:08:13 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>MariaDB</title>
+			<link>https://ych3r.github.io/tags/mariadb/</link>
+			<pubDate>Tue, 31 May 2022 15:08:13 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/mariadb/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>weak password</title>
+			<link>https://ych3r.github.io/tags/weak-password/</link>
+			<pubDate>Tue, 31 May 2022 15:08:13 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/weak-password/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>sqli</title>
 			<link>https://ych3r.github.io/tags/sqli/</link>

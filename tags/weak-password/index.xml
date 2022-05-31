@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>weak password on Yuchen Blog</title>
+		<link>https://ych3r.github.io/tags/weak-password/</link>
+		<description>Recent content in weak password on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Tue, 31 May 2022 15:08:13 -0400</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/tags/weak-password/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Sequel</title>
+			<link>https://ych3r.github.io/posts/htb-sequel/</link>
+			<pubDate>Tue, 31 May 2022 15:08:13 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-sequel/</guid>
+			<description>
+			This box is about “MariaDB” and “weak password”.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( …
+			</description>
+		</item>
+	</channel>
+</rss>

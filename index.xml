@@ -7,16 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sun, 29 May 2022 19:00:51 -0400</lastBuildDate>
+		<lastBuildDate>Tue, 31 May 2022 15:08:13 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Sequel</title>
+			<link>https://ych3r.github.io/posts/htb-sequel/</link>
+			<pubDate>Tue, 31 May 2022 15:08:13 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-sequel/</guid>
+			<description>
+			This box is about “MariaDB” and “weak password”.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( …
+			</description>
+		</item>
 		<item>
 			<title>HTB-Appointment</title>
 			<link>https://ych3r.github.io/posts/htb-appointment/</link>
 			<pubDate>Sun, 29 May 2022 19:00:51 -0400</pubDate>
 			<guid>https://ych3r.github.io/posts/htb-appointment/</guid>
 			<description>
-			This box is about sql injection.
-┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 …
+			This box is about “sql injection”.
+┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at …
 			</description>
 		</item>
 		<item>
@@ -25,7 +35,7 @@
 			<pubDate>Sun, 29 May 2022 11:39:54 -0400</pubDate>
 			<guid>https://ych3r.github.io/posts/htb-redeemer/</guid>
 			<description>
-			This box is about redis.
+			This box is about “redis”.
 Redis is an open source, in-memory data structure store, used as a database, cache, and message broker.
 In-memory …
 			</description>

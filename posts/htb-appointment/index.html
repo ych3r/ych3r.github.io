@@ -7,8 +7,8 @@
 <meta name="generator" content="Hugo 0.99.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="sqli">
-<meta name="description" content="This box is about sql injection.
-┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 18:31 EDT Nmap …">
+<meta name="description" content="This box is about “sql injection”.
+┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 18:31 EDT …">
 <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 
 
 <meta property="og:title" content="HTB-Appointment" />
-<meta property="og:description" content="This box is about sql injection.
+<meta property="og:description" content="This box is about &ldquo;sql injection&rdquo;.
 ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 18:31 EDT Nmap scan report for 10.129.103.48 Host is up (0.018s latency). Not shown: 999 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 80/tcp open http Apache httpd 2.4.38 ((Debian)) |_http-server-header: Apache/2.4.38 (Debian) |_http-title: Login Just use &#39; or 1=1 -- -" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ych3r.github.io/posts/htb-appointment/" /><meta property="article:section" content="posts" />
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HTB-Appointment"/>
-<meta name="twitter:description" content="This box is about sql injection.
+<meta name="twitter:description" content="This box is about &ldquo;sql injection&rdquo;.
 ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 18:31 EDT Nmap scan report for 10.129.103.48 Host is up (0.018s latency). Not shown: 999 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 80/tcp open http Apache httpd 2.4.38 ((Debian)) |_http-server-header: Apache/2.4.38 (Debian) |_http-title: Login Just use &#39; or 1=1 -- -"/>
 
 <meta itemprop="name" content="HTB-Appointment">
-<meta itemprop="description" content="This box is about sql injection.
+<meta itemprop="description" content="This box is about &ldquo;sql injection&rdquo;.
 ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-29 18:31 EDT Nmap scan report for 10.129.103.48 Host is up (0.018s latency). Not shown: 999 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 80/tcp open http Apache httpd 2.4.38 ((Debian)) |_http-server-header: Apache/2.4.38 (Debian) |_http-title: Login Just use &#39; or 1=1 -- -"><meta itemprop="datePublished" content="2022-05-29T19:00:51-04:00" />
 <meta itemprop="dateModified" content="2022-05-29T19:00:51-04:00" />
 <meta itemprop="wordCount" content="62">
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 </div>
 </div>
 <div class="markdown">
-<p>This box is about sql injection.</p>
+<p>This box is about &ldquo;sql injection&rdquo;.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
 </span></span><span style="display:flex;"><span>└─$ nmap -sC -sV 10.129.103.48
 </span></span><span style="display:flex;"><span>Starting Nmap 7.92 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2022-05-29 18:31 EDT
