@@ -18,7 +18,7 @@
 			Objectives: Use API to create an ISS tracker.
 Libraries: requests, smtplib, datetime
 Code: ISS Overhead Notifier
- What is API? “Application …
+What is API? “Application …
 			</description>
 		</item>
 		<item>
@@ -30,7 +30,7 @@ Code: ISS Overhead Notifier
 			Objectives: Send email using python code.
 Libraries: smtplib, datetime, pandas
 Code: Automated Birthday Wisher
- How email works? For …
+How email works? For example, …
 			</description>
 		</item>
 	</channel>

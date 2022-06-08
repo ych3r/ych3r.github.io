@@ -7,8 +7,18 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Tue, 31 May 2022 16:43:38 -0400</lastBuildDate>
+		<lastBuildDate>Wed, 08 Jun 2022 17:57:51 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Responder</title>
+			<link>https://ych3r.github.io/posts/htb-responder/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-responder/</guid>
+			<description>
+			This box is about “File Inclusion” and “NTLM”.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be …
+			</description>
+		</item>
 		<item>
 			<title>HTB-Crocodile</title>
 			<link>https://ych3r.github.io/posts/htb-crocodile/</link>
@@ -80,7 +90,7 @@ Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Sta
 			<description>
 			This box is about “configuration mistakes”.
 When there’s a login box, try:
- admin administrator root  Scan ┌──(kali㉿kali)-[~/htb/meow] └─$ …
+admin administrator root Scan ┌──(kali㉿kali)-[~/htb/meow] └─$ …
 			</description>
 		</item>
 	</channel>

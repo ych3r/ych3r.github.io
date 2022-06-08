@@ -7,8 +7,44 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Tue, 31 May 2022 16:43:38 -0400</lastBuildDate>
+		<lastBuildDate>Wed, 08 Jun 2022 17:57:51 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>lfi</title>
+			<link>https://ych3r.github.io/tags/lfi/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/lfi/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>ntlm</title>
+			<link>https://ych3r.github.io/tags/ntlm/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/ntlm/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>rfi</title>
+			<link>https://ych3r.github.io/tags/rfi/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/rfi/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>winrm</title>
+			<link>https://ych3r.github.io/tags/winrm/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/winrm/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>FTP</title>
 			<link>https://ych3r.github.io/tags/ftp/</link>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>rfi on Yuchen Blog</title>
+		<link>https://ych3r.github.io/tags/rfi/</link>
+		<description>Recent content in rfi on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Wed, 08 Jun 2022 17:57:51 -0400</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/tags/rfi/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>HTB-Responder</title>
+			<link>https://ych3r.github.io/posts/htb-responder/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/htb-responder/</guid>
+			<description>
+			This box is about “File Inclusion” and “NTLM”.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be …
+			</description>
+		</item>
+	</channel>
+</rss>

@@ -15,7 +15,7 @@
 			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
 			<guid>https://ych3r.github.io/posts/ssh-login-without-password/</guid>
 			<description>
-			Add remote host to ssh config file $ nano ~/.ssh/config Host remotehost  Hostname <remote host hostname or ip>  Port <remote host ssh port>  HostKeyAlias remotehost  User <your name> Create public and …</your></remote></remote>
+			Add remote host to ssh config file $ nano ~/.ssh/config Host remotehost Hostname <remote host hostname or ip> Port <remote host ssh port> HostKeyAlias remotehost User <your name> Create public and …</your></remote></remote>
 			</description>
 		</item>
 		<item>
@@ -27,7 +27,7 @@
 			Objectives: Send email using python code.
 Libraries: smtplib, datetime, pandas
 Code: Automated Birthday Wisher
- How email works? For …
+How email works? For example, …
 			</description>
 		</item>
 	</channel>

@@ -18,7 +18,7 @@
 			Objectives: Use API to create an ISS tracker.
 Libraries: requests, smtplib, datetime
 Code: ISS Overhead Notifier
- What is API? “Application …
+What is API? “Application …
 			</description>
 		</item>
 	</channel>
