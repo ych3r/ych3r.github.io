@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Wed, 08 Jun 2022 17:57:51 -0400</lastBuildDate>
+		<lastBuildDate>Mon, 27 Jun 2022 12:37:01 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Web Requests</title>
+			<link>https://ych3r.github.io/posts/web_requests/</link>
+			<pubDate>Mon, 27 Jun 2022 12:37:01 -0400</pubDate>
+			<guid>https://ych3r.github.io/posts/web_requests/</guid>
+			<description>
+			HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP …
+			</description>
+		</item>
 		<item>
 			<title>HTB-Responder</title>
 			<link>https://ych3r.github.io/posts/htb-responder/</link>

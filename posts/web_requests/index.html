@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Requests | Yuchen Blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.101.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="HTTP">
+<meta name="description" content="HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP communication …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Web Requests" />
+<meta property="og:description" content="HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP communication consists of a client and a server, where the client requests the server for a resource. The server processes the requests and returns the requested resource. In browser, we enter FQDN(Fully Qualified Domain Name) as a URL(Uniform Resource Locator) to reach the desired website.
+The structure of a URL:
+http://admin:password@example.com:80/dashboard.php?login=true#status Scheme	http:// User Info	admin:password@	This is an optional component." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/posts/web_requests/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-27T12:37:01-04:00" />
+<meta property="article:modified_time" content="2022-06-27T12:37:01-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web Requests"/>
+<meta name="twitter:description" content="HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP communication consists of a client and a server, where the client requests the server for a resource. The server processes the requests and returns the requested resource. In browser, we enter FQDN(Fully Qualified Domain Name) as a URL(Uniform Resource Locator) to reach the desired website.
+The structure of a URL:
+http://admin:password@example.com:80/dashboard.php?login=true#status Scheme	http:// User Info	admin:password@	This is an optional component."/>
+
+<meta itemprop="name" content="Web Requests">
+<meta itemprop="description" content="HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP communication consists of a client and a server, where the client requests the server for a resource. The server processes the requests and returns the requested resource. In browser, we enter FQDN(Fully Qualified Domain Name) as a URL(Uniform Resource Locator) to reach the desired website.
+The structure of a URL:
+http://admin:password@example.com:80/dashboard.php?login=true#status Scheme	http:// User Info	admin:password@	This is an optional component."><meta itemprop="datePublished" content="2022-06-27T12:37:01-04:00" />
+<meta itemprop="dateModified" content="2022-06-27T12:37:01-04:00" />
+<meta itemprop="wordCount" content="699">
+<meta itemprop="keywords" content="HTTP," />
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="titleonly"><a href="https://ych3r.github.io/">Yuchen Blog</a></h2>
+</div>
+<div id="title-social">
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/posts">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">27</span>
+<span class="rest">Jun 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Web Requests</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;699&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h3 id="http-fundamentals">HTTP Fundamentals</h3>
+<p><strong>HTTP</strong>(HyperText Transfer Protocol) is an application-level protocol
+used to access the World Wide Web resources. HTTP communication consists
+of a client and a server, where the client requests the server for a
+resource. The server processes the requests and returns the requested
+resource. In browser, we enter FQDN(Fully Qualified Domain Name) as a
+URL(Uniform Resource Locator) to reach the desired website.</p>
+<p>The structure of a URL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>http://admin:password@example.com:80/dashboard.php?login=true#status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Scheme			http://
+</span></span><span style="display:flex;"><span>User Info		admin:password@		This is an optional 
+</span></span><span style="display:flex;"><span>component.
+</span></span><span style="display:flex;"><span>Host			example.com
+</span></span><span style="display:flex;"><span>Port 			:80
+</span></span><span style="display:flex;"><span>Path			/dashboard.php		If no path specified, 
+</span></span><span style="display:flex;"><span>returns the default index.html page.
+</span></span><span style="display:flex;"><span>Query String	?login=true
+</span></span><span style="display:flex;"><span>Fragments		#status
+</span></span></code></pre></div><p>HTTP Flow:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>User --enters the URL--&gt; Browser 
+</span></span><span style="display:flex;"><span>Browser --sends a request to resolve the domain--&gt; DNS Server
+</span></span><span style="display:flex;"><span>DNS Server --looks up the IP and returns it--&gt; Browser
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Browser --sends a GET request to the default HTTP port, asking for root 
+</span></span><span style="display:flex;"><span>path--&gt; Web Server
+</span></span><span style="display:flex;"><span>Web Server --returns an index file--&gt; Browser
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// Our browser usually first look up records in the local &#39;/etc/hosts&#39; 
+</span></span><span style="display:flex;"><span>file before contact other DNS servers.
+</span></span></code></pre></div><p>One significant drawbacks of HTTP is that all data is transferred in
+clear-text. So, MitM huh?</p>
+<p><strong>HTTPS</strong>(HTTP Secure) makes all communications are transferred in an
+encrypted format. (Use wireshark to see the difference)</p>
+<p>HTTPS Flow:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>User --enters the URL--&gt; Browser
+</span></span><span style="display:flex;"><span>Browser --sends HTTP request--&gt; Web Server
+</span></span><span style="display:flex;"><span>Web Server --redirects to HTTPS--&gt; Browser
+</span></span><span style="display:flex;"><span>Browser --sends Client Hello with info--&gt; Web Server
+</span></span><span style="display:flex;"><span>Web Server --sends Server Hello and Server Key--&gt; Browser
+</span></span><span style="display:flex;"><span>Browser --verifies the key and sends Client Key(Encrypted Handshake)--&gt; 
+</span></span><span style="display:flex;"><span>Web Server
+</span></span><span style="display:flex;"><span>Web Server --sends back Encrypted Handshake--&gt; Browser
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>--HTTP communication is continued--
+</span></span></code></pre></div><p>HTTP communications mainly consist of <strong>HTTP Requests &amp; Responses</strong>.</p>
+<p>The structure of a HTTP Request:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Method 	GET
+</span></span><span style="display:flex;"><span>Path 	/users/login.html
+</span></span><span style="display:flex;"><span>Version	HTTP/1.1
+</span></span><span style="display:flex;"><span>Headers	Host, User-Agent, Cookie, etc
+</span></span></code></pre></div><p>The structure of a HTTP Response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Version			HTTP/1.1
+</span></span><span style="display:flex;"><span>Response code 	200 OK
+</span></span><span style="display:flex;"><span>Headers			similar to request
+</span></span><span style="display:flex;"><span>Body			HTML code, JSON, etc
+</span></span></code></pre></div><p><strong>HTTP Headers</strong> pass information between the client and the server.</p>
+<p>There&rsquo;re different kinds of headers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>- General Headers
+</span></span><span style="display:flex;"><span>	- Date: date and time at which the message originated
+</span></span><span style="display:flex;"><span>	- Connection: &#39;close&#39; or &#39;keep-alive&#39;
+</span></span><span style="display:flex;"><span>- Entity Headers
+</span></span><span style="display:flex;"><span>	- Content-Type: type of resource being transferred
+</span></span><span style="display:flex;"><span>	- Media-Type: similar to Content-Type
+</span></span><span style="display:flex;"><span>	- Boundary: a maker to separate content
+</span></span><span style="display:flex;"><span>	- Content-Length: size of the entity being passed
+</span></span><span style="display:flex;"><span>	- Content-Encoding: transformations before being passed
+</span></span><span style="display:flex;"><span>- Request Headers
+</span></span><span style="display:flex;"><span>	- Host: the host being queried for the resource
+</span></span><span style="display:flex;"><span>	- User-Agent: the client requesting resources
+</span></span><span style="display:flex;"><span>	- Referer: where the current request is coming from
+</span></span><span style="display:flex;"><span>	- Accept: with media types the client can understand
+</span></span><span style="display:flex;"><span>	- Cookie: cookie-value pairs
+</span></span><span style="display:flex;"><span>	- Authorization: method for the server to identify clients
+</span></span><span style="display:flex;"><span>- Response Headers
+</span></span><span style="display:flex;"><span>	- Server: info about the HTTP server
+</span></span><span style="display:flex;"><span>	- Set-Cookie: the cookies needed for client identification
+</span></span><span style="display:flex;"><span>	- WWW-Authenticate: the type of authentication required
+</span></span><span style="display:flex;"><span>- Security Headers
+</span></span><span style="display:flex;"><span>	- Content-Security-Policy: the website&#39;s policy towards externally 
+</span></span><span style="display:flex;"><span>injected resources
+</span></span><span style="display:flex;"><span>	- Strict-Transport-Security: forces all communication to be 
+</span></span><span style="display:flex;"><span>carried over HTTPS
+</span></span><span style="display:flex;"><span>	- Referrer-Policy: should include referer header or not
+</span></span></code></pre></div><hr>
+<h3 id="http-methods">HTTP Methods</h3>
+<p><strong>Request Methods</strong></p>
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>HEAD</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>OPTIONS</li>
+<li>PATCH</li>
+</ul>
+<p><strong>Response Codes</strong></p>
+<ul>
+<li>1xx	Provides info and does not affect the processing of the request</li>
+<li>2xx	Returned when a request succeeds</li>
+<li>3xx	Returned when the server redirects the client</li>
+<li>4xx	Signifies improper requests from the client</li>
+<li>5xx	Returned when there is some problem with the HTTP server itself</li>
+</ul>
+<p>Whenever we visit any URL, browsers default to a <strong>GET</strong> request to obtain
+the remote resources hosted at that URL.</p>
+<p>Basic Auth</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ curl -u admin:password http://example.com:80/
+</span></span><span style="display:flex;"><span>$ curl http://admin:password@example.com:80/
+</span></span><span style="display:flex;"><span>// use curl -v &lt;target&gt; to check the header
+</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#e6db74">&#39;Authorization: Basic &lt;base64 encoded admin:password&gt;&#39;</span> 
+</span></span><span style="display:flex;"><span>http://example.com:80/
+</span></span></code></pre></div><p>Whenever web applications need to transfer files or move the user
+parameters from the URL, they utilize <strong>POST</strong> requests.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ curl -X POST -d <span style="color:#e6db74">&#39;username=admin&amp;password=password&#39;</span> 
+</span></span><span style="display:flex;"><span>http://example.com:80/
+</span></span><span style="display:flex;"><span>// use -i to view the response, it should contain Set-Cookie header
+</span></span><span style="display:flex;"><span>$ curl -b <span style="color:#e6db74">&#39;PHPSESSID=&lt;cookie&gt;&#39;</span> http://example.com:80/
+</span></span><span style="display:flex;"><span>$ curl -H <span style="color:#e6db74">&#39;Cookie: PHPSESSID=&lt;cookie&gt;&#39;</span> http://example.com:80/
+</span></span><span style="display:flex;"><span>// send JSON data
+</span></span><span style="display:flex;"><span>$ curl -X POST -d <span style="color:#e6db74">&#39;{&#34;search&#34;:&#34;london&#34;}&#39;</span> -b <span style="color:#e6db74">&#39;PHPSESSID=&lt;cookie&gt;&#39;</span> -H 
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> http://example.com:80/search.php
+</span></span></code></pre></div><p>We can use <strong>CRUD API</strong> to perform operations.</p>
+<ul>
+<li>Create	POST</li>
+<li>Read		GET</li>
+<li>Update	PUT</li>
+<li>Delete	DELETE</li>
+</ul>
+<p>examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ curl -X POST http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/ -d 
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;{&#34;city_name&#34;:&#34;HTB_City&#34;, &#34;country_name&#34;:&#34;HTB&#34;}&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">application/json&#39;</span>
+</span></span><span style="display:flex;"><span>$ curl -s http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/HTB_City | jq
+</span></span><span style="display:flex;"><span>$ curl -X PUT http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/london -d 
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;{&#34;city_name&#34;:&#34;New_HTB_City&#34;, &#34;country_name&#34;:&#34;HTB&#34;}&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">application/json&#39;</span>
+</span></span><span style="display:flex;"><span>$ curl -X DELETE http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/New_HTB_City
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/bug-bounty/">bug-bounty</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/http/">http</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

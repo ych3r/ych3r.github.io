@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ych3r.github.io/categories/bug-bounty/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
     <loc>https://ych3r.github.io/categories/</loc>
-    <lastmod>2022-06-08T17:57:51-04:00</lastmod>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/http/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/posts/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/posts/web_requests/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/posts/htb-responder/</loc>
     <lastmod>2022-06-08T17:57:51-04:00</lastmod>
@@ -14,22 +32,13 @@
     <loc>https://ych3r.github.io/tags/ntlm/</loc>
     <lastmod>2022-06-08T17:57:51-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/</loc>
-    <lastmod>2022-06-08T17:57:51-04:00</lastmod>
-  </url><url>
     <loc>https://ych3r.github.io/tags/rfi/</loc>
-    <lastmod>2022-06-08T17:57:51-04:00</lastmod>
-  </url><url>
-    <loc>https://ych3r.github.io/tags/</loc>
     <lastmod>2022-06-08T17:57:51-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/winrm/</loc>
     <lastmod>2022-06-08T17:57:51-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/categories/writeups/</loc>
-    <lastmod>2022-06-08T17:57:51-04:00</lastmod>
-  </url><url>
-    <loc>https://ych3r.github.io/</loc>
     <lastmod>2022-06-08T17:57:51-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/ftp/</loc>
