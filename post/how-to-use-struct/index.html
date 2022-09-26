@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>How to Use Struct | Yuchen&#39;s Tech blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="struct">
+<meta name="description" content="The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is used mostly …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="How to Use Struct" />
+<meta property="og:description" content="The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is used mostly for handling binary data stored in files or from network connections, among other sources.
+import struct pack() &amp; unpack() h: short l: long i: int ?: bool q: long long int f: float b: binary struct.pack takes non-bytes values and converts them into bytes. In contrast, struct." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/post/how-to-use-struct/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-02-17T16:07:19-05:00" />
+<meta property="article:modified_time" content="2022-02-17T16:07:19-05:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Use Struct"/>
+<meta name="twitter:description" content="The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is used mostly for handling binary data stored in files or from network connections, among other sources.
+import struct pack() &amp; unpack() h: short l: long i: int ?: bool q: long long int f: float b: binary struct.pack takes non-bytes values and converts them into bytes. In contrast, struct."/>
+
+<meta itemprop="name" content="How to Use Struct">
+<meta itemprop="description" content="The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is used mostly for handling binary data stored in files or from network connections, among other sources.
+import struct pack() &amp; unpack() h: short l: long i: int ?: bool q: long long int f: float b: binary struct.pack takes non-bytes values and converts them into bytes. In contrast, struct."><meta itemprop="datePublished" content="2022-02-17T16:07:19-05:00" />
+<meta itemprop="dateModified" content="2022-02-17T16:07:19-05:00" />
+<meta itemprop="wordCount" content="267">
+<meta itemprop="keywords" content="struct," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://ych3r.github.io/"><img src="/img/coder.png" alt="Yuchen&#39;s Tech blog"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://ych3r.github.io/">Yuchen&#39;s Tech blog</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Let&rsquo;s learn something new!</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/post">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">17</span>
+<span class="rest">Feb 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">How to Use Struct</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;267&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>The <a href="https://docs.python.org/3/library/struct.html" target="_blank">struct</a> module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is used mostly for handling binary data stored in files or from network connections, among other sources.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> struct
+</span></span></code></pre></div><h3 id="pack--unpack">pack() &amp; unpack()</h3>
+<ul>
+<li>h: short</li>
+<li>l: long</li>
+<li>i: int</li>
+<li>?: bool</li>
+<li>q: long long int</li>
+<li>f: float</li>
+<li>b: binary</li>
+</ul>
+<p><strong>struct.pack</strong> takes non-bytes values and converts them into bytes. In contrast, <strong>struct.unpack</strong> takes bytes and converts them into higher-order equivalents.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;hli?qf&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#66d9ef">True</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6.7</span>)
+</span></span><span style="display:flex;"><span>print(var)
+</span></span><span style="display:flex;"><span>tup <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>unpack(<span style="color:#e6db74">&#39;hli?qf&#39;</span>, var)
+</span></span><span style="display:flex;"><span>print(tup)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;hli?qf&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#66d9ef">True</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6.7</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00</span><span style="color:#e6db74">ff</span><span style="color:#ae81ff">\xd6</span><span style="color:#e6db74">@&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> tup <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>unpack(<span style="color:#e6db74">&#39;hli?qf&#39;</span>, var)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(tup)
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#66d9ef">True</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6.699999809265137</span>)
+</span></span></code></pre></div><h3 id="endianness">Endianness</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt;: little-endian
+</span></span><span style="display:flex;"><span>&lt;: big-endian
+</span></span><span style="display:flex;"><span>=: standard
+</span></span><span style="display:flex;"><span>!: network
+</span></span><span style="display:flex;"><span>@: native
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;hhl&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x01\x00\x02\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;&gt;hhl&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x00\x01\x00\x02\x00\x00\x00\x03</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;&lt;hhl&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x01\x00\x02\x00\x03\x00\x00\x00</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;=hhl&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x01\x00\x02\x00\x03\x00\x00\x00</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;!hhl&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x00\x01\x00\x02\x00\x00\x00\x03</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;@hhl&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x01\x00\x02\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00</span><span style="color:#e6db74">&#39;</span>
+</span></span></code></pre></div><h3 id="calcsize">calcsize()</h3>
+<p>Use struct.calcsize() to get the size of the struct. It is required for other functions like struct.pack_into() and struct.unpack_from().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;i&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;l&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;b&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;h&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;?&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;q&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;f&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;bi&#39;</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A</span><span style="color:#ae81ff">\x00\x00\x00\x01\x00\x00\x00</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;bi&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> var <span style="color:#f92672">=</span> struct<span style="color:#f92672">.</span>pack(<span style="color:#e6db74">&#39;ib&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">65</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(var)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x01\x00\x00\x00</span><span style="color:#e6db74">A&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(struct<span style="color:#f92672">.</span>calcsize(<span style="color:#e6db74">&#39;ib&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p>ref:</p>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/struct-module-python/" target="_blank">struct module python</a></li>
+<li><a href="https://pymotw.com/2/struct/" target="_blank">struct – Working with Binary Data</a></li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/netsec/">netsec</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/struct/">struct</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

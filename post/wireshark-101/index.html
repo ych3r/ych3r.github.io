@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wireshark 101 | Yuchen&#39;s Tech blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="wireshark">
+<meta name="description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
+Wireshark uses OSI layers to break down packets.
+7 Layers of the OSI …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Wireshark 101" />
+<meta property="og:description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
+Wireshark uses OSI layers to break down packets.
+7 Layers of the OSI Model Application - End User layer - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port - API&#39;s, Sockets, WinSock Transport - End-to-end connections - TCP, UDP Network - Packets - IP, ICMP, IPSec, IGMP Data Link - Frames - Ethernet, PPP, Switch, Bridge Physical - Physical structure - Coax, Fiber, Wireless, Hubs, Repeaters Packet Details (e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/post/wireshark-101/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-02-18T21:45:20-05:00" />
+<meta property="article:modified_time" content="2022-02-18T21:45:20-05:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wireshark 101"/>
+<meta name="twitter:description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
+Wireshark uses OSI layers to break down packets.
+7 Layers of the OSI Model Application - End User layer - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port - API&#39;s, Sockets, WinSock Transport - End-to-end connections - TCP, UDP Network - Packets - IP, ICMP, IPSec, IGMP Data Link - Frames - Ethernet, PPP, Switch, Bridge Physical - Physical structure - Coax, Fiber, Wireless, Hubs, Repeaters Packet Details (e."/>
+
+<meta itemprop="name" content="Wireshark 101">
+<meta itemprop="description" content="Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
+Wireshark uses OSI layers to break down packets.
+7 Layers of the OSI Model Application - End User layer - HTTP, FTP, IRC, SSH, DNS Presentation - Syntax layer - SSL, SSH, IMAP, FTP, MPEG, JPEG Session - Synch &amp; send to port - API&#39;s, Sockets, WinSock Transport - End-to-end connections - TCP, UDP Network - Packets - IP, ICMP, IPSec, IGMP Data Link - Frames - Ethernet, PPP, Switch, Bridge Physical - Physical structure - Coax, Fiber, Wireless, Hubs, Repeaters Packet Details (e."><meta itemprop="datePublished" content="2022-02-18T21:45:20-05:00" />
+<meta itemprop="dateModified" content="2022-02-18T21:45:20-05:00" />
+<meta itemprop="wordCount" content="590">
+<meta itemprop="keywords" content="wireshark," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://ych3r.github.io/"><img src="/img/coder.png" alt="Yuchen&#39;s Tech blog"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://ych3r.github.io/">Yuchen&#39;s Tech blog</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Let&rsquo;s learn something new!</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/post">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">18</span>
+<span class="rest">Feb 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Wireshark 101</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;590&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p><a href="https://www.wireshark.org/docs/" target="_blank">Wireshark</a> is tool used for creating and analyzing PCAPs(network packet capture files).</p>
+<p>Wireshark uses OSI layers to break down packets.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>7 Layers of the OSI Model
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Application  - End User layer
+</span></span><span style="display:flex;"><span>             - HTTP, FTP, IRC, SSH, DNS
+</span></span><span style="display:flex;"><span>Presentation - Syntax layer
+</span></span><span style="display:flex;"><span>             - SSL, SSH, IMAP, FTP, MPEG, JPEG
+</span></span><span style="display:flex;"><span>Session      - Synch &amp; send to port
+</span></span><span style="display:flex;"><span>             - API&#39;s, Sockets, WinSock
+</span></span><span style="display:flex;"><span>Transport    - End-to-end connections
+</span></span><span style="display:flex;"><span>             - TCP, UDP
+</span></span><span style="display:flex;"><span>Network      - Packets
+</span></span><span style="display:flex;"><span>             - IP, ICMP, IPSec, IGMP
+</span></span><span style="display:flex;"><span>Data Link    - Frames
+</span></span><span style="display:flex;"><span>             - Ethernet, PPP, Switch, Bridge
+</span></span><span style="display:flex;"><span>Physical     - Physical structure
+</span></span><span style="display:flex;"><span>             - Coax, Fiber, Wireless, Hubs, Repeaters
+</span></span></code></pre></div><p><figure>
+  <img src="/img/wireshark/packet_details.png" alt="packet details"  />
+</figure></p>
+<p>Packet Details (e.g. HTTP)</p>
+<ul>
+<li>Frame (Physical layer): show you what frame / packet you are looking at.</li>
+<li>Source [MAC] (Data Link layer): show you the source and destination MAC Addresses.</li>
+<li>Source [IP] (Network layer): show you the source and destination IPv4 Addresses.</li>
+<li>Protocol (Transport layer): show you details of the protocol used (UDP/TCP) along with source and destination ports.
+<ul>
+<li>Protocol Errors (not showing in the pic): show specific segments that needed to be reassembled.</li>
+</ul>
+</li>
+<li>Application Protocol (Application layer): show details specific to the protocol being used.</li>
+<li>Application Data (not showing in the pic)</li>
+</ul>
+<h1 id="arp">ARP</h1>
+<p>ARP(Address Resolution Protocol) is a Layer 2 protocol that is used to <strong>connect IP Addresses with MAC Addresses</strong>. They will contain two type of messages(operation codes):</p>
+<ul>
+<li>Request(1)</li>
+<li>Reply(2)</li>
+</ul>
+<h3 id="arp-request">ARP Request</h3>
+<p><figure>
+  <img src="/img/wireshark/arp-request.png" alt="arp request"  />
+</figure></p>
+<h3 id="arp-reply">ARP Reply</h3>
+<p><figure>
+  <img src="/img/wireshark/arp-reply.png" alt="arp reply"  />
+</figure></p>
+<p>ps:
+filter by mac address</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>eth.src == [mac address]
+</span></span></code></pre></div><h1 id="icmp">ICMP</h1>
+<p>ICMP(Internet Control Message Protocol) is used analyze various nodes on a network. A ping would have a request and a reply.</p>
+<p>Packet details:</p>
+<ul>
+<li>type
+<ul>
+<li>8: means that it is a request packet</li>
+<li>0: means that it is a reply packet</li>
+</ul>
+</li>
+<li>code
+<ul>
+<li>do not seem correct: a sign of suspicious activity</li>
+</ul>
+</li>
+<li>timestamp
+<ul>
+<li>identify the time the ping and suspicious activity in some cases.</li>
+</ul>
+</li>
+<li>data
+<ul>
+<li>typically just be a random data string</li>
+</ul>
+</li>
+</ul>
+<h3 id="icmp-request">ICMP Request</h3>
+<p><figure>
+  <img src="/img/wireshark/icmp-request.png" alt="icmp request"  />
+</figure></p>
+<h3 id="icmp-reply">ICMP Reply</h3>
+<p><figure>
+  <img src="/img/wireshark/icmp-reply.png" alt="icmp reply"  />
+</figure></p>
+<h1 id="tcp">TCP</h1>
+<p>TCP(Transmission Control Protocol) handles the delivery of packets including sequencing and errors.</p>
+<p>TCP handshake:</p>
+<ul>
+<li>syn</li>
+<li>syn, ack</li>
+<li>ack</li>
+</ul>
+<p>Packet Analysis</p>
+<ul>
+<li>sequence number</li>
+<li>acknowledgment number</li>
+</ul>
+<p><figure>
+  <img src="/img/wireshark/tcp.png" alt="tcp"  />
+</figure></p>
+<h1 id="dns">DNS</h1>
+<p>DNS(Domain Name Service) is used to resolves names with IP addresses.</p>
+<p>Packet Analysis:</p>
+<ul>
+<li>Query-Response</li>
+<li>DNS-Servers Only</li>
+<li>UDP: the query should originated from UDP 53. If it was TCP 53 then it should be considered suspicious traffic.</li>
+</ul>
+<h3 id="dns-query">DNS Query</h3>
+<p><figure>
+  <img src="/img/wireshark/dns-query.png" alt="dns-query"  />
+</figure></p>
+<h3 id="dns-response">DNS Response</h3>
+<p><figure>
+  <img src="/img/wireshark/dns-response.png" alt="dns-response"  />
+</figure></p>
+<h1 id="http">HTTP</h1>
+<p>HTTP(Hypertext transfer Protocol) is a commonly used protocol for the world wide web and used by some websites. It is used to send GET and POST requests to a web server in order to receive things like webpages.</p>
+<p>Packet Analysis</p>
+<ul>
+<li>Very straight forward. No handshakes or prerequisites before communication.</li>
+</ul>
+<p>HTTP request</p>
+<ul>
+<li>host</li>
+<li>user-agent</li>
+<li>requested URI</li>
+<li>response</li>
+</ul>
+<p><figure>
+  <img src="/img/wireshark/http.png" alt="http"  />
+</figure></p>
+<p>Some useful features:</p>
+<p>Statics &gt; Protocol Hierarchy: can be very useful in practical applications like threat hunting to identify discrepancies in packet captures.</p>
+<p><figure>
+  <img src="/img/wireshark/http-hierarchy.png" alt="http hierarchy"  />
+</figure></p>
+<p>file &gt; Export Objects &gt; HTTP: can be useful to quickly identify possible discrepancies in captures.</p>
+<p><figure>
+  <img src="/img/wireshark/http-export.png" alt="http export"  />
+</figure></p>
+<p>Statics &gt; Endpoints: allows the user to organize all endpoints and IPs found within a specific capture. Can be useful to identify where a discrepancy is originating from.</p>
+<p><figure>
+  <img src="/img/wireshark/http-endpoints.png" alt="http endpoints"  />
+</figure></p>
+<h1 id="https">HTTPS</h1>
+<p>HTTPS(Hypertext Transfer Protocol Secure) can be annoying to understand from a packet analysis perspective.</p>
+<p>Before sending encrypted information the client and server need to agree upon various steps in order to make a secure tunnel.</p>
+<ul>
+<li>Client and server  agree on a protocol version</li>
+<li>Client and server select a cryptographic algorithm</li>
+<li>The client and server can authenticate to each other</li>
+<li>Creates a secure tunnel with a public key</li>
+</ul>
+<p>Packet Analysis</p>
+<p>All of the requests are encrypted. We can use an RSA key to view the data unencrypted.</p>
+<p>Preferences &gt; Protocols &gt; TLS &gt; [+]</p>
+<p><figure>
+  <img src="/img/wireshark/https.png" alt="https"  />
+</figure></p>
+<p>ref:</p>
+<ul>
+<li><a href="https://tryhackme.com/room/wireshark" target="_blank">Wireshark 101</a></li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/netsec/">netsec</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/wireshark/">wireshark</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Yuchen&#39;s Tech blog</title>
+		<link>https://ych3r.github.io/post/</link>
+		<description>Recent content in Posts on ych3r.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Yuchen Liu 2022</copyright>
+		<lastBuildDate>Mon, 27 Jun 2022 12:37:01 -0400</lastBuildDate>
+		<atom:link href="https://ych3r.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Web Requests</title>
+			<link>https://ych3r.github.io/post/web_requests/</link>
+			<pubDate>Mon, 27 Jun 2022 12:37:01 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/web_requests/</guid>
+			<description>
+			HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Responder</title>
+			<link>https://ych3r.github.io/post/htb-responder/</link>
+			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/htb-responder/</guid>
+			<description>
+			This box is about “File Inclusion” and “NTLM”.
+A File Inclusion vulnerability on a webpage being served on a windows machine can be …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Crocodile</title>
+			<link>https://ych3r.github.io/post/htb-crocodile/</link>
+			<pubDate>Tue, 31 May 2022 16:43:38 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/htb-crocodile/</guid>
+			<description>
+			This box is about “FTP”.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Sequel</title>
+			<link>https://ych3r.github.io/post/htb-sequel/</link>
+			<pubDate>Tue, 31 May 2022 15:08:13 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/htb-sequel/</guid>
+			<description>
+			This box is about “MariaDB” and “weak password”.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Appointment</title>
+			<link>https://ych3r.github.io/post/htb-appointment/</link>
+			<pubDate>Sun, 29 May 2022 19:00:51 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/htb-appointment/</guid>
+			<description>
+			This box is about “sql injection”.
+┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Redeemer</title>
+			<link>https://ych3r.github.io/post/htb-redeemer/</link>
+			<pubDate>Sun, 29 May 2022 11:39:54 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/htb-redeemer/</guid>
+			<description>
+			This box is about “redis”.
+Redis is an open source, in-memory data structure store, used as a database, cache, and message broker.
+In-memory …
+			</description>
+		</item>
+		<item>
+			<title>SSH Login Without Password</title>
+			<link>https://ych3r.github.io/post/ssh-login-without-password/</link>
+			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/ssh-login-without-password/</guid>
+			<description>
+			Add remote host to ssh config file $ nano ~/.ssh/config Host remotehost Hostname <remote host hostname or ip> Port <remote host ssh port> HostKeyAlias remotehost User <your name> Create public and …</your></remote></remote>
+			</description>
+		</item>
+		<item>
+			<title>ISS Overhead Notifier</title>
+			<link>https://ych3r.github.io/post/iss-overhead-notifier/</link>
+			<pubDate>Sun, 22 May 2022 17:06:21 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/iss-overhead-notifier/</guid>
+			<description>
+			Objectives: Use API to create an ISS tracker.
+Libraries: requests, smtplib, datetime
+Code: ISS Overhead Notifier
+What is API? “Application …
+			</description>
+		</item>
+		<item>
+			<title>Automated Birthday Wisher</title>
+			<link>https://ych3r.github.io/post/auto-birthday-wisher/</link>
+			<pubDate>Sat, 21 May 2022 13:02:40 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/auto-birthday-wisher/</guid>
+			<description>
+			Objectives: Send email using python code.
+Libraries: smtplib, datetime, pandas
+Code: Automated Birthday Wisher
+How email works? For example, …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Dancing</title>
+			<link>https://ych3r.github.io/post/htb-dancing/</link>
+			<pubDate>Sat, 12 Mar 2022 21:15:07 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/htb-dancing/</guid>
+			<description>
+			This box is about “SMB”.
+SMB provides shared access to files, printers, and serial ports between endpoints on a network.
+App Layer: SMB …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Fawn</title>
+			<link>https://ych3r.github.io/post/htb-fawn/</link>
+			<pubDate>Sat, 12 Mar 2022 21:14:36 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/htb-fawn/</guid>
+			<description>
+			This box is about “FTP”.
+FTP is a file transfer service.
+Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Starting Nmap 7.92 …
+			</description>
+		</item>
+		<item>
+			<title>HTB-Meow</title>
+			<link>https://ych3r.github.io/post/htb-meow/</link>
+			<pubDate>Sat, 12 Mar 2022 21:12:42 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/htb-meow/</guid>
+			<description>
+			This box is about “configuration mistakes”.
+When there’s a login box, try:
+admin administrator root Scan ┌──(kali㉿kali)-[~/htb/meow] └─$ …
+			</description>
+		</item>
+		<item>
+			<title>Wireshark 101</title>
+			<link>https://ych3r.github.io/post/wireshark-101/</link>
+			<pubDate>Fri, 18 Feb 2022 21:45:20 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/wireshark-101/</guid>
+			<description>
+			Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
+Wireshark uses OSI layers to break down packets.
+7 …
+			</description>
+		</item>
+		<item>
+			<title>How to Use Struct</title>
+			<link>https://ych3r.github.io/post/how-to-use-struct/</link>
+			<pubDate>Thu, 17 Feb 2022 16:07:19 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/how-to-use-struct/</guid>
+			<description>
+			The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is …
+			</description>
+		</item>
+		<item>
+			<title>Socket Programming - Simple Client &amp; Server</title>
+			<link>https://ych3r.github.io/post/socket-programming/</link>
+			<pubDate>Sun, 13 Feb 2022 10:45:21 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/socket-programming/</guid>
+			<description>
+			Sockets and the socket API are used to send messages across a network.
+Let’s focus on building simple echo client and server using TCP …
+			</description>
+		</item>
+		<item>
+			<title>How to Build a Hugo Blog</title>
+			<link>https://ych3r.github.io/post/how-to-build-a-hugo-blog/</link>
+			<pubDate>Sat, 12 Feb 2022 21:51:31 -0500</pubDate>
+			<guid>https://ych3r.github.io/post/how-to-build-a-hugo-blog/</guid>
+			<description>
+			 This tutorial is for mac users.
+Here we have three easy steps: Install it, Build locally, and Put it on Github.
+STEP 0 - Installation …
+			</description>
+		</item>
+	</channel>
+</rss>

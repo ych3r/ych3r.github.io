@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>projects on Tech blog</title>
+		<title>projects on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/categories/projects/</link>
 		<description>Recent content in projects on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,9 +11,9 @@
 		<atom:link href="https://ych3r.github.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>ISS Overhead Notifier</title>
-			<link>https://ych3r.github.io/posts/iss-overhead-notifier/</link>
+			<link>https://ych3r.github.io/post/iss-overhead-notifier/</link>
 			<pubDate>Sun, 22 May 2022 17:06:21 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/iss-overhead-notifier/</guid>
+			<guid>https://ych3r.github.io/post/iss-overhead-notifier/</guid>
 			<description>
 			Objectives: Use API to create an ISS tracker.
 Libraries: requests, smtplib, datetime
@@ -23,9 +23,9 @@ What is API? “Application …
 		</item>
 		<item>
 			<title>Automated Birthday Wisher</title>
-			<link>https://ych3r.github.io/posts/auto-birthday-wisher/</link>
+			<link>https://ych3r.github.io/post/auto-birthday-wisher/</link>
 			<pubDate>Sat, 21 May 2022 13:02:40 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/auto-birthday-wisher/</guid>
+			<guid>https://ych3r.github.io/post/auto-birthday-wisher/</guid>
 			<description>
 			Objectives: Send email using python code.
 Libraries: smtplib, datetime, pandas

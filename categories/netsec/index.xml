@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>netsec on Tech blog</title>
+		<title>netsec on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/categories/netsec/</link>
 		<description>Recent content in netsec on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,9 +11,9 @@
 		<atom:link href="https://ych3r.github.io/categories/netsec/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Wireshark 101</title>
-			<link>https://ych3r.github.io/posts/wireshark-101/</link>
+			<link>https://ych3r.github.io/post/wireshark-101/</link>
 			<pubDate>Fri, 18 Feb 2022 21:45:20 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/wireshark-101/</guid>
+			<guid>https://ych3r.github.io/post/wireshark-101/</guid>
 			<description>
 			Wireshark is tool used for creating and analyzing PCAPs(network packet capture files).
 Wireshark uses OSI layers to break down packets.
@@ -22,18 +22,18 @@ Wireshark uses OSI layers to break down packets.
 		</item>
 		<item>
 			<title>How to Use Struct</title>
-			<link>https://ych3r.github.io/posts/how-to-use-struct/</link>
+			<link>https://ych3r.github.io/post/how-to-use-struct/</link>
 			<pubDate>Thu, 17 Feb 2022 16:07:19 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/how-to-use-struct/</guid>
+			<guid>https://ych3r.github.io/post/how-to-use-struct/</guid>
 			<description>
 			The struct module includes functions for converting between strings of bytes and native Python data types such as numbers and strings. It is …
 			</description>
 		</item>
 		<item>
 			<title>Socket Programming - Simple Client &amp; Server</title>
-			<link>https://ych3r.github.io/posts/socket-programming/</link>
+			<link>https://ych3r.github.io/post/socket-programming/</link>
 			<pubDate>Sun, 13 Feb 2022 10:45:21 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/socket-programming/</guid>
+			<guid>https://ych3r.github.io/post/socket-programming/</guid>
 			<description>
 			Sockets and the socket API are used to send messages across a network.
 Let’s focus on building simple echo client and server using TCP …

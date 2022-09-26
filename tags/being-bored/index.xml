@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>being bored on Tech blog</title>
+		<title>being bored on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/tags/being-bored/</link>
 		<description>Recent content in being bored on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,9 +11,9 @@
 		<atom:link href="https://ych3r.github.io/tags/being-bored/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>ISS Overhead Notifier</title>
-			<link>https://ych3r.github.io/posts/iss-overhead-notifier/</link>
+			<link>https://ych3r.github.io/post/iss-overhead-notifier/</link>
 			<pubDate>Sun, 22 May 2022 17:06:21 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/iss-overhead-notifier/</guid>
+			<guid>https://ych3r.github.io/post/iss-overhead-notifier/</guid>
 			<description>
 			Objectives: Use API to create an ISS tracker.
 Libraries: requests, smtplib, datetime

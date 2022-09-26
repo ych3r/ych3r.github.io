@@ -11,19 +11,19 @@
     <loc>https://ych3r.github.io/tags/http/</loc>
     <lastmod>2022-06-27T12:37:01-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/</loc>
+    <loc>https://ych3r.github.io/post/</loc>
     <lastmod>2022-06-27T12:37:01-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/</loc>
     <lastmod>2022-06-27T12:37:01-04:00</lastmod>
   </url><url>
+    <loc>https://ych3r.github.io/post/web_requests/</loc>
+    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
+  </url><url>
     <loc>https://ych3r.github.io/</loc>
     <lastmod>2022-06-27T12:37:01-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/web_requests/</loc>
-    <lastmod>2022-06-27T12:37:01-04:00</lastmod>
-  </url><url>
-    <loc>https://ych3r.github.io/posts/htb-responder/</loc>
+    <loc>https://ych3r.github.io/post/htb-responder/</loc>
     <lastmod>2022-06-08T17:57:51-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/lfi/</loc>
@@ -44,10 +44,10 @@
     <loc>https://ych3r.github.io/tags/ftp/</loc>
     <lastmod>2022-05-31T16:43:38-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-crocodile/</loc>
+    <loc>https://ych3r.github.io/post/htb-crocodile/</loc>
     <lastmod>2022-05-31T16:43:38-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-sequel/</loc>
+    <loc>https://ych3r.github.io/post/htb-sequel/</loc>
     <lastmod>2022-05-31T15:08:13-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/mariadb/</loc>
@@ -56,13 +56,13 @@
     <loc>https://ych3r.github.io/tags/weak-password/</loc>
     <lastmod>2022-05-31T15:08:13-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-appointment/</loc>
+    <loc>https://ych3r.github.io/post/htb-appointment/</loc>
     <lastmod>2022-05-29T19:00:51-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/sqli/</loc>
     <lastmod>2022-05-29T19:00:51-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-redeemer/</loc>
+    <loc>https://ych3r.github.io/post/htb-redeemer/</loc>
     <lastmod>2022-05-29T11:39:54-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/redis/</loc>
@@ -74,34 +74,34 @@
     <loc>https://ych3r.github.io/categories/etc/</loc>
     <lastmod>2022-05-22T17:37:30-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/ssh-login-without-password/</loc>
+    <loc>https://ych3r.github.io/post/ssh-login-without-password/</loc>
     <lastmod>2022-05-22T17:37:30-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/being-bored/</loc>
     <lastmod>2022-05-22T17:06:21-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/iss-overhead-notifier/</loc>
+    <loc>https://ych3r.github.io/post/iss-overhead-notifier/</loc>
     <lastmod>2022-05-22T17:06:21-04:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/categories/projects/</loc>
     <lastmod>2022-05-22T17:06:21-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/auto-birthday-wisher/</loc>
+    <loc>https://ych3r.github.io/post/auto-birthday-wisher/</loc>
     <lastmod>2022-05-21T13:02:40-04:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-dancing/</loc>
+    <loc>https://ych3r.github.io/post/htb-dancing/</loc>
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/smb/</loc>
     <lastmod>2022-03-12T21:15:07-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-fawn/</loc>
+    <loc>https://ych3r.github.io/post/htb-fawn/</loc>
     <lastmod>2022-03-12T21:14:36-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/config-mistakes/</loc>
     <lastmod>2022-03-12T21:12:42-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/htb-meow/</loc>
+    <loc>https://ych3r.github.io/post/htb-meow/</loc>
     <lastmod>2022-03-12T21:12:42-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/categories/netsec/</loc>
@@ -110,10 +110,10 @@
     <loc>https://ych3r.github.io/tags/wireshark/</loc>
     <lastmod>2022-02-18T21:45:20-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/wireshark-101/</loc>
+    <loc>https://ych3r.github.io/post/wireshark-101/</loc>
     <lastmod>2022-02-18T21:45:20-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/how-to-use-struct/</loc>
+    <loc>https://ych3r.github.io/post/how-to-use-struct/</loc>
     <lastmod>2022-02-17T16:07:19-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/struct/</loc>
@@ -122,17 +122,20 @@
     <loc>https://ych3r.github.io/tags/socket/</loc>
     <lastmod>2022-02-13T10:45:21-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/socket-programming/</loc>
+    <loc>https://ych3r.github.io/post/socket-programming/</loc>
     <lastmod>2022-02-13T10:45:21-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/tags/etc/</loc>
     <lastmod>2022-02-12T21:51:31-05:00</lastmod>
   </url><url>
-    <loc>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</loc>
+    <loc>https://ych3r.github.io/post/how-to-build-a-hugo-blog/</loc>
     <lastmod>2022-02-12T21:51:31-05:00</lastmod>
   </url><url>
     <loc>https://ych3r.github.io/about/</loc>
     <lastmod>2022-02-12T21:01:22-05:00</lastmod>
+  </url><url>
+    <loc>https://ych3r.github.io/homepage/</loc>
+    <priority>0</priority>
   </url><url>
     <loc>https://ych3r.github.io/series/</loc>
   </url>

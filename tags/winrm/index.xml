@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>winrm on Tech blog</title>
+		<title>winrm on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/tags/winrm/</link>
 		<description>Recent content in winrm on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,9 +11,9 @@
 		<atom:link href="https://ych3r.github.io/tags/winrm/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>HTB-Responder</title>
-			<link>https://ych3r.github.io/posts/htb-responder/</link>
+			<link>https://ych3r.github.io/post/htb-responder/</link>
 			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-responder/</guid>
+			<guid>https://ych3r.github.io/post/htb-responder/</guid>
 			<description>
 			This box is about “File Inclusion” and “NTLM”.
 A File Inclusion vulnerability on a webpage being served on a windows machine can be …

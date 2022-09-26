@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Bug Bounty on Tech blog</title>
+		<title>Bug Bounty on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/categories/bug-bounty/</link>
 		<description>Recent content in Bug Bounty on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,9 +11,9 @@
 		<atom:link href="https://ych3r.github.io/categories/bug-bounty/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Web Requests</title>
-			<link>https://ych3r.github.io/posts/web_requests/</link>
+			<link>https://ych3r.github.io/post/web_requests/</link>
 			<pubDate>Mon, 27 Jun 2022 12:37:01 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/web_requests/</guid>
+			<guid>https://ych3r.github.io/post/web_requests/</guid>
 			<description>
 			HTTP Fundamentals HTTP(HyperText Transfer Protocol) is an application-level protocol used to access the World Wide Web resources. HTTP …
 			</description>

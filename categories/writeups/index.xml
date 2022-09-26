@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>writeups on Tech blog</title>
+		<title>writeups on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/categories/writeups/</link>
 		<description>Recent content in writeups on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,9 +11,9 @@
 		<atom:link href="https://ych3r.github.io/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>HTB-Responder</title>
-			<link>https://ych3r.github.io/posts/htb-responder/</link>
+			<link>https://ych3r.github.io/post/htb-responder/</link>
 			<pubDate>Wed, 08 Jun 2022 17:57:51 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-responder/</guid>
+			<guid>https://ych3r.github.io/post/htb-responder/</guid>
 			<description>
 			This box is about “File Inclusion” and “NTLM”.
 A File Inclusion vulnerability on a webpage being served on a windows machine can be …
@@ -21,9 +21,9 @@ A File Inclusion vulnerability on a webpage being served on a windows machine ca
 		</item>
 		<item>
 			<title>HTB-Crocodile</title>
-			<link>https://ych3r.github.io/posts/htb-crocodile/</link>
+			<link>https://ych3r.github.io/post/htb-crocodile/</link>
 			<pubDate>Tue, 31 May 2022 16:43:38 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-crocodile/</guid>
+			<guid>https://ych3r.github.io/post/htb-crocodile/</guid>
 			<description>
 			This box is about “FTP”.
 Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting Nmap 7.92 ( https://nmap.org ) at 2022-05-31 …
@@ -31,9 +31,9 @@ Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.89.19 Starting N
 		</item>
 		<item>
 			<title>HTB-Sequel</title>
-			<link>https://ych3r.github.io/posts/htb-sequel/</link>
+			<link>https://ych3r.github.io/post/htb-sequel/</link>
 			<pubDate>Tue, 31 May 2022 15:08:13 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-sequel/</guid>
+			<guid>https://ych3r.github.io/post/htb-sequel/</guid>
 			<description>
 			This box is about “MariaDB” and “weak password”.
 Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting Nmap 7.92 ( …
@@ -41,9 +41,9 @@ Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting
 		</item>
 		<item>
 			<title>HTB-Appointment</title>
-			<link>https://ych3r.github.io/posts/htb-appointment/</link>
+			<link>https://ych3r.github.io/post/htb-appointment/</link>
 			<pubDate>Sun, 29 May 2022 19:00:51 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-appointment/</guid>
+			<guid>https://ych3r.github.io/post/htb-appointment/</guid>
 			<description>
 			This box is about “sql injection”.
 ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.103.48 Starting Nmap 7.92 ( https://nmap.org ) at …
@@ -51,9 +51,9 @@ Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.217.175 Starting
 		</item>
 		<item>
 			<title>HTB-Redeemer</title>
-			<link>https://ych3r.github.io/posts/htb-redeemer/</link>
+			<link>https://ych3r.github.io/post/htb-redeemer/</link>
 			<pubDate>Sun, 29 May 2022 11:39:54 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-redeemer/</guid>
+			<guid>https://ych3r.github.io/post/htb-redeemer/</guid>
 			<description>
 			This box is about “redis”.
 Redis is an open source, in-memory data structure store, used as a database, cache, and message broker.
@@ -62,9 +62,9 @@ In-memory …
 		</item>
 		<item>
 			<title>HTB-Dancing</title>
-			<link>https://ych3r.github.io/posts/htb-dancing/</link>
+			<link>https://ych3r.github.io/post/htb-dancing/</link>
 			<pubDate>Sat, 12 Mar 2022 21:15:07 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-dancing/</guid>
+			<guid>https://ych3r.github.io/post/htb-dancing/</guid>
 			<description>
 			This box is about “SMB”.
 SMB provides shared access to files, printers, and serial ports between endpoints on a network.
@@ -73,9 +73,9 @@ App Layer: SMB …
 		</item>
 		<item>
 			<title>HTB-Fawn</title>
-			<link>https://ych3r.github.io/posts/htb-fawn/</link>
+			<link>https://ych3r.github.io/post/htb-fawn/</link>
 			<pubDate>Sat, 12 Mar 2022 21:14:36 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-fawn/</guid>
+			<guid>https://ych3r.github.io/post/htb-fawn/</guid>
 			<description>
 			This box is about “FTP”.
 FTP is a file transfer service.
@@ -84,9 +84,9 @@ Scan ┌──(kali㉿kali)-[~/htb/fawn] └─$ nmap -sC -sV 10.129.234.156 Sta
 		</item>
 		<item>
 			<title>HTB-Meow</title>
-			<link>https://ych3r.github.io/posts/htb-meow/</link>
+			<link>https://ych3r.github.io/post/htb-meow/</link>
 			<pubDate>Sat, 12 Mar 2022 21:12:42 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/htb-meow/</guid>
+			<guid>https://ych3r.github.io/post/htb-meow/</guid>
 			<description>
 			This box is about “configuration mistakes”.
 When there’s a login box, try:

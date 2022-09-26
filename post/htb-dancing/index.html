@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTB-Dancing | Yuchen&#39;s Tech blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="SMB">
+<meta name="description" content="This box is about “SMB”.
+SMB provides shared access to files, printers, and serial ports between endpoints on a network.
+App Layer: SMB Transport Layer: …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="HTB-Dancing" />
+<meta property="og:description" content="This box is about &ldquo;SMB&rdquo;.
+SMB provides shared access to files, printers, and serial ports between endpoints on a network.
+App Layer: SMB Transport Layer: NetBIOS TCP/IP (NBT) SMB relies on lover-level protocols for transport, that&rsquo;s why they both exist.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.84.99 Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:17 EST Nmap scan report for 10.129.84.99 Host is up (0.017s latency). Not shown: 997 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/post/htb-dancing/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-12T21:15:07-05:00" />
+<meta property="article:modified_time" content="2022-03-12T21:15:07-05:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTB-Dancing"/>
+<meta name="twitter:description" content="This box is about &ldquo;SMB&rdquo;.
+SMB provides shared access to files, printers, and serial ports between endpoints on a network.
+App Layer: SMB Transport Layer: NetBIOS TCP/IP (NBT) SMB relies on lover-level protocols for transport, that&rsquo;s why they both exist.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.84.99 Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:17 EST Nmap scan report for 10.129.84.99 Host is up (0.017s latency). Not shown: 997 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds?"/>
+
+<meta itemprop="name" content="HTB-Dancing">
+<meta itemprop="description" content="This box is about &ldquo;SMB&rdquo;.
+SMB provides shared access to files, printers, and serial ports between endpoints on a network.
+App Layer: SMB Transport Layer: NetBIOS TCP/IP (NBT) SMB relies on lover-level protocols for transport, that&rsquo;s why they both exist.
+Scan ┌──(kali㉿kali)-[~/htb] └─$ nmap -sC -sV 10.129.84.99 Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:17 EST Nmap scan report for 10.129.84.99 Host is up (0.017s latency). Not shown: 997 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 135/tcp open msrpc Microsoft Windows RPC 139/tcp open netbios-ssn Microsoft Windows netbios-ssn 445/tcp open microsoft-ds?"><meta itemprop="datePublished" content="2022-03-12T21:15:07-05:00" />
+<meta itemprop="dateModified" content="2022-03-12T21:15:07-05:00" />
+<meta itemprop="wordCount" content="474">
+<meta itemprop="keywords" content="SMB," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://ych3r.github.io/"><img src="/img/coder.png" alt="Yuchen&#39;s Tech blog"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://ych3r.github.io/">Yuchen&#39;s Tech blog</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Let&rsquo;s learn something new!</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/post">All Posts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">12</span>
+<span class="rest">Mar 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">HTB-Dancing</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;474&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>This box is about &ldquo;SMB&rdquo;.</p>
+<p>SMB provides shared access to files, printers, and serial ports between endpoints on a network.</p>
+<p>App Layer: SMB
+Transport Layer: NetBIOS TCP/IP (NBT)
+SMB relies on lover-level protocols for transport, that&rsquo;s why they both exist.</p>
+<h3 id="scan">Scan</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ nmap -sC -sV 10.129.84.99  
+</span></span><span style="display:flex;"><span>Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-12 20:17 EST
+</span></span><span style="display:flex;"><span>Nmap scan report for 10.129.84.99
+</span></span><span style="display:flex;"><span>Host is up (0.017s latency).
+</span></span><span style="display:flex;"><span>Not shown: 997 closed tcp ports (conn-refused)
+</span></span><span style="display:flex;"><span>PORT    STATE SERVICE       VERSION
+</span></span><span style="display:flex;"><span>135/tcp open  msrpc         Microsoft Windows RPC
+</span></span><span style="display:flex;"><span>139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+</span></span><span style="display:flex;"><span>445/tcp open  microsoft-ds?
+</span></span><span style="display:flex;"><span>Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Host script results:
+</span></span><span style="display:flex;"><span>|_clock-skew: 4h00m00s
+</span></span><span style="display:flex;"><span>| smb2-time: 
+</span></span><span style="display:flex;"><span>|   date: 2022-03-13T05:17:45
+</span></span><span style="display:flex;"><span>|_  start_date: N/A
+</span></span><span style="display:flex;"><span>| smb2-security-mode: 
+</span></span><span style="display:flex;"><span>|   3.1.1: 
+</span></span><span style="display:flex;"><span>|_    Message signing enabled but not required
+</span></span></code></pre></div><h3 id="use-smbclient-to-connect-to-smb-shares">Use smbclient to connect to SMB shares</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ smbclient -L 10.129.84.99                                                                                 1 ⨯
+</span></span><span style="display:flex;"><span>Enter WORKGROUP\kali&#39;s password: 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Sharename       Type      Comment
+</span></span><span style="display:flex;"><span>        ---------       ----      -------
+</span></span><span style="display:flex;"><span>        ADMIN$          Disk      Remote Admin
+</span></span><span style="display:flex;"><span>        C$              Disk      Default share
+</span></span><span style="display:flex;"><span>        IPC$            IPC       Remote IPC
+</span></span><span style="display:flex;"><span>        WorkShares      Disk      
+</span></span><span style="display:flex;"><span>SMB1 disabled -- no workgroup available
+</span></span></code></pre></div><p>ADMIN$ - Administrative shares are hidden network shares created by the Windows NT family of
+operating systems that allow system administrators to have remote access to every disk volume on a
+network-connected system. These shares may not be permanently deleted but may be disabled.</p>
+<p>C$ - Administrative share for the C:\ disk volume. This is where the operating system is hosted.</p>
+<p>IPC$ - The inter-process communication share. Used for inter-process communication via named
+pipes and is not part of the file system.</p>
+<p>WorkShares - Custom share.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ smbclient \\\\10.129.84.99\\ADMIN$                                                                        1 ⨯
+</span></span><span style="display:flex;"><span>Enter WORKGROUP\kali&#39;s password: 
+</span></span><span style="display:flex;"><span>tree connect failed: NT_STATUS_ACCESS_DENIED
+</span></span><span style="display:flex;"><span>                                                                                                                  
+</span></span><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ smbclient \\\\10.129.84.99\\C$                                                                            1 ⨯
+</span></span><span style="display:flex;"><span>Enter WORKGROUP\kali&#39;s password: 
+</span></span><span style="display:flex;"><span>tree connect failed: NT_STATUS_ACCESS_DENIED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ smbclient \\\\10.129.84.99\\WorkShares                                                                  130 ⨯
+</span></span><span style="display:flex;"><span>Enter WORKGROUP\kali&#39;s password: 
+</span></span><span style="display:flex;"><span>Try &#34;help&#34; to get a list of possible commands.
+</span></span><span style="display:flex;"><span>smb: \&gt; ls
+</span></span><span style="display:flex;"><span>  .                                   D        0  Mon Mar 29 04:22:01 2021
+</span></span><span style="display:flex;"><span>  ..                                  D        0  Mon Mar 29 04:22:01 2021
+</span></span><span style="display:flex;"><span>  Amy.J                               D        0  Mon Mar 29 05:08:24 2021
+</span></span><span style="display:flex;"><span>  James.P                             D        0  Thu Jun  3 04:38:03 2021
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                5114111 blocks of size 4096. 1732421 blocks available
+</span></span><span style="display:flex;"><span>smb: \&gt; ls Amy.J\
+</span></span><span style="display:flex;"><span>  .                                   D        0  Mon Mar 29 05:08:24 2021
+</span></span><span style="display:flex;"><span>  ..                                  D        0  Mon Mar 29 05:08:24 2021
+</span></span><span style="display:flex;"><span>  worknotes.txt                       A       94  Fri Mar 26 07:00:37 2021
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                5114111 blocks of size 4096. 1731571 blocks available
+</span></span><span style="display:flex;"><span>smb: \&gt; ls James.P\
+</span></span><span style="display:flex;"><span>  .                                   D        0  Thu Jun  3 04:38:03 2021
+</span></span><span style="display:flex;"><span>  ..                                  D        0  Thu Jun  3 04:38:03 2021
+</span></span><span style="display:flex;"><span>  flag.txt                            A       32  Mon Mar 29 05:26:57 2021
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                5114111 blocks of size 4096. 1731571 blocks available
+</span></span><span style="display:flex;"><span>smb: \&gt; get Amy.J\worknotes.txt 
+</span></span><span style="display:flex;"><span>getting file \Amy.J\worknotes.txt of size 94 as Amy.J\worknotes.txt (1.0 KiloBytes/sec) (average 1.0 KiloBytes/sec)
+</span></span><span style="display:flex;"><span>smb: \&gt; get James.P\flag.txt 
+</span></span><span style="display:flex;"><span>getting file \James.P\flag.txt of size 32 as James.P\flag.txt (0.4 KiloBytes/sec) (average 0.7 KiloBytes/sec)
+</span></span><span style="display:flex;"><span>smb: \&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ cat Amy.J\\worknotes.txt 
+</span></span><span style="display:flex;"><span>- start apache server on the linux machine
+</span></span><span style="display:flex;"><span>- secure the ftp server
+</span></span><span style="display:flex;"><span>- setup winrm on dancing                                                                                                                   
+</span></span><span style="display:flex;"><span>┌──(kali㉿kali)-[~/htb]
+</span></span><span style="display:flex;"><span>└─$ cat James.P\\flag.txt   
+</span></span><span style="display:flex;"><span>5f61c10dffbc77a704d76016a22f1664
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/writeups/">writeups</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/smb/">smb</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>etc on Tech blog</title>
+		<title>etc on Yuchen&#39;s Tech blog</title>
 		<link>https://ych3r.github.io/categories/etc/</link>
 		<description>Recent content in etc on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -11,18 +11,18 @@
 		<atom:link href="https://ych3r.github.io/categories/etc/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>SSH Login Without Password</title>
-			<link>https://ych3r.github.io/posts/ssh-login-without-password/</link>
+			<link>https://ych3r.github.io/post/ssh-login-without-password/</link>
 			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
-			<guid>https://ych3r.github.io/posts/ssh-login-without-password/</guid>
+			<guid>https://ych3r.github.io/post/ssh-login-without-password/</guid>
 			<description>
 			Add remote host to ssh config file $ nano ~/.ssh/config Host remotehost Hostname <remote host hostname or ip> Port <remote host ssh port> HostKeyAlias remotehost User <your name> Create public and …</your></remote></remote>
 			</description>
 		</item>
 		<item>
 			<title>How to Build a Hugo Blog</title>
-			<link>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</link>
+			<link>https://ych3r.github.io/post/how-to-build-a-hugo-blog/</link>
 			<pubDate>Sat, 12 Feb 2022 21:51:31 -0500</pubDate>
-			<guid>https://ych3r.github.io/posts/how-to-build-a-hugo-blog/</guid>
+			<guid>https://ych3r.github.io/post/how-to-build-a-hugo-blog/</guid>
 			<description>
 			 This tutorial is for mac users.
 Here we have three easy steps: Install it, Build locally, and Put it on Github.
