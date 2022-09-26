@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>wireshark on Yuchen Blog</title>
+		<title>wireshark on Tech blog</title>
 		<link>https://ych3r.github.io/tags/wireshark/</link>
 		<description>Recent content in wireshark on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
