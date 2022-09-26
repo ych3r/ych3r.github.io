@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Yuchen&#39;s Tech blog</title>
+		<title>Yuchen&#39;s Tech Blog</title>
 		<link>https://ych3r.github.io/</link>
 		<description>Recent content on ych3r.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
@@ -194,7 +194,8 @@ That’s it.
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 			<guid>https://ych3r.github.io/homepage/</guid>
 			<description>
-			Hello 
+			Hello friend. My name is Yuchen.
+
 			</description>
 		</item>
 	</channel>
