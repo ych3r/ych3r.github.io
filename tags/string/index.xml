@@ -15,7 +15,7 @@
 			<pubDate>Thu, 29 Sep 2022 11:41:41 -0400</pubDate>
 			<guid>https://ych3r.github.io/post/reverse-a-string/</guid>
 			<description>
-			 Create a function that reverses a string:
+			 Create a function that reverses a string.
 The first one I can think of:
 def reverse(string: str) -> str: return string[::-1] Let’s see the …
 			</description>
