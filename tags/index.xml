@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Thu, 29 Sep 2022 22:27:42 -0400</lastBuildDate>
+		<lastBuildDate>Sun, 09 Oct 2022 18:43:00 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>being lazy</title>
+			<link>https://ych3r.github.io/tags/being-lazy/</link>
+			<pubDate>Sun, 09 Oct 2022 18:43:00 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/being-lazy/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>array</title>
 			<link>https://ych3r.github.io/tags/array/</link>
@@ -113,15 +122,6 @@
 			<link>https://ych3r.github.io/tags/redis/</link>
 			<pubDate>Sun, 29 May 2022 11:39:54 -0400</pubDate>
 			<guid>https://ych3r.github.io/tags/redis/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>being lazy</title>
-			<link>https://ych3r.github.io/tags/being-lazy/</link>
-			<pubDate>Sun, 22 May 2022 17:37:30 -0400</pubDate>
-			<guid>https://ych3r.github.io/tags/being-lazy/</guid>
 			<description>
 			
 			</description>
