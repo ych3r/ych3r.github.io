@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Build Kali Docker on M1 Mac | Yuchen&#39;s Tech Blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.3" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="kali, docker">
+<meta name="description" content="Background: I personally use M1 Macbook. It’s pretty tricky to install VMs on it. So why don’t we just use docker?
+Install and run Kali docker Download …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Build Kali Docker on M1 Mac" />
+<meta property="og:description" content="Background: I personally use M1 Macbook. It&rsquo;s pretty tricky to install VMs on it. So why don&rsquo;t we just use docker?
+Install and run Kali docker Download Docker Desktop for m1.
+In terminal, download and run Kali docker image:
+docker run -it kalilinux/kali-rolling /bin/bash
+In Kali shell, update and download essential tools:
+apt-get update &amp; apt install kali-linux-default
+Install RDP and XFCE:
+apt-get install kali-desktop-xfce xrdp
+Add a user:
+adduser test" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/post/build-kali-docker-on-m1-mac/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-10-18T15:49:37-04:00" />
+<meta property="article:modified_time" content="2022-10-18T15:49:37-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Build Kali Docker on M1 Mac"/>
+<meta name="twitter:description" content="Background: I personally use M1 Macbook. It&rsquo;s pretty tricky to install VMs on it. So why don&rsquo;t we just use docker?
+Install and run Kali docker Download Docker Desktop for m1.
+In terminal, download and run Kali docker image:
+docker run -it kalilinux/kali-rolling /bin/bash
+In Kali shell, update and download essential tools:
+apt-get update &amp; apt install kali-linux-default
+Install RDP and XFCE:
+apt-get install kali-desktop-xfce xrdp
+Add a user:
+adduser test"/>
+
+<meta itemprop="name" content="Build Kali Docker on M1 Mac">
+<meta itemprop="description" content="Background: I personally use M1 Macbook. It&rsquo;s pretty tricky to install VMs on it. So why don&rsquo;t we just use docker?
+Install and run Kali docker Download Docker Desktop for m1.
+In terminal, download and run Kali docker image:
+docker run -it kalilinux/kali-rolling /bin/bash
+In Kali shell, update and download essential tools:
+apt-get update &amp; apt install kali-linux-default
+Install RDP and XFCE:
+apt-get install kali-desktop-xfce xrdp
+Add a user:
+adduser test"><meta itemprop="datePublished" content="2022-10-18T15:49:37-04:00" />
+<meta itemprop="dateModified" content="2022-10-18T15:49:37-04:00" />
+<meta itemprop="wordCount" content="281">
+<meta itemprop="keywords" content="kali,docker," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://ych3r.github.io/"><img src="/img/coder.png" alt="Yuchen&#39;s Tech Blog"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://ych3r.github.io/">Yuchen&#39;s Tech Blog</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Let&rsquo;s learn something new today!</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/post">All Posts</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">18</span>
+<span class="rest">Oct 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Build Kali Docker on M1 Mac</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;281&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h2 id="background">Background:</h2>
+<p>I personally use M1 Macbook. It&rsquo;s pretty tricky to install VMs on it. So why don&rsquo;t we just use docker?</p>
+<h2 id="install-and-run-kali-docker">Install and run Kali docker</h2>
+<ul>
+<li>
+<p>Download <strong>Docker Desktop for m1</strong>.</p>
+</li>
+<li>
+<p>In terminal, download and run Kali docker image:</p>
+<p><code>docker run -it kalilinux/kali-rolling /bin/bash</code></p>
+</li>
+<li>
+<p>In Kali shell, update and download essential tools:</p>
+<p><code>apt-get update &amp; apt install kali-linux-default</code></p>
+</li>
+<li>
+<p>Install <strong>RDP</strong> and <strong>XFCE</strong>:</p>
+<p><code>apt-get install kali-desktop-xfce xrdp</code></p>
+</li>
+<li>
+<p>Add a user:</p>
+<p><code>adduser test</code></p>
+</li>
+<li>
+<p>Give it <em>sudo</em> priv:</p>
+<p><code>usermod -aG sudo test</code></p>
+</li>
+<li>
+<p>Exit from kali, use container id to commit to a new image(so you don&rsquo;t have to repeat the above steps):</p>
+<p><code>docker commit xxxxxxxx kali:v1</code></p>
+</li>
+<li>
+<p>Now, we need to know container is completely isolated from localhost unless you make it open a port:</p>
+<p><code>docker run -it -p 3389:3389 --expose=3389 kali</code></p>
+</li>
+</ul>
+<h2 id="use-rdp-connect-to-it">Use RDP connect to it</h2>
+<ul>
+<li>
+<p>Back to kali, start rdp:</p>
+<p><code>sudo service xrdp start</code>. You can also use <code>status</code>, <code>stop</code>, or <code>restart</code> to control this process.</p>
+</li>
+<li>
+<p>Some RDP software only support ipv4. So we change it to ipv4: <code>sudo nano /etc/xrdp/xrdp.ini</code> and then change <code>port=3389</code> to <code>port=tcp://:3389</code>.</p>
+</li>
+<li>
+<p>Exit Kali, download <strong>Microsoft Remote Desktop</strong>. Yes, it can also be used to access Windows remote machines.</p>
+</li>
+<li>
+<p>Type in <code>127.0.0.1</code> and you should connect to the kali.</p>
+</li>
+</ul>
+<h2 id="some-bugs">Some bugs</h2>
+<ul>
+<li>
+<p>When we restart the container after we stopped it, xrdp won&rsquo;t work.</p>
+</li>
+<li>
+<p>We need to manually remove old processes and start it:</p>
+<p><code>sudo rm /var/run/xrdp/xrdp* &amp; sudo service xrdp start</code>.</p>
+</li>
+<li>
+<p>So I put it into a bash script.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>sudo rm /var/run/xrdp/xrdp*
+</span></span><span style="display:flex;"><span>sudo service xrdp start
+</span></span></code></pre></div><h2 id="etc">etc</h2>
+<p>It&rsquo;s faster than vm and super easy to rebuild.</p>
+<hr>
+<p>ref:</p>
+<ul>
+<li><a href="https://systemweakness.com/my-perfect-bug-bounty-docker-setup-f6441f236a2d" target="_blank">My Perfect Bug Bounty Docker Setup</a></li>
+<li><a href="https://stackoverflow.com/questions/67566142/does-xrdp-0-9-5-only-support-ipv6-and-not-ipv4" target="_blank">Does Xrdp 0.9.5 only support IPV6 and not IPv4?</a></li>
+<li><a href="https://www.kali.org/docs/general-use/xfce-with-rdp/" target="_blank">Setting up RDP with Xfce</a></li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/etc/">etc</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/docker/">docker</a>
+<a href="/tags/kali/">kali</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

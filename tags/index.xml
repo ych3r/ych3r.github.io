@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Sun, 09 Oct 2022 18:43:00 -0400</lastBuildDate>
+		<lastBuildDate>Tue, 18 Oct 2022 15:49:37 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>docker</title>
+			<link>https://ych3r.github.io/tags/docker/</link>
+			<pubDate>Tue, 18 Oct 2022 15:49:37 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/docker/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>kali</title>
+			<link>https://ych3r.github.io/tags/kali/</link>
+			<pubDate>Tue, 18 Oct 2022 15:49:37 -0400</pubDate>
+			<guid>https://ych3r.github.io/tags/kali/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>being lazy</title>
 			<link>https://ych3r.github.io/tags/being-lazy/</link>
