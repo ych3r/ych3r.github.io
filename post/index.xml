@@ -30,28 +30,6 @@ It’s too heavy to carry around. It’s Intel based while my laptop is a M1 mac
 			</description>
 		</item>
 		<item>
-			<title>Merge Sorted Arrays</title>
-			<link>https://ych3r.github.io/post/merge-sorted-arrays/</link>
-			<pubDate>Thu, 29 Sep 2022 22:27:42 -0400</pubDate>
-			<guid>https://ych3r.github.io/post/merge-sorted-arrays/</guid>
-			<description>
-			 merge two sorted arrays.
-First I can think of:
-def merge_sorted_arrays(arr1: int, arr2: int) -> int: # [0, 3, 4, 31] [4, 6, 30] return …
-			</description>
-		</item>
-		<item>
-			<title>Reverse A String</title>
-			<link>https://ych3r.github.io/post/reverse-a-string/</link>
-			<pubDate>Thu, 29 Sep 2022 11:41:41 -0400</pubDate>
-			<guid>https://ych3r.github.io/post/reverse-a-string/</guid>
-			<description>
-			 Create a function that reverses a string.
-The first one I can think of:
-def reverse(string: str) -> str: return string[::-1] Let’s see the …
-			</description>
-		</item>
-		<item>
 			<title>Web Requests</title>
 			<link>https://ych3r.github.io/post/web_requests/</link>
 			<pubDate>Mon, 27 Jun 2022 12:37:01 -0400</pubDate>
