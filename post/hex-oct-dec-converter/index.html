@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Convert Hex Oct Dec to Chr | Yuchen&#39;s Tech Blog</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.3" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="converter">
+<meta name="description" content="hex to chr:
+hex = input(&#34;hex-&gt; &#34;) hex_list = hex.split() ans = &#34;&#34; for h in hex_list: ans &#43;= chr(int(h, 2)) print(ans) example:
+hex-&gt; 01110011 01101111 …">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Convert Hex Oct Dec to Chr" />
+<meta property="og:description" content="hex to chr:
+hex = input(&#34;hex-&gt; &#34;) hex_list = hex.split() ans = &#34;&#34; for h in hex_list: ans &#43;= chr(int(h, 2)) print(ans) example:
+hex-&gt; 01110011 01101111 01100011 01101011 01100101 01110100 socket oct to chr:
+oct = input(&#34;oct-&gt; &#34;) oct_list = oct.split() ans = &#34;&#34; for o in oct_list: ans &#43;= chr(int(o, 8)) print(ans) example:
+oct-&gt; 155 141 160 map hex string to chr:
+hex = input(&#34;hex str-&gt; &#34;) print(bytes.fromhex(hex).decode(&#34;utf-8&#34;)) example:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ych3r.github.io/post/hex-oct-dec-converter/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-10-26T21:04:03-04:00" />
+<meta property="article:modified_time" content="2022-10-26T21:04:03-04:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Convert Hex Oct Dec to Chr"/>
+<meta name="twitter:description" content="hex to chr:
+hex = input(&#34;hex-&gt; &#34;) hex_list = hex.split() ans = &#34;&#34; for h in hex_list: ans &#43;= chr(int(h, 2)) print(ans) example:
+hex-&gt; 01110011 01101111 01100011 01101011 01100101 01110100 socket oct to chr:
+oct = input(&#34;oct-&gt; &#34;) oct_list = oct.split() ans = &#34;&#34; for o in oct_list: ans &#43;= chr(int(o, 8)) print(ans) example:
+oct-&gt; 155 141 160 map hex string to chr:
+hex = input(&#34;hex str-&gt; &#34;) print(bytes.fromhex(hex).decode(&#34;utf-8&#34;)) example:"/>
+
+<meta itemprop="name" content="Convert Hex Oct Dec to Chr">
+<meta itemprop="description" content="hex to chr:
+hex = input(&#34;hex-&gt; &#34;) hex_list = hex.split() ans = &#34;&#34; for h in hex_list: ans &#43;= chr(int(h, 2)) print(ans) example:
+hex-&gt; 01110011 01101111 01100011 01101011 01100101 01110100 socket oct to chr:
+oct = input(&#34;oct-&gt; &#34;) oct_list = oct.split() ans = &#34;&#34; for o in oct_list: ans &#43;= chr(int(o, 8)) print(ans) example:
+oct-&gt; 155 141 160 map hex string to chr:
+hex = input(&#34;hex str-&gt; &#34;) print(bytes.fromhex(hex).decode(&#34;utf-8&#34;)) example:"><meta itemprop="datePublished" content="2022-10-26T21:04:03-04:00" />
+<meta itemprop="dateModified" content="2022-10-26T21:04:03-04:00" />
+<meta itemprop="wordCount" content="100">
+<meta itemprop="keywords" content="converter," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://ych3r.github.io/"><img src="/img/coder.png" alt="Yuchen&#39;s Tech Blog"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://ych3r.github.io/">Yuchen&#39;s Tech Blog</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">Let&rsquo;s learn something new today!</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/ych3r"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/post">All Posts</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">26</span>
+<span class="rest">Oct 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Convert Hex Oct Dec to Chr</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+
+
+ 
+&nbsp;| &nbsp;
+
+<i class="fas fa-book"></i>&nbsp;100&nbsp;words
+
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p>hex to chr:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>hex <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;hex-&gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>hex_list <span style="color:#f92672">=</span> hex<span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span>ans <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> h <span style="color:#f92672">in</span> hex_list:
+</span></span><span style="display:flex;"><span>  ans <span style="color:#f92672">+=</span> chr(int(h, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>print(ans)
+</span></span></code></pre></div><p>example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-s" data-lang="s"><span style="display:flex;"><span>hex<span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">01110011</span> <span style="color:#ae81ff">01101111</span> <span style="color:#ae81ff">01100011</span> <span style="color:#ae81ff">01101011</span> <span style="color:#ae81ff">01100101</span> <span style="color:#ae81ff">01110100</span>
+</span></span><span style="display:flex;"><span>socket
+</span></span></code></pre></div><p>oct to chr:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>oct <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;oct-&gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>oct_list <span style="color:#f92672">=</span> oct<span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span>ans <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> o <span style="color:#f92672">in</span> oct_list:
+</span></span><span style="display:flex;"><span>  ans <span style="color:#f92672">+=</span> chr(int(o, <span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>print(ans)
+</span></span></code></pre></div><p>example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-s" data-lang="s"><span style="display:flex;"><span>oct<span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">155</span> <span style="color:#ae81ff">141</span> <span style="color:#ae81ff">160</span>
+</span></span><span style="display:flex;"><span>map
+</span></span></code></pre></div><p>hex string to chr:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>hex <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;hex str-&gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>print(bytes<span style="color:#f92672">.</span>fromhex(hex)<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#34;utf-8&#34;</span>))
+</span></span></code></pre></div><p>example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-s" data-lang="s"><span style="display:flex;"><span>hex str<span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">636</span>f6c6f7261646f
+</span></span><span style="display:flex;"><span>colorado
+</span></span></code></pre></div><p>dec to chr:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>dec <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;dec-&gt; &#34;</span>)
+</span></span><span style="display:flex;"><span>dec_list <span style="color:#f92672">=</span> dec<span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span>ans <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> dec_list:
+</span></span><span style="display:flex;"><span>  ans <span style="color:#f92672">+=</span> chr(int(d, <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>print(ans)
+</span></span></code></pre></div><p>example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-s" data-lang="s"><span style="display:flex;"><span>dec<span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">65</span>
+</span></span><span style="display:flex;"><span>A
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/ctf/">ctf</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/converter/">converter</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Yuchen Liu 2022
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

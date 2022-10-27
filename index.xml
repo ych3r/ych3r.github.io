@@ -7,8 +7,19 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Yuchen Liu 2022</copyright>
-		<lastBuildDate>Tue, 18 Oct 2022 15:49:37 -0400</lastBuildDate>
+		<lastBuildDate>Wed, 26 Oct 2022 21:04:03 -0400</lastBuildDate>
 		<atom:link href="https://ych3r.github.io/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Convert Hex Oct Dec to Chr</title>
+			<link>https://ych3r.github.io/post/hex-oct-dec-converter/</link>
+			<pubDate>Wed, 26 Oct 2022 21:04:03 -0400</pubDate>
+			<guid>https://ych3r.github.io/post/hex-oct-dec-converter/</guid>
+			<description>
+			hex to chr:
+hex = input("hex-> ") hex_list = hex.split() ans = "" for h in hex_list: ans += chr(int(h, 2)) print(ans) example:
+hex-> …
+			</description>
+		</item>
 		<item>
 			<title>Build Kali Docker on M1 Mac</title>
 			<link>https://ych3r.github.io/post/build-kali-docker-on-m1-mac/</link>
