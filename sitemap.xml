@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ych3r.github.io/search/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.es/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.fr/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.hi/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.jp/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.pl/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.ru/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/search/_index.zh-cn/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://ych3r.github.io/categories/</loc>
+  </url><url>
+    <loc>https://ych3r.github.io/</loc>
+  </url><url>
+    <loc>https://ych3r.github.io/tags/</loc>
+  </url>
+</urlset>
