@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Techniques on Y.Liu&#39;s Blog</title>
+    <link>http://localhost:1313/tags/techniques/</link>
+    <description>Recent content in Techniques on Y.Liu&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Yuchen Liu</copyright>
+    <lastBuildDate>Fri, 13 Sep 2024 21:15:54 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/techniques/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>File Transfer</title>
+      <link>http://localhost:1313/posts/file_transfer/</link>
+      <pubDate>Fri, 13 Sep 2024 21:15:54 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/file_transfer/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# draft&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Background&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Techniques&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Linux -&amp;gt; Windows&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Windows -&amp;gt; Linux&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Linux -&amp;gt; Linux&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Windows -&amp;gt; Windows&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Imagine you gain initial access to a target, there&amp;rsquo;s a database file right in front of you and it might contain user&amp;rsquo;s password. How do you get it?&lt;/p&gt;&#xA;&lt;h2 id=&#34;techniques&#34;&gt;Techniques&lt;/h2&gt;&#xA;&lt;h3 id=&#34;linux---windows&#34;&gt;Linux -&amp;gt; Windows&lt;/h3&gt;</description>
+    </item>
+  </channel>
+</rss>

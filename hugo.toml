@@ -1,0 +1,41 @@
+baseURL = "https://liuyuchen.dev/"
+languageCode = "en-us"
+title = "Y.Liu's Blog"
+author = "Yuchen"
+copyright = "Yuchen Liu"
+theme = "tailwind"
+
+[markup]
+  _merge = "deep"
+
+[params]
+  subtitle = ""
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "coder.png"
+
+  [params.footer]
+    since = 2024
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 20
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
