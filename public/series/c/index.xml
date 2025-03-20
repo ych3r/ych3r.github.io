@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on Y.Liu&#39;s Blog</title>
+    <link>http://localhost:1313/series/c/</link>
+    <description>Recent content in C on Y.Liu&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Yuchen Liu</copyright>
+    <lastBuildDate>Fri, 23 Aug 2024 01:11:38 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS Basics</title>
+      <link>http://localhost:1313/posts/xss_basics/</link>
+      <pubDate>Fri, 23 Aug 2024 01:11:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/xss_basics/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
