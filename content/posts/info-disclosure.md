@@ -2,6 +2,7 @@
 title = 'Duplicate Report'
 date = 2025-03-20T00:09:38-04:00
 draft = true
+toc = false
 categories = ['bug bounty']
 tags = ['information disclosure', 'recon']
 series = ['']

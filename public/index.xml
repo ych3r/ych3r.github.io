@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Y.Liu&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://liuyuchen.dev/</link>
     <description>Recent content on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,89 +10,89 @@
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
     <lastBuildDate>Wed, 21 Aug 2024 23:39:22 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://liuyuchen.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Whoami</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://liuyuchen.dev/about/</link>
       <pubDate>Wed, 21 Aug 2024 23:39:22 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://liuyuchen.dev/about/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;(I think) I&amp;rsquo;m a developer/hacker ;)&lt;/li&gt;&#xA;&lt;li&gt;I build secure systems as a &lt;strong&gt;Software Developer&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Then I try to break into systems as a &lt;strong&gt;Bug Bounty Hunter&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
+      <link>https://liuyuchen.dev/posts/hello/</link>
       <pubDate>Wed, 21 Aug 2024 11:56:18 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/hello/</guid>
+      <guid>https://liuyuchen.dev/posts/hello/</guid>
       <description>&lt;p&gt;Hey y&amp;rsquo;all, I just started this new blog. Thanks for visiting ;)&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/manifest.json</link>
+      <link>https://liuyuchen.dev/manifest.json</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/manifest.json</guid>
+      <guid>https://liuyuchen.dev/manifest.json</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.de/</link>
+      <link>https://liuyuchen.dev/search/_index.de/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.de/</guid>
+      <guid>https://liuyuchen.dev/search/_index.de/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.es/</link>
+      <link>https://liuyuchen.dev/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.es/</guid>
+      <guid>https://liuyuchen.dev/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.fr/</link>
+      <link>https://liuyuchen.dev/search/_index.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.fr/</guid>
+      <guid>https://liuyuchen.dev/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.hi/</link>
+      <link>https://liuyuchen.dev/search/_index.hi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.hi/</guid>
+      <guid>https://liuyuchen.dev/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.jp/</link>
+      <link>https://liuyuchen.dev/search/_index.jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.jp/</guid>
+      <guid>https://liuyuchen.dev/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.nl/</link>
+      <link>https://liuyuchen.dev/search/_index.nl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.nl/</guid>
+      <guid>https://liuyuchen.dev/search/_index.nl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.pl/</link>
+      <link>https://liuyuchen.dev/search/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.pl/</guid>
+      <guid>https://liuyuchen.dev/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.ru/</link>
+      <link>https://liuyuchen.dev/search/_index.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.ru/</guid>
+      <guid>https://liuyuchen.dev/search/_index.ru/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.zh-cn/</link>
+      <link>https://liuyuchen.dev/search/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
+      <guid>https://liuyuchen.dev/search/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>

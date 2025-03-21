@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://liuyuchen.dev/posts/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://liuyuchen.dev/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://liuyuchen.dev/about/</loc>
     <lastmod>2024-08-21T23:39:22-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello/</loc>
+    <loc>https://liuyuchen.dev/posts/hello/</loc>
     <lastmod>2024-08-21T11:56:18-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/manifest.json</loc>
+    <loc>https://liuyuchen.dev/manifest.json</loc>
   </url><url>
-    <loc>http://localhost:1313/search/_index.de/</loc>
+    <loc>https://liuyuchen.dev/search/_index.de/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://liuyuchen.dev/search/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.es/</loc>
+    <loc>https://liuyuchen.dev/search/_index.es/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.fr/</loc>
+    <loc>https://liuyuchen.dev/search/_index.fr/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.hi/</loc>
+    <loc>https://liuyuchen.dev/search/_index.hi/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.jp/</loc>
+    <loc>https://liuyuchen.dev/search/_index.jp/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.nl/</loc>
+    <loc>https://liuyuchen.dev/search/_index.nl/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.pl/</loc>
+    <loc>https://liuyuchen.dev/search/_index.pl/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.ru/</loc>
+    <loc>https://liuyuchen.dev/search/_index.ru/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.zh-cn/</loc>
+    <loc>https://liuyuchen.dev/search/_index.zh-cn/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://liuyuchen.dev/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://liuyuchen.dev/series/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://liuyuchen.dev/tags/</loc>
   </url>
 </urlset>
