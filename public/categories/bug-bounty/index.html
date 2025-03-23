@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>Bug Bounty :: Y.Liu&#39;s Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -13,7 +13,7 @@
   name="keywords"
   content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
 />
-<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="http://localhost:1313/categories/bug-bounty/">
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="https://liuyuchen.dev/categories/bug-bounty/">
   <meta property="og:site_name" content="Y.Liu&#39;s Blog">
   <meta property="og:title" content="Bug Bounty">
   <meta property="og:locale" content="en_us">
@@ -24,10 +24,10 @@
   <meta name="twitter:title" content="Bug Bounty">
 
 
-<link rel="canonical" href="http://localhost:1313/categories/bug-bounty/" />
+<link rel="canonical" href="https://liuyuchen.dev/categories/bug-bounty/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.f2b5b9c8e4e9b03048601ca9eedc29df44c3a73343f4538f41785e16f13c341a.css">
+<link rel="stylesheet" href="/css/index.min.c860e17f20d9f258820c02bf7ab3f57c9595d0bc21dede7eda08ccd63ba3f4cc.css">
 
 
 
@@ -39,18 +39,7 @@
 
   
 </head>
-<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
-    
-<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
-  <span class="block sm:hidden">all</span>
-  <span class="hidden sm:block md:hidden">sm</span>
-  <span class="hidden md:block lg:hidden">md</span>
-  <span class="hidden lg:block xl:hidden">lg</span>
-  <span class="hidden xl:block 2xl:hidden">xl</span>
-  <span class="hidden 2xl:block">2xl</span>
-</div>
-
-  <header class="flex flex-none justify-center z-10">
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800"><header class="flex flex-none justify-center z-10">
     <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
   <div class="flex-none ml-2 md:ml-0">
     <a href="/" class="">
@@ -164,24 +153,30 @@
         
           <article class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
             <div>
-              <a href="/posts/info-disclosure/">
+              <a href="/posts/duplicate-report/">
                 
               </a>
             </div>
             <div class="flex flex-col gap-y-3 p-6">
               <h2 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
-                <a href="/posts/info-disclosure/">Duplicate Report</a>
+                <a href="/posts/duplicate-report/">Duplicate Report</a>
               </h2>
 
               
   
   <div class="my-4 text-large text-slate-600 dark:text-slate-300">
     <p>So, I almost submit my first valid bug report&hellip;</p>
-<blockquote>
-<p>what happened
-what&rsquo;s information disclosure bug
-where to find it
-how to make it more efficient</p></blockquote>
+<p><div class="not-prose">
+<figure>
+    <img src="/duplicate-report.png"
+      alt="screenshot" 
+      loading="lazy"
+    >
+  </figure></div>
+</p>
+<h3 id="what-happened">What Happened</h3>
+<p>The other night, I finally decided to give bug bounty a try. I found a VDP program and let ChatGPT write me a recon script. That recon script returned with several subdomains, and when I went through them, a weird domain caught my eye. What the hell is &lsquo;whoami.xx.xx.com&rsquo;?</p>
+<p>Out of curiosity, I opened that in my browser. Holy cow, it looks like a debugging page with an internal IP! I wasn&rsquo;t sure if that counts but ChatGPT said it was a valid information disclosure bug. Before embarrassing myself, I wanted to figure out what this &lsquo;whoami&rsquo; subdomain does.</p>
   </div>
   
 
@@ -271,7 +266,7 @@ how to make it more efficient</p></blockquote>
 
     </i>
     <span>
-      One minute to read
+      3 minutes to read
     </span>
   </div>
 </div>
@@ -426,7 +421,7 @@ how to make it more efficient</p></blockquote>
 </section>
 
   </footer>
-  <script src="/main.js"></script>
+  <script src="/main.min.c6372b6836971865bd94bfde974748aca8415824a2facab6ccd66a87384bfacb.js"></script>
 
 
 
