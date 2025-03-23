@@ -9,6 +9,21 @@
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
+    <lastBuildDate>Thu, 20 Mar 2025 00:09:38 -0400</lastBuildDate>
     <atom:link href="https://liuyuchen.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Information Disclosure</title>
+      <link>https://liuyuchen.dev/tags/information-disclosure/</link>
+      <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/tags/information-disclosure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recon</title>
+      <link>https://liuyuchen.dev/tags/recon/</link>
+      <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/tags/recon/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
