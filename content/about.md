@@ -5,6 +5,6 @@ draft = false
 toc = false
 +++
 
-- (I think) I'm a developer/hacker ;)
-- I build secure systems as a **Software Developer**.
-- Then I try to break into systems as a **Bug Bounty Hunter**.
+- I'm a developer & hacker. *I think
+- I build (hopefully)secure software during the day.
+- And I do/learn bug hunting for fun at night.
