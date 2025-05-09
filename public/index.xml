@@ -26,13 +26,6 @@
       <description>&lt;ul&gt;&#xA;&lt;li&gt;I&amp;rsquo;m a developer &amp;amp; hacker. *I think&lt;/li&gt;&#xA;&lt;li&gt;I build (hopefully)secure software during the day.&lt;/li&gt;&#xA;&lt;li&gt;And I do/learn bug hunting for fun at night.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
-      <pubDate>Wed, 21 Aug 2024 11:56:18 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/hello/</guid>
-      <description>&lt;p&gt;Hey y&amp;rsquo;all, I just started this new blog. Thanks for visiting ;)&lt;/p&gt;</description>
-    </item>
-    <item>
       <title></title>
       <link>http://localhost:1313/manifest.json</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>

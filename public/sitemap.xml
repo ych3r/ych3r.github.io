@@ -29,9 +29,6 @@
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-08-21T23:39:22-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello/</loc>
-    <lastmod>2024-08-21T11:56:18-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/manifest.json</loc>
   </url><url>
     <loc>http://localhost:1313/search/_index.de/</loc>
