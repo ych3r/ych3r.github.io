@@ -2,20 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Y.Liu&#39;s Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://liuyuchen.dev/categories/</link>
     <description>Recent content in Categories on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Thu, 20 Mar 2025 00:09:38 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 May 2025 11:46:59 -0400</lastBuildDate>
+    <atom:link href="https://liuyuchen.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Etc</title>
+      <link>https://liuyuchen.dev/categories/etc/</link>
+      <pubDate>Sat, 17 May 2025 11:46:59 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/categories/etc/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bug Bounty</title>
-      <link>http://localhost:1313/categories/bug-bounty/</link>
+      <link>https://liuyuchen.dev/categories/bug-bounty/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/categories/bug-bounty/</guid>
+      <guid>https://liuyuchen.dev/categories/bug-bounty/</guid>
       <description></description>
     </item>
   </channel>

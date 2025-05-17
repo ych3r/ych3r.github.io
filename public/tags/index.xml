@@ -2,27 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Y.Liu&#39;s Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://liuyuchen.dev/tags/</link>
     <description>Recent content in Tags on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Thu, 20 Mar 2025 00:09:38 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 May 2025 11:46:59 -0400</lastBuildDate>
+    <atom:link href="https://liuyuchen.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Career</title>
+      <link>https://liuyuchen.dev/tags/career/</link>
+      <pubDate>Sat, 17 May 2025 11:46:59 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/tags/career/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Information Disclosure</title>
-      <link>http://localhost:1313/tags/information-disclosure/</link>
+      <link>https://liuyuchen.dev/tags/information-disclosure/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/tags/information-disclosure/</guid>
+      <guid>https://liuyuchen.dev/tags/information-disclosure/</guid>
       <description></description>
     </item>
     <item>
       <title>Recon</title>
-      <link>http://localhost:1313/tags/recon/</link>
+      <link>https://liuyuchen.dev/tags/recon/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/tags/recon/</guid>
+      <guid>https://liuyuchen.dev/tags/recon/</guid>
       <description></description>
     </item>
   </channel>
