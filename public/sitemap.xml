@@ -2,74 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://liuyuchen.dev/tags/career/</loc>
+    <loc>http://localhost:1313/tags/career/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/posts/career-change/</loc>
+    <loc>http://localhost:1313/posts/career-change/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/categories/etc/</loc>
+    <loc>http://localhost:1313/categories/etc/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/categories/bug-bounty/</loc>
+    <loc>http://localhost:1313/categories/bug-bounty/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/posts/duplicate-report/</loc>
+    <loc>http://localhost:1313/posts/duplicate-report/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/tags/information-disclosure/</loc>
+    <loc>http://localhost:1313/tags/information-disclosure/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/tags/recon/</loc>
+    <loc>http://localhost:1313/tags/recon/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-08-21T23:39:22-04:00</lastmod>
   </url><url>
-    <loc>https://liuyuchen.dev/manifest.json</loc>
+    <loc>http://localhost:1313/manifest.json</loc>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.de/</loc>
+    <loc>http://localhost:1313/search/_index.de/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.es/</loc>
+    <loc>http://localhost:1313/search/_index.es/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.fr/</loc>
+    <loc>http://localhost:1313/search/_index.fr/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.hi/</loc>
+    <loc>http://localhost:1313/search/_index.hi/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.jp/</loc>
+    <loc>http://localhost:1313/search/_index.jp/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.nl/</loc>
+    <loc>http://localhost:1313/search/_index.nl/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.pl/</loc>
+    <loc>http://localhost:1313/search/_index.pl/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.ru/</loc>
+    <loc>http://localhost:1313/search/_index.ru/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/search/_index.zh-cn/</loc>
+    <loc>http://localhost:1313/search/_index.zh-cn/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://liuyuchen.dev/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
   </url>
 </urlset>
