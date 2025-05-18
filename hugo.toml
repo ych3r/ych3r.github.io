@@ -25,13 +25,13 @@ theme = "tailwind"
 
   [[menu.main]]
     identifier = "post"
-    name = "Post"
+    name = "Blogs"
     pageRef = "/posts"
     weight = 10
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "Whoami"
     pageRef = "/about"
     weight = 20
 
