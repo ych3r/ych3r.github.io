@@ -9,8 +9,15 @@
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Sat, 17 May 2025 11:46:59 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jun 2025 12:26:43 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Are you from the Same Origin?</title>
+      <link>http://localhost:1313/posts/cors/</link>
+      <pubDate>Sun, 01 Jun 2025 12:26:43 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/cors/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;create-a-simple-web-app-with-cors-misconfiguration&#34;&gt;Create a Simple Web App with CORS Misconfiguration&lt;/h3&gt;&#xA;&lt;p&gt;Essentially, we require a web application with a straightforward login feature and a data endpoint. With misconfigured CORS, we should be able to see the sensitive data from another origin.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Career Change: From Cybersecurity to Software Development</title>
       <link>http://localhost:1313/posts/career-change/</link>
