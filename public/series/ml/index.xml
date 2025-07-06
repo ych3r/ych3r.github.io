@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ML on Y.Liu&#39;s Blog</title>
+    <link>http://localhost:1313/series/ml/</link>
+    <description>Recent content in ML on Y.Liu&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Yuchen Liu</copyright>
+    <lastBuildDate>Sat, 14 Jun 2025 13:36:36 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/ml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supervised Machine Learning 101</title>
+      <link>http://localhost:1313/posts/supervised-ml/</link>
+      <pubDate>Sat, 14 Jun 2025 13:36:36 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/supervised-ml/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The other day, the tech lead wanted us to implement supervised machine learning in our ticket approval system. He said it is very easy.&lt;/p&gt;&#xA;&lt;p&gt;But I had no idea how it works, so I thought writing a blog might be helpful for me to learn about it.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;We have a ticket approval system, a platform for reviewing tickets that request access to some resource. With an increasing number of tickets being submitted, manually reviewing them has become inefficient. So, we are seeking a machine learning solution to automate this process.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
