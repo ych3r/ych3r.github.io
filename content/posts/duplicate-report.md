@@ -3,9 +3,9 @@ title = 'Duplicate Report'
 date = 2025-03-20T00:09:38-04:00
 draft = false
 toc = false
-categories = ['bug bounty']
+categories = ['security']
 tags = ['information disclosure', 'recon']
-series = ['']
+series = ['bug bounty']
 +++
 
 So, I almost submit my first valid bug report...
