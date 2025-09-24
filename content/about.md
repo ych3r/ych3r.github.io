@@ -6,6 +6,4 @@ toc = false
 +++
 
 - Hi I'm Yuchen.
-- I'm a developer & hacker. *I think
-- I build (hopefully)secure software during the day.
-- And I do/learn bug hunting for fun at night.
+- I'm a Software Engineer.
