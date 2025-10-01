@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Decision Tree on Y.Liu&#39;s Blog</title>
-    <link>http://localhost:1313/tags/decision-tree/</link>
+    <link>https://liuyuchen.dev/tags/decision-tree/</link>
     <description>Recent content in Decision Tree on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,12 +10,12 @@
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
     <lastBuildDate>Sat, 14 Jun 2025 13:36:36 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/decision-tree/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://liuyuchen.dev/tags/decision-tree/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Decision Tree &gt; if-else</title>
-      <link>http://localhost:1313/posts/decision-tree/</link>
+      <link>https://liuyuchen.dev/posts/decision-tree/</link>
       <pubDate>Sat, 14 Jun 2025 13:36:36 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/decision-tree/</guid>
+      <guid>https://liuyuchen.dev/posts/decision-tree/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The other day, our tech lead suggested we implement supervised machine learning to automate our ticket approval system.&lt;/p&gt;&#xA;&lt;p&gt;He said it would be very easy.&lt;/p&gt;&#xA;&lt;p&gt;I had no idea how it worked-and honestly, I was confused. Why not just use if-else statements?&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;We have a ticket approval system, a platform for reviewing tickets that request access to some resource. With an increasing number of tickets being submitted, manually reviewing them has become inefficient.&lt;/p&gt;</description>
     </item>
   </channel>
