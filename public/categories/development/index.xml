@@ -9,15 +9,8 @@
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Tue, 30 Sep 2025 23:44:15 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 17 May 2025 11:46:59 -0400</lastBuildDate>
     <atom:link href="https://liuyuchen.dev/categories/development/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Basic Data Structures</title>
-      <link>https://liuyuchen.dev/posts/basic-ds/</link>
-      <pubDate>Tue, 30 Sep 2025 23:44:15 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/basic-ds/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Data structure is the basis of basics.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I took the data structure and algorithms class back in college, and I probably got a pretty good grade because I remember that I liked it. But because I learned that in C, and I&amp;rsquo;ve never used C to do anything, after switching to security, I completely forgot about DSA.&lt;/p&gt;&#xA;&lt;p&gt;Now that I work as a software engineer, I have to pick it up&amp;hellip; fast.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Career Change: From Cybersecurity to Software Development</title>
       <link>https://liuyuchen.dev/posts/career-change/</link>

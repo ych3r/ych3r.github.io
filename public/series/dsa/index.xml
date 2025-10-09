@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dsa on Y.Liu&#39;s Blog</title>
-    <link>https://liuyuchen.dev/series/dsa/</link>
+    <link>http://localhost:1313/series/dsa/</link>
     <description>Recent content in Dsa on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,12 +10,12 @@
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
     <lastBuildDate>Tue, 30 Sep 2025 23:44:15 -0400</lastBuildDate>
-    <atom:link href="https://liuyuchen.dev/series/dsa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/series/dsa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basic Data Structures</title>
-      <link>https://liuyuchen.dev/posts/basic-ds/</link>
+      <link>http://localhost:1313/posts/basic-ds/</link>
       <pubDate>Tue, 30 Sep 2025 23:44:15 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/basic-ds/</guid>
+      <guid>http://localhost:1313/posts/basic-ds/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Data structure is the basis of basics.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I took the data structure and algorithms class back in college, and I probably got a pretty good grade because I remember that I liked it. But because I learned that in C, and I&amp;rsquo;ve never used C to do anything, after switching to security, I completely forgot about DSA.&lt;/p&gt;&#xA;&lt;p&gt;Now that I work as a software engineer, I have to pick it up&amp;hellip; fast.&lt;/p&gt;</description>
     </item>
   </channel>

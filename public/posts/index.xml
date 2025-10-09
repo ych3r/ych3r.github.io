@@ -2,49 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Y.Liu&#39;s Blog</title>
-    <link>https://liuyuchen.dev/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Tue, 30 Sep 2025 23:44:15 -0400</lastBuildDate>
-    <atom:link href="https://liuyuchen.dev/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Basic Data Structures</title>
-      <link>https://liuyuchen.dev/posts/basic-ds/</link>
-      <pubDate>Tue, 30 Sep 2025 23:44:15 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/basic-ds/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Data structure is the basis of basics.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I took the data structure and algorithms class back in college, and I probably got a pretty good grade because I remember that I liked it. But because I learned that in C, and I&amp;rsquo;ve never used C to do anything, after switching to security, I completely forgot about DSA.&lt;/p&gt;&#xA;&lt;p&gt;Now that I work as a software engineer, I have to pick it up&amp;hellip; fast.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Sat, 14 Jun 2025 13:36:36 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Decision Tree &gt; if-else</title>
-      <link>https://liuyuchen.dev/posts/decision-tree/</link>
+      <link>http://localhost:1313/posts/decision-tree/</link>
       <pubDate>Sat, 14 Jun 2025 13:36:36 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/decision-tree/</guid>
+      <guid>http://localhost:1313/posts/decision-tree/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The other day, our tech lead suggested we implement supervised machine learning to automate our ticket approval system.&lt;/p&gt;&#xA;&lt;p&gt;He said it would be very easy.&lt;/p&gt;&#xA;&lt;p&gt;I had no idea how it worked-and honestly, I was confused. Why not just use if-else statements?&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;We have a ticket approval system, a platform for reviewing tickets that request access to some resource. With an increasing number of tickets being submitted, manually reviewing them has become inefficient.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Are you from the Same Origin?</title>
-      <link>https://liuyuchen.dev/posts/cors/</link>
+      <link>http://localhost:1313/posts/cors/</link>
       <pubDate>Sun, 01 Jun 2025 12:26:43 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/cors/</guid>
+      <guid>http://localhost:1313/posts/cors/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;create-a-simple-web-app-with-cors-misconfiguration&#34;&gt;Create a Simple Web App with CORS Misconfiguration&lt;/h3&gt;&#xA;&lt;p&gt;Essentially, we require a web application with a straightforward login feature and a data endpoint. With misconfigured CORS, we should be able to see the sensitive data from another origin.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Career Change: From Cybersecurity to Software Development</title>
-      <link>https://liuyuchen.dev/posts/career-change/</link>
+      <link>http://localhost:1313/posts/career-change/</link>
       <pubDate>Sat, 17 May 2025 11:46:59 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/career-change/</guid>
+      <guid>http://localhost:1313/posts/career-change/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;As a young professional in cybersecurity, do you often feel so dumb that you can&amp;rsquo;t understand some concepts? Maybe my experience can help.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;my-background&#34;&gt;My Background&lt;/h3&gt;&#xA;&lt;p&gt;I studied Information Security in college. We had the usual foundational CS and math courses, along with cryptography. Back then, the security field seemed straightforward—either you were an attacker or a defender—even though I had no idea how either actually worked.&lt;/p&gt;&#xA;&lt;p&gt;Later, I interned at two companies, where I learned about web pentesting and Active Directory security. I thought I was cool because I could &amp;ldquo;hack a machine.&amp;rdquo; But I fell into the certification trap and stayed there for years. I believed that once I got my OSCP, I&amp;rsquo;d land a great job and be set for life. The truth? I never passed the exam and I still got a decent job.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Duplicate Report</title>
-      <link>https://liuyuchen.dev/posts/duplicate-report/</link>
+      <link>http://localhost:1313/posts/duplicate-report/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/duplicate-report/</guid>
-      <description>&lt;p&gt;So, I almost submit my first valid bug report&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;not-prose&#34;&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;https://liuyuchen.dev/duplicate-report.png&#34;&#xA;      alt=&#34;screenshot&#34; &#xA;      loading=&#34;lazy&#34;&#xA;    &gt;&#xA;  &lt;/figure&gt;&lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-happened&#34;&gt;What Happened&lt;/h3&gt;&#xA;&lt;p&gt;The other night, I finally decided to give bug bounty a try. I found a VDP program and let ChatGPT write me a recon script. That recon script returned with several subdomains, and when I went through them, a weird domain caught my eye. What the hell is &amp;lsquo;whoami.xx.xx.com&amp;rsquo;?&lt;/p&gt;&#xA;&lt;p&gt;Out of curiosity, I opened that in my browser. Holy cow, it looks like a debugging page with an internal IP! I wasn&amp;rsquo;t sure if that counts but ChatGPT said it was a valid information disclosure bug. Before embarrassing myself, I wanted to figure out what this &amp;lsquo;whoami&amp;rsquo; subdomain does.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/duplicate-report/</guid>
+      <description>&lt;p&gt;So, I almost submit my first valid bug report&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;not-prose&#34;&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;http://localhost:1313/duplicate-report.png&#34;&#xA;      alt=&#34;screenshot&#34; &#xA;      loading=&#34;lazy&#34;&#xA;    &gt;&#xA;  &lt;/figure&gt;&lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-happened&#34;&gt;What Happened&lt;/h3&gt;&#xA;&lt;p&gt;The other night, I finally decided to give bug bounty a try. I found a VDP program and let ChatGPT write me a recon script. That recon script returned with several subdomains, and when I went through them, a weird domain caught my eye. What the hell is &amp;lsquo;whoami.xx.xx.com&amp;rsquo;?&lt;/p&gt;&#xA;&lt;p&gt;Out of curiosity, I opened that in my browser. Holy cow, it looks like a debugging page with an internal IP! I wasn&amp;rsquo;t sure if that counts but ChatGPT said it was a valid information disclosure bug. Before embarrassing myself, I wanted to figure out what this &amp;lsquo;whoami&amp;rsquo; subdomain does.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

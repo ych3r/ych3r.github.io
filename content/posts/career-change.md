@@ -3,7 +3,7 @@ title = 'Career Change: From Cybersecurity to Software Development'
 date = 2025-05-17T11:46:59-04:00
 draft = false
 toc = false
-categories = ['development']
+categories = ['misc']
 tags = ['career']
 series = ['']
 +++
