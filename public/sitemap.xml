@@ -26,20 +26,11 @@
     <loc>http://localhost:1313/posts/cors/</loc>
     <lastmod>2025-06-01T12:26:43-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/client-side/</loc>
-    <lastmod>2025-06-01T12:26:43-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/cors/</loc>
-    <lastmod>2025-06-01T12:26:43-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/misconfiguration/</loc>
     <lastmod>2025-06-01T12:26:43-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/web-security/</loc>
     <lastmod>2025-06-01T12:26:43-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/career/</loc>
-    <lastmod>2025-05-17T11:46:59-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/career-change/</loc>
     <lastmod>2025-05-17T11:46:59-04:00</lastmod>
@@ -51,9 +42,6 @@
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/information-disclosure/</loc>
-    <lastmod>2025-03-20T00:09:38-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/recon/</loc>
     <lastmod>2025-03-20T00:09:38-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>

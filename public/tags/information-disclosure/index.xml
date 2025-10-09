@@ -12,7 +12,7 @@
     <lastBuildDate>Thu, 20 Mar 2025 00:09:38 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/information-disclosure/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Duplicate Report</title>
+      <title>First Duplicate Report</title>
       <link>http://localhost:1313/posts/duplicate-report/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
       <guid>http://localhost:1313/posts/duplicate-report/</guid>

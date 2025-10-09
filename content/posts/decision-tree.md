@@ -1,5 +1,5 @@
 +++
-title = 'Why Decision Tree > if-else'
+title = 'Why Decision Tree > if-else?'
 date = 2025-06-14T13:36:36-04:00
 draft = false
 toc = false
