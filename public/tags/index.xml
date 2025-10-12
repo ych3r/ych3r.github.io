@@ -2,34 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Y.Liu&#39;s Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://liuyuchen.dev/tags/</link>
     <description>Recent content in Tags on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Sat, 14 Jun 2025 13:36:36 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Oct 2025 23:14:09 -0400</lastBuildDate>
+    <atom:link href="https://liuyuchen.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big O</title>
+      <link>https://liuyuchen.dev/tags/big-o/</link>
+      <pubDate>Wed, 08 Oct 2025 23:14:09 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/tags/big-o/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Decision Tree</title>
-      <link>http://localhost:1313/tags/decision-tree/</link>
+      <link>https://liuyuchen.dev/tags/decision-tree/</link>
       <pubDate>Sat, 14 Jun 2025 13:36:36 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/tags/decision-tree/</guid>
+      <guid>https://liuyuchen.dev/tags/decision-tree/</guid>
       <description></description>
     </item>
     <item>
       <title>Cors</title>
-      <link>http://localhost:1313/tags/cors/</link>
+      <link>https://liuyuchen.dev/tags/cors/</link>
       <pubDate>Sun, 01 Jun 2025 12:26:43 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/tags/cors/</guid>
+      <guid>https://liuyuchen.dev/tags/cors/</guid>
       <description></description>
     </item>
     <item>
       <title>Information Disclosure</title>
-      <link>http://localhost:1313/tags/information-disclosure/</link>
+      <link>https://liuyuchen.dev/tags/information-disclosure/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/tags/information-disclosure/</guid>
+      <guid>https://liuyuchen.dev/tags/information-disclosure/</guid>
       <description></description>
     </item>
   </channel>
