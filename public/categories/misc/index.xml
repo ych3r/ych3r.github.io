@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on Y.Liu&#39;s Blog</title>
+    <link>https://liuyuchen.dev/categories/misc/</link>
+    <description>Recent content in Misc on Y.Liu&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Yuchen Liu</copyright>
+    <lastBuildDate>Sat, 17 May 2025 11:46:59 -0400</lastBuildDate>
+    <atom:link href="https://liuyuchen.dev/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Career Change: From Cybersecurity to Software Development</title>
+      <link>https://liuyuchen.dev/posts/career-change/</link>
+      <pubDate>Sat, 17 May 2025 11:46:59 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/posts/career-change/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;As a young professional in cybersecurity, do you often feel so dumb that you can&amp;rsquo;t understand some concepts? Maybe my experience can help.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;my-background&#34;&gt;My Background&lt;/h3&gt;&#xA;&lt;p&gt;I studied Information Security in college. We had the usual foundational CS and math courses, along with cryptography. Back then, the security field seemed straightforward—either you were an attacker or a defender—even though I had no idea how either actually worked.&lt;/p&gt;&#xA;&lt;p&gt;Later, I interned at two companies, where I learned about web pentesting and Active Directory security. I thought I was cool because I could &amp;ldquo;hack a machine.&amp;rdquo; But I fell into the certification trap and stayed there for years. I believed that once I got my OSCP, I&amp;rsquo;d land a great job and be set for life. The truth? I never passed the exam and I still got a decent job.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

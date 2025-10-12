@@ -1,10 +1,10 @@
 +++
-title = 'Are you from the Same Origin?'
+title = 'Are you from the Same Origin'
 date = 2025-06-01T12:26:43-04:00
 draft = false
 toc = false
-categories = ['security']
-tags = ['cors', 'client-side', 'misconfiguration']
+categories = ['web security']
+tags = ['cors']
 series = ['']
 +++
 

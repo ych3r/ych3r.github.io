@@ -6,4 +6,4 @@ toc = false
 +++
 
 - Hi I'm Yuchen.
-- I'm a Software Engineer.
+- I'm a Software Engineer :)

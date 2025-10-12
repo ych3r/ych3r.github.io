@@ -2,118 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Y.Liu&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://liuyuchen.dev/</link>
     <description>Recent content on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Sat, 14 Jun 2025 13:36:36 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Oct 2025 23:14:09 -0400</lastBuildDate>
+    <atom:link href="https://liuyuchen.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Good Code</title>
+      <link>https://liuyuchen.dev/posts/big-o/</link>
+      <pubDate>Wed, 08 Oct 2025 23:14:09 -0400</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/posts/big-o/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Before saying someone&amp;rsquo;s code is sh*t code, you should know what is good code.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Apart from those that are not readable, in general, the good code should run fast and take up less memory space. Everyone can say their code is good, but how do you prove it? Simply monitoring runtime and memory space may not be accurate due to various factors-the data matters, and hardware also matters. A more scientific way to do so is to look at the &lt;strong&gt;&amp;ldquo;trend&amp;rdquo;&lt;/strong&gt;-if the number of items grows, how would the time and space grow?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Why Decision Tree &gt; if-else</title>
-      <link>http://localhost:1313/posts/decision-tree/</link>
+      <link>https://liuyuchen.dev/posts/decision-tree/</link>
       <pubDate>Sat, 14 Jun 2025 13:36:36 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/decision-tree/</guid>
+      <guid>https://liuyuchen.dev/posts/decision-tree/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The other day, our tech lead suggested we implement supervised machine learning to automate our ticket approval system.&lt;/p&gt;&#xA;&lt;p&gt;He said it would be very easy.&lt;/p&gt;&#xA;&lt;p&gt;I had no idea how it worked-and honestly, I was confused. Why not just use if-else statements?&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;We have a ticket approval system, a platform for reviewing tickets that request access to some resource. With an increasing number of tickets being submitted, manually reviewing them has become inefficient.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Are you from the Same Origin?</title>
-      <link>http://localhost:1313/posts/cors/</link>
+      <title>Are you from the Same Origin</title>
+      <link>https://liuyuchen.dev/posts/cors/</link>
       <pubDate>Sun, 01 Jun 2025 12:26:43 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/cors/</guid>
+      <guid>https://liuyuchen.dev/posts/cors/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;create-a-simple-web-app-with-cors-misconfiguration&#34;&gt;Create a Simple Web App with CORS Misconfiguration&lt;/h3&gt;&#xA;&lt;p&gt;Essentially, we require a web application with a straightforward login feature and a data endpoint. With misconfigured CORS, we should be able to see the sensitive data from another origin.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Career Change: From Cybersecurity to Software Development</title>
-      <link>http://localhost:1313/posts/career-change/</link>
+      <link>https://liuyuchen.dev/posts/career-change/</link>
       <pubDate>Sat, 17 May 2025 11:46:59 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/career-change/</guid>
+      <guid>https://liuyuchen.dev/posts/career-change/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;As a young professional in cybersecurity, do you often feel so dumb that you can&amp;rsquo;t understand some concepts? Maybe my experience can help.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;my-background&#34;&gt;My Background&lt;/h3&gt;&#xA;&lt;p&gt;I studied Information Security in college. We had the usual foundational CS and math courses, along with cryptography. Back then, the security field seemed straightforward—either you were an attacker or a defender—even though I had no idea how either actually worked.&lt;/p&gt;&#xA;&lt;p&gt;Later, I interned at two companies, where I learned about web pentesting and Active Directory security. I thought I was cool because I could &amp;ldquo;hack a machine.&amp;rdquo; But I fell into the certification trap and stayed there for years. I believed that once I got my OSCP, I&amp;rsquo;d land a great job and be set for life. The truth? I never passed the exam and I still got a decent job.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Duplicate Report</title>
-      <link>http://localhost:1313/posts/duplicate-report/</link>
+      <title>First Duplicate Report</title>
+      <link>https://liuyuchen.dev/posts/duplicate-report/</link>
       <pubDate>Thu, 20 Mar 2025 00:09:38 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/posts/duplicate-report/</guid>
-      <description>&lt;p&gt;So, I almost submit my first valid bug report&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;not-prose&#34;&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;http://localhost:1313/duplicate-report.png&#34;&#xA;      alt=&#34;screenshot&#34; &#xA;      loading=&#34;lazy&#34;&#xA;    &gt;&#xA;  &lt;/figure&gt;&lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-happened&#34;&gt;What Happened&lt;/h3&gt;&#xA;&lt;p&gt;The other night, I finally decided to give bug bounty a try. I found a VDP program and let ChatGPT write me a recon script. That recon script returned with several subdomains, and when I went through them, a weird domain caught my eye. What the hell is &amp;lsquo;whoami.xx.xx.com&amp;rsquo;?&lt;/p&gt;&#xA;&lt;p&gt;Out of curiosity, I opened that in my browser. Holy cow, it looks like a debugging page with an internal IP! I wasn&amp;rsquo;t sure if that counts but ChatGPT said it was a valid information disclosure bug. Before embarrassing myself, I wanted to figure out what this &amp;lsquo;whoami&amp;rsquo; subdomain does.&lt;/p&gt;</description>
+      <guid>https://liuyuchen.dev/posts/duplicate-report/</guid>
+      <description>&lt;p&gt;So, I almost submit my first valid bug report&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;not-prose&#34;&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;https://liuyuchen.dev/duplicate-report.png&#34;&#xA;      alt=&#34;screenshot&#34; &#xA;      loading=&#34;lazy&#34;&#xA;    &gt;&#xA;  &lt;/figure&gt;&lt;/div&gt;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-happened&#34;&gt;What Happened&lt;/h3&gt;&#xA;&lt;p&gt;The other night, I finally decided to give bug bounty a try. I found a VDP program and let ChatGPT write me a recon script. That recon script returned with several subdomains, and when I went through them, a weird domain caught my eye. What the hell is &amp;lsquo;whoami.xx.xx.com&amp;rsquo;?&lt;/p&gt;&#xA;&lt;p&gt;Out of curiosity, I opened that in my browser. Holy cow, it looks like a debugging page with an internal IP! I wasn&amp;rsquo;t sure if that counts but ChatGPT said it was a valid information disclosure bug. Before embarrassing myself, I wanted to figure out what this &amp;lsquo;whoami&amp;rsquo; subdomain does.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Whoami</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://liuyuchen.dev/about/</link>
       <pubDate>Wed, 21 Aug 2024 23:39:22 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Hi I&amp;rsquo;m Yuchen.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;m a developer &amp;amp; hacker. *I think&lt;/li&gt;&#xA;&lt;li&gt;I build (hopefully)secure software during the day.&lt;/li&gt;&#xA;&lt;li&gt;And I do/learn bug hunting for fun at night.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>https://liuyuchen.dev/about/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Hi I&amp;rsquo;m Yuchen.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;m a Software Engineer :)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/manifest.json</link>
+      <link>https://liuyuchen.dev/manifest.json</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/manifest.json</guid>
+      <guid>https://liuyuchen.dev/manifest.json</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.de/</link>
+      <link>https://liuyuchen.dev/search/_index.de/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.de/</guid>
+      <guid>https://liuyuchen.dev/search/_index.de/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.es/</link>
+      <link>https://liuyuchen.dev/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.es/</guid>
+      <guid>https://liuyuchen.dev/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.fr/</link>
+      <link>https://liuyuchen.dev/search/_index.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.fr/</guid>
+      <guid>https://liuyuchen.dev/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.hi/</link>
+      <link>https://liuyuchen.dev/search/_index.hi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.hi/</guid>
+      <guid>https://liuyuchen.dev/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.jp/</link>
+      <link>https://liuyuchen.dev/search/_index.jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.jp/</guid>
+      <guid>https://liuyuchen.dev/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.nl/</link>
+      <link>https://liuyuchen.dev/search/_index.nl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.nl/</guid>
+      <guid>https://liuyuchen.dev/search/_index.nl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.pl/</link>
+      <link>https://liuyuchen.dev/search/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.pl/</guid>
+      <guid>https://liuyuchen.dev/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.ru/</link>
+      <link>https://liuyuchen.dev/search/_index.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.ru/</guid>
+      <guid>https://liuyuchen.dev/search/_index.ru/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/search/_index.zh-cn/</link>
+      <link>https://liuyuchen.dev/search/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
+      <guid>https://liuyuchen.dev/search/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>

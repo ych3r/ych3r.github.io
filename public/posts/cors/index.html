@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <title>Are you from the Same Origin? :: Y.Liu&#39;s Blog</title>
+<head>
+  <title>Are you from the Same Origin :: Y.Liu&#39;s Blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,9 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
   name="keywords"
   content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
 />
-<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="http://localhost:1313/posts/cors/">
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="https://liuyuchen.dev/posts/cors/">
   <meta property="og:site_name" content="Y.Liu&#39;s Blog">
-  <meta property="og:title" content="Are you from the Same Origin?">
+  <meta property="og:title" content="Are you from the Same Origin">
   <meta property="og:description" content="Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.
 Create a Simple Web App with CORS Misconfiguration Essentially, we require a web application with a straightforward login feature and a data endpoint. With misconfigured CORS, we should be able to see the sensitive data from another origin.">
   <meta property="og:locale" content="en_us">
@@ -26,20 +26,18 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
     <meta property="article:published_time" content="2025-06-01T12:26:43-04:00">
     <meta property="article:modified_time" content="2025-06-01T12:26:43-04:00">
     <meta property="article:tag" content="Cors">
-    <meta property="article:tag" content="Client-Side">
-    <meta property="article:tag" content="Misconfiguration">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Are you from the Same Origin?">
+  <meta name="twitter:title" content="Are you from the Same Origin">
   <meta name="twitter:description" content="Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.
 Create a Simple Web App with CORS Misconfiguration Essentially, we require a web application with a straightforward login feature and a data endpoint. With misconfigured CORS, we should be able to see the sensitive data from another origin.">
 
 
-<link rel="canonical" href="http://localhost:1313/posts/cors/" />
+<link rel="canonical" href="https://liuyuchen.dev/posts/cors/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.f2b5b9c8e4e9b03048601ca9eedc29df44c3a73343f4538f41785e16f13c341a.css">
+<link rel="stylesheet" href="/css/index.min.08ae78ad799bdf6bc07f88b81fb42f6102cb7ef8c52893763bcc6ef38078b13f.css">
 
 
 
@@ -53,18 +51,7 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
   
 
 </head>
-<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
-    
-<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
-  <span class="block sm:hidden">all</span>
-  <span class="hidden sm:block md:hidden">sm</span>
-  <span class="hidden md:block lg:hidden">md</span>
-  <span class="hidden lg:block xl:hidden">lg</span>
-  <span class="hidden xl:block 2xl:hidden">xl</span>
-  <span class="hidden 2xl:block">2xl</span>
-</div>
-
-  <header class="flex flex-none justify-center z-10">
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800"><header class="flex flex-none justify-center z-10">
     <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
   <div class="flex-none ml-2 md:ml-0">
     <a href="/" class="">
@@ -172,7 +159,7 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
     </div>
     <div class="flex flex-col gap-y-3 p-6">
       <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
-        <a href="/posts/cors/">Are you from the Same Origin?</a>
+        <a href="/posts/cors/">Are you from the Same Origin</a>
       </h1>
 
       
@@ -181,9 +168,9 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
     
       
       <li>
-        <a href="/categories/bug-bounty/"
+        <a href="/categories/web-security/"
           class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
-          Bug Bounty
+          Web Security
         </a>
       </li>
       
@@ -204,40 +191,6 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
 
           </i>
           <span class="ml-0">Cors</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/tags/client-side/"
-          class="flex flex-row text-sm mr-2 py-1">
-          <i class="h-5 w-5 flex-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M5 9l14 0"></path>
-   <path d="M5 15l14 0"></path>
-   <path d="M11 4l-4 16"></path>
-   <path d="M17 4l-4 16"></path>
-</svg>
-
-          </i>
-          <span class="ml-0">Client-Side</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/tags/misconfiguration/"
-          class="flex flex-row text-sm mr-2 py-1">
-          <i class="h-5 w-5 flex-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M5 9l14 0"></path>
-   <path d="M5 15l14 0"></path>
-   <path d="M11 4l-4 16"></path>
-   <path d="M17 4l-4 16"></path>
-</svg>
-
-          </i>
-          <span class="ml-0">Misconfiguration</span>
         </a>
       </li>
       
@@ -297,12 +250,12 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
 <p>Check out the code repo: <a href="https://github.com/ych3r/vuln-apps/tree/main/cors" target="_blank" rel="noopener">https://github.com/ych3r/vuln-apps/tree/main/cors</a>
 </p></blockquote>
 <p>Because we have a session check, you can&rsquo;t access the sensitive data without login.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">cookie</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">r</span><span class="p">.</span><span class="nf">Cookie</span><span class="p">(</span><span class="s">&#34;session&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="o">||</span> <span class="nx">cookie</span><span class="p">.</span><span class="nx">Value</span> <span class="o">!=</span> <span class="s">&#34;valid-session&#34;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">http</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="s">&#34;Unauthorized&#34;</span><span class="p">,</span> <span class="nx">http</span><span class="p">.</span><span class="nx">StatusUnauthorized</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p><div class="not-prose">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">cookie</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nf">Cookie</span><span class="p">(</span><span class="s">&#34;session&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">cookie</span><span class="p">.</span><span class="nx">Value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&#34;valid-session&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Unauthorized&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusUnauthorized</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p><div class="not-prose">
 <figure>
     <img src="/cors/cors-1.png"
       alt="cors1" 
@@ -327,12 +280,12 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
   </figure></div>
 </p>
 <p>Now we misconfigure the CORS.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">origin</span> <span class="o">:=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;Origin&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">origin</span> <span class="o">!=</span> <span class="s">&#34;&#34;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span> <span class="nx">origin</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Credentials&#34;</span><span class="p">,</span> <span class="s">&#34;true&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>This will allow all the origin to access it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">origin</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;Origin&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">origin</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Credentials&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;true&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>This will allow all the origin to access it.</p>
 <h3 id="attack-it">Attack it</h3>
 <p>First, we make sure this vulnerability exists. Of course, we test with our own session, and bear with me, I&rsquo;m too lazy to create another profile. Let&rsquo;s just imagine this sensitive data is not the victim&rsquo;s data.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">╰─$ curl -i http://localhost:8080/api/data -H <span class="s2">&#34;Origin: xx.com&#34;</span> -H <span class="s2">&#34;Cookie: session=valid-session&#34;</span>
@@ -398,15 +351,15 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
 </ul>
 <h3 id="make-it-safe">Make it Safe</h3>
 <p>Because it’s a configuration problem, the solution is fairly easy. We set up an allowed origin list, then other domains won&rsquo;t be able to fetch data.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">origin</span> <span class="o">:=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;Origin&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nx">allowedOrigins</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">bool</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s">&#34;https://liuyuchen.dev&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">allowedOrigins</span><span class="p">[</span><span class="nx">origin</span><span class="p">]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span> <span class="nx">origin</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Credentials&#34;</span><span class="p">,</span> <span class="s">&#34;true&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p><div class="not-prose">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">origin</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="s">&#34;Origin&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">allowedOrigins</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">bool</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;https://liuyuchen.dev&#34;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="nx">allowedOrigins</span><span class="p">[</span><span class="nx">origin</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Origin&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">origin</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;Access-Control-Allow-Credentials&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;true&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p><div class="not-prose">
 <figure>
     <img src="/cors/cors-5.png"
       alt="cors5" 
@@ -471,7 +424,7 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
 </section>
 
   </footer>
-  <script src="/main.js"></script>
+  <script src="/main.min.c6372b6836971865bd94bfde974748aca8415824a2facab6ccd66a87384bfacb.js"></script>
 
 <div class="hidden top-1 right-1" id="code-copy">
   <i class="h-6 w-6 block">
@@ -491,7 +444,7 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
 </svg>
 
   </i>
-</div><script src="/code-copy.js"></script>
+</div><script src="/code-copy.min.e7b2a74adef1ed474c335c8bd5e7832b2316b8842b0f9184d65286c5bd64f51a.js"></script>
 
 
 
