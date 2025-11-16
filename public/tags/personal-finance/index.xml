@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Personal Finance on Y.Liu&#39;s Blog</title>
+    <link>https://liuyuchen.dev/tags/personal-finance/</link>
+    <description>Recent content in Personal Finance on Y.Liu&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Yuchen Liu</copyright>
+    <lastBuildDate>Sun, 16 Nov 2025 11:14:26 -0500</lastBuildDate>
+    <atom:link href="https://liuyuchen.dev/tags/personal-finance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PAW vs UAW</title>
+      <link>https://liuyuchen.dev/posts/paw-uaw/</link>
+      <pubDate>Sun, 16 Nov 2025 11:14:26 -0500</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/posts/paw-uaw/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Recently, I finished reading a book called &amp;lsquo;The Millionaire Next Door&amp;rsquo;. Most of the content is talking about common sense, like how to live a frugal life, which most people have already done. It actually brings out an interesting formula about how to categorize your financial status.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Expected Net Worth = (Age x Annual Income) / 10&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;If your actual net worth is &lt;strong&gt;double than the expected number&lt;/strong&gt;, then you are a &amp;lsquo;PAW (Prodigious accumulator of wealth)&amp;rsquo;.&lt;/li&gt;&#xA;&lt;li&gt;If your actual net worth is &lt;strong&gt;less than half of the expected number&lt;/strong&gt;, then you are a &amp;lsquo;UAW (Under accumulator of wealth)&amp;rsquo;.&lt;/li&gt;&#xA;&lt;li&gt;If you are something in between, like most people, you are an &amp;lsquo;AAW (Average Accumulator of Wealth)&amp;rsquo;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;PAW means you live below your means-you are wealthy compared with your lifestyle. Obviously, you should try to be a &amp;lsquo;PAW&amp;rsquo;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
