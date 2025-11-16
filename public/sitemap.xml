@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://liuyuchen.dev/categories/</loc>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
+  </url><url>
+    <loc>https://liuyuchen.dev/categories/money/</loc>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
+  </url><url>
+    <loc>https://liuyuchen.dev/posts/paw-uaw/</loc>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
+  </url><url>
+    <loc>https://liuyuchen.dev/tags/personal-finance/</loc>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
+  </url><url>
     <loc>https://liuyuchen.dev/posts/</loc>
-    <lastmod>2025-10-10T22:56:48-04:00</lastmod>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
+  </url><url>
+    <loc>https://liuyuchen.dev/tags/</loc>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
   </url><url>
     <loc>https://liuyuchen.dev/</loc>
-    <lastmod>2025-10-10T22:56:48-04:00</lastmod>
+    <lastmod>2025-11-16T11:14:26-05:00</lastmod>
   </url><url>
     <loc>https://liuyuchen.dev/tags/big-o/</loc>
-    <lastmod>2025-10-08T23:14:09-04:00</lastmod>
-  </url><url>
-    <loc>https://liuyuchen.dev/categories/</loc>
     <lastmod>2025-10-08T23:14:09-04:00</lastmod>
   </url><url>
     <loc>https://liuyuchen.dev/categories/coding/</loc>
@@ -21,9 +33,6 @@
     <lastmod>2025-10-08T23:14:09-04:00</lastmod>
   </url><url>
     <loc>https://liuyuchen.dev/series/</loc>
-    <lastmod>2025-10-08T23:14:09-04:00</lastmod>
-  </url><url>
-    <loc>https://liuyuchen.dev/tags/</loc>
     <lastmod>2025-10-08T23:14:09-04:00</lastmod>
   </url><url>
     <loc>https://liuyuchen.dev/posts/big-o/</loc>

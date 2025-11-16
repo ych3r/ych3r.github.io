@@ -9,8 +9,15 @@
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Wed, 08 Oct 2025 23:14:09 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 16 Nov 2025 11:14:26 -0500</lastBuildDate>
     <atom:link href="https://liuyuchen.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Finance</title>
+      <link>https://liuyuchen.dev/tags/personal-finance/</link>
+      <pubDate>Sun, 16 Nov 2025 11:14:26 -0500</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/tags/personal-finance/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Big O</title>
       <link>https://liuyuchen.dev/tags/big-o/</link>
