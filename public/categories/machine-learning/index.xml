@@ -9,14 +9,21 @@
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Sat, 14 Jun 2025 13:36:36 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 28 Nov 2025 17:00:29 -0500</lastBuildDate>
     <atom:link href="https://liuyuchen.dev/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning Introduction</title>
+      <link>https://liuyuchen.dev/posts/ml-intro/</link>
+      <pubDate>Fri, 28 Nov 2025 17:00:29 -0500</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>https://liuyuchen.dev/posts/ml-intro/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;I completed Andrew Ng&amp;rsquo;s Machine Learning Specialization course.&#xA;And somehow, I&amp;rsquo;m still confused&amp;hellip;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Course 1: I&amp;rsquo;ve learned supervised machine learning, including regression and classification.&lt;/li&gt;&#xA;&lt;li&gt;Course 2: I&amp;rsquo;ve learned some advanced learning algorithms, like neural network and decision trees.&lt;/li&gt;&#xA;&lt;li&gt;Course 3: I&amp;rsquo;ve learned unsupervised machine learning, recommender systems, and reinforcement learning.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;But hey, I understood each concept (at some level), but my understanding is not holistic. I still have no idea how to use machine learning as a tool.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Why Decision Tree &gt; if-else</title>
       <link>https://liuyuchen.dev/posts/decision-tree/</link>
       <pubDate>Sat, 14 Jun 2025 13:36:36 -0400</pubDate><author>user@example.com (Hugo Author)</author>
       <guid>https://liuyuchen.dev/posts/decision-tree/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The other day, our tech lead suggested we implement supervised machine learning to automate our ticket approval system.&lt;/p&gt;&#xA;&lt;p&gt;He said it would be very easy.&lt;/p&gt;&#xA;&lt;p&gt;I had no idea how it worked-and honestly, I was confused. Why not just use if-else statements?&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;We have a ticket approval system, a platform for reviewing tickets that request access to some resource. With an increasing number of tickets being submitted, manually reviewing them has become inefficient.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The other day, our tech lead suggested we implement supervised machine learning to automate our ticket approval system.&lt;/p&gt;&#xA;&lt;p&gt;He said it would be very easy.&lt;/p&gt;&#xA;&lt;p&gt;I had no idea how it worked-and honestly, I was confused. Why not just use if-else statements?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;&#xA;&lt;p&gt;We have a ticket approval system, a platform for reviewing tickets that request access to some resource. With an increasing number of tickets being submitted, manually reviewing them has become inefficient.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

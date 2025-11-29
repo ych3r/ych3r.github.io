@@ -243,12 +243,14 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
 
       <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
         <blockquote>
-<p>Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.</p></blockquote>
+<p>Recently, when I debugged a web app, I had to add my own test domain to a CORS allowed list there. Then I remembered having seen a CORS vulnerability report before and decided to delve deeper into this topic.</p>
+</blockquote>
 <h3 id="create-a-simple-web-app-with-cors-misconfiguration">Create a Simple Web App with CORS Misconfiguration</h3>
 <p>Essentially, we require a web application with a straightforward login feature and a data endpoint. With misconfigured CORS, we should be able to see the sensitive data from another origin.</p>
 <blockquote>
 <p>Check out the code repo: <a href="https://github.com/ych3r/vuln-apps/tree/main/cors" target="_blank" rel="noopener">https://github.com/ych3r/vuln-apps/tree/main/cors</a>
-</p></blockquote>
+</p>
+</blockquote>
 <p>Because we have a session check, you can&rsquo;t access the sensitive data without login.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">cookie</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nf">Cookie</span><span class="p">(</span><span class="s">&#34;session&#34;</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">cookie</span><span class="p">.</span><span class="nx">Value</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&#34;valid-session&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -322,7 +324,8 @@ Create a Simple Web App with CORS Misconfiguration Essentially, we require a web
   </figure></div>
 </p>
 <blockquote>
-<p>What does it mean?</p></blockquote>
+<p>What does it mean?</p>
+</blockquote>
 <p>As long as we let the victim open <code>evil.html</code>, and they happened to have a live session on the service, we will be able to bypass the access control and read sensitive data using their session cookie.</p>
 <p>We&rsquo;re not going to let it pop up obviously, but we can let it secretly send the data to our server.</p>
 <h3 id="theory-part">Theory Part</h3>
