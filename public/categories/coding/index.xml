@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding on Y.Liu&#39;s Blog</title>
-    <link>https://liuyuchen.dev/categories/coding/</link>
+    <link>http://localhost:1313/categories/coding/</link>
     <description>Recent content in Coding on Y.Liu&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
@@ -10,12 +10,12 @@
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
     <lastBuildDate>Wed, 08 Oct 2025 23:14:09 -0400</lastBuildDate>
-    <atom:link href="https://liuyuchen.dev/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is Good Code</title>
-      <link>https://liuyuchen.dev/posts/big-o/</link>
+      <link>http://localhost:1313/posts/big-o/</link>
       <pubDate>Wed, 08 Oct 2025 23:14:09 -0400</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://liuyuchen.dev/posts/big-o/</guid>
+      <guid>http://localhost:1313/posts/big-o/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Before saying someone&amp;rsquo;s code is sh*t code, you should know what is good code.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Apart from those that are not readable, in general, the good code should run fast and take up less memory space. Everyone can say their code is good, but how do you prove it? Simply monitoring runtime and memory space may not be accurate due to various factors-the data matters, and hardware also matters. A more scientific way to do so is to look at the &lt;strong&gt;&amp;ldquo;trend&amp;rdquo;&lt;/strong&gt;-if the number of items grows, how would the time and space grow?&lt;/p&gt;</description>
     </item>
   </channel>
