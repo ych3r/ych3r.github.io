@@ -3,7 +3,7 @@ title = 'PAW vs UAW'
 date = 2025-11-16T11:14:26-05:00
 draft = false
 toc = false
-categories = ['money']
+categories = ['misc']
 tags = ['personal finance']
 series = ['']
 +++
