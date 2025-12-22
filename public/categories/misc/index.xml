@@ -9,8 +9,15 @@
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Yuchen Liu</copyright>
-    <lastBuildDate>Sat, 17 May 2025 11:46:59 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 16 Nov 2025 11:14:26 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PAW vs UAW</title>
+      <link>http://localhost:1313/posts/paw-uaw/</link>
+      <pubDate>Sun, 16 Nov 2025 11:14:26 -0500</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/paw-uaw/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Recently, I finished reading a book called &amp;lsquo;The Millionaire Next Door&amp;rsquo;. Most of the content is talking about common sense, like how to live a frugal life, which most people have already done. It actually brings out an interesting formula about how to categorize your financial status.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Expected Net Worth = (Age x Annual Income) / 10&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;If your actual net worth is &lt;strong&gt;double than the expected number&lt;/strong&gt;, then you are a &amp;lsquo;PAW (Prodigious accumulator of wealth)&amp;rsquo;.&lt;/li&gt;&#xA;&lt;li&gt;If your actual net worth is &lt;strong&gt;less than half of the expected number&lt;/strong&gt;, then you are a &amp;lsquo;UAW (Under accumulator of wealth)&amp;rsquo;.&lt;/li&gt;&#xA;&lt;li&gt;If you are something in between, like most people, you are an &amp;lsquo;AAW (Average Accumulator of Wealth)&amp;rsquo;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;PAW means you live below your means-you are wealthy compared with your lifestyle. Obviously, you should try to be a &amp;lsquo;PAW&amp;rsquo;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Career Change: From Cybersecurity to Software Development</title>
       <link>http://localhost:1313/posts/career-change/</link>
